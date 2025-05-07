@@ -1,7 +1,3 @@
-## LIVE LINK: https://craetive-agency.vercel.app/
-
-
-
 ## Getting Started
 
 First, run the development server:
