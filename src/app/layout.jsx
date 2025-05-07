@@ -1,0 +1,50 @@
+import { Poppins, Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
+import "./globals.css";
+import SiteNavbar from "@/components/SiteNavbar";
+import SiteFooter from "@/components/SiteFooter";
+import ProgressbarProvider from "@/components/ProgressbarProvider";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+});
+const jakarta_sans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-jakarta_sans",
+});
+
+const avenir = localFont({
+  src: "../font/Avenir Regular.ttf",
+  variable: "--font-avenir_regular",
+});
+
+export const metadata = {
+  title: "Creative Agency ",
+  description: "A agency for build your business",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className="scroll-smooth">
+      <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png" sizes="180x180" />
+      <link rel="icon" href="./favicon/favicon-96x96.png" sizes="96x96" type="image/png" />
+      <link rel="icon" href="./favicon/favicon-192x192.png" sizes="192x192" type="image/png" />
+      <link rel="icon" href="./favicon/favicon-512x512.png" sizes="512x512" type="image/png" />
+      <link rel="icon" href="./favicon/favicon.svg" type="image/svg+xml" />
+      <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon" />
+      <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon" sizes="any" />
+      <link rel="manifest" href="./favicon/site.webmanifest" />
+      <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5" />
+      <body className={`${poppins.variable} ${jakarta_sans.variable} ${avenir.variable}`}>
+        <ProgressbarProvider>
+          <SiteNavbar />
+          {children}
+          <SiteFooter />
+        </ProgressbarProvider>
+      </body>
+    </html>
+  );
+}
