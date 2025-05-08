@@ -1,5 +1,6 @@
 import FeatureProject from "@/components/FeatureProject";
 import Hero from "@/components/Hero";
+import Services from "@/components/Services";
 import StatList from "@/components/StatList";
 import Subscribe from "@/components/Subscribe";
 import Team from "@/components/Team";
@@ -11,6 +12,7 @@ export default function Home() {
     <>
       <Hero />
       <WorkList />
+      <Services />
       <FeatureProject />
       <StatList />
       <TestimonialList />

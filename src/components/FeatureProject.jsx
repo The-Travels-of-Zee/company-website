@@ -1,24 +1,9 @@
 import { parseDate } from "@/utils/helper";
 import Link from "next/link";
-
-import { headers } from "next/headers";
-
-const getData = async () => {
-  const host = headers().get("host");
-  const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
-  const res = await fetch(`${protocol}://${host}/api/FeaturedProject`);
-
-  if (!res.ok) {
-    throw new Error("FeaturedProject API call failed");
-  }
-
-  return res.json();
-};
+import { featureProjects } from "@/constants";
 
 const FeatureProject = async () => {
-  const featureProjects = await getData();
-
-  const withoutFirstProject = featureProjects.slice(2);
+  const withoutFirstProject = featureProjects.slice(1);
 
   return (
     <section className="pt-16 pb-20 bg-bgBlueLight" id="projects">

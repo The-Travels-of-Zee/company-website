@@ -1,23 +1,6 @@
 import Brand from "./Brand";
 
-import { headers } from "next/headers";
-
-const getData = async () => {
-  const host = headers().get("host");
-  const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
-  const res = await fetch(`${protocol}://${host}/api/FeaturedProject`);
-
-  if (!res.ok) {
-    throw new Error("FeaturedProject API call failed");
-  }
-
-  return res.json();
-};
-
 const Hero = async () => {
-  const data = await getData();
-  const { title, description, image1, image2, image3, image4 } = data;
-
   return (
     <section className=" hero_bg pt-36 pb-9">
       <div>
