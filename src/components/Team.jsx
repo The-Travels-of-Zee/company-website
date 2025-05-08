@@ -1,22 +1,8 @@
 import Link from "next/link";
 import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
-
-import { headers } from "next/headers";
-
-const getData = async () => {
-  const host = headers().get("host");
-  const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
-  const res = await fetch(`${protocol}://${host}/api/TeamMembers`);
-
-  if (!res.ok) {
-    throw new Error("TeamList API call failed");
-  }
-
-  return res.json();
-};
+import { teamMembers } from "@/constants";
 
 const Team = async () => {
-  const members = await getData();
   return (
     <section className="pt-16 pb-20" id="team">
       <div className="container">
@@ -25,13 +11,16 @@ const Team = async () => {
           <h2 className="sub_heading mt-4 max-w-[500px]">Check our awesome team members</h2>
         </div>
 
-        <div className="team_member grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-between gap-8 mt-16">
-          {members.map((member) => (
-            <div key={member.id} className="member  shadow-teamShadow rounded-[20px] bg-white">
+        <div className="team_member grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-between gap-8 mt-16">
+          {teamMembers.map((member) => (
+            <div
+              key={member.id}
+              className="member hover:shadow-bgBlueLight transition-all duration-300 shadow-brandShadow rounded-[20px] bg-white"
+            >
               <div className="image_container relative">
                 <img
-                  className="object-cover w-full h-full max-h-[387px] rounded-t-[20px]"
-                  src="./static/T-logo.png"
+                  className="object-cover w-full h-full max-h-[387px] rounded-t-[20px] grayscale hover:grayscale-0 transition-all duration-300"
+                  src={member.image}
                   alt="tem member image"
                 />
                 <div className="social_links flex items-center justify-between bg-white py-4 px-5 shadow-teamShadow rounded-[25px] absolute bottom-8 gap-4 left-1/2 -translate-x-1/2">

@@ -1,6 +1,7 @@
 import Link from "next/link"
 
 import { headers } from "next/headers";
+import { allProjects } from "@/constants";
 
 const getData = async () => {
   const host = headers().get("host");
@@ -30,11 +31,11 @@ const AllProjects = async () => {
         <div className="projects_container grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
 
           {
-            projects.map(porject =>
-              <Link key={projects.id} href={""}>
+            allProjects.map(project =>
+              <Link key={project.id} href={""}>
                 <div className="project bg-white px-[30px] pt-10 pb-[30px] rounded-[20px] shadow-brandShadow">
-                  <img className='rounded-[20px]' src={porject.image} alt="Projects images" />
-                  <h4 className="font-poppins font-semibold text-[26px] text-black uppercase text-left mt-8">{porject.title}</h4>
+                  <img className='rounded-[20px]' src={project.image} alt="Projects images" />
+                  <h4 className="font-poppins font-semibold text-[26px] text-black uppercase text-left mt-8">{project.title}</h4>
                 </div>
               </Link>
             )

@@ -1,32 +1,18 @@
-import { headers } from "next/headers";
-
-const getData = async () => {
-  const host = headers().get("host");
-  const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
-  const res = await fetch(`${protocol}://${host}/api/FeaturedProject`);
-
-  if (!res.ok) {
-    throw new Error("FeaturedProject API call failed");
-  }
-
-  return res.json();
-};
+import { workLists } from "@/constants";
 
 const WorkList = async () => {
-  const workLists = await getData();
-
   return (
-    <section className="py-16 bg-white" id="services">
+    <section className="py-16 bg-white" id="worklist">
       <div className="container">
         <div className="section_content">
           <p className="mb-4 tagline_text">Work List</p>
           <h2 className="sub_heading max-w-[500px]">We provide the Perfect Solution to your business growth</h2>
         </div>
         <div className="grid md:grid-cols-3 items-center  mt-11 ">
-          {workLists.map((workList) => (
-            <div key={workList.step} className="py-[50px] px-[30px] card md:max-w-[380px] ">
-              <img src="/icons/Heart.png" alt="what we do" />
-              <h3 className="font-poppins font-semibold text-2xl text-left text-black mt-4">{workList.title}</h3>
+          {workLists.map((item) => (
+            <div key={item.name} className="py-[50px] px-[30px] card md:max-w-[380px] ">
+              <img src={item.image} alt="what we do" />
+              <h3 className="font-poppins font-semibold text-2xl text-left text-black mt-4">{item.title}</h3>
               <p className="font_avenir font-normal text-lg text-black mt-4">
                 Fusce quam tellus, placerat eu metus ut, viverra aliquet purus. Suspendisse potenti. Nulla non nibh
                 feugiat.

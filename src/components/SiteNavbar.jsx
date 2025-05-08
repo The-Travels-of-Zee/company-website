@@ -1,4 +1,5 @@
 "use client";
+import { navbarLinks } from "@/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -22,56 +23,20 @@ const SiteNavbar = () => {
 
         <div className="nav_items">
           <ul className="lg:flex items-center gap-[30px] hidden   md:text-xs  md:gap-4 lg:text-sm xl:gap-[30px] xl:text-base ">
-            <li>
-              <Link
-                href={"/"}
-                className={`${
-                  currentPath === "/" ? "text-brandPrimary border-b border-brandPrimary" : "text-black"
-                } p-[10px] text-center  font-poppins font-medium capitalize `}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"#team"}
-                className={`${
-                  currentPath === "/team" ? "text-brandPrimary border-b border-brandPrimary" : "text-black"
-                } p-[10px] text-center font-poppins font-medium capitalize `}
-              >
-                Team
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"#services"}
-                className={`${
-                  currentPath === "/services" ? "text-brandPrimary border-b border-brandPrimary" : "text-black"
-                } p-[10px] text-center font-poppins font-medium capitalize `}
-              >
-                Service
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"#projects"}
-                className={`${
-                  currentPath === "/projects" ? "text-brandPrimary border-b border-brandPrimary" : "text-black"
-                } p-[10px] text-center font-poppins font-medium capitalize `}
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"/testimonials"}
-                className={`${
-                  currentPath === "/testimonials" ? "text-brandPrimary border-b border-brandPrimary" : "text-black"
-                } p-[10px] text-center font-poppins font-medium capitalize `}
-              >
-                Testimonials
-              </Link>
-            </li>
+            {navbarLinks.map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  className={`${
+                    currentPath === item.href && (item.href === "/" || item.href === "/services")
+                      ? "text-brandPrimary border-b border-brandPrimary"
+                      : "text-black"
+                  } p-[10px] text-center font-poppins font-medium capitalize`}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
 
             {/* <li>
               <Link
@@ -100,67 +65,26 @@ const SiteNavbar = () => {
           <img src="./static/full-logo-black.png" alt="logo" />
         </div>
         <div className="menuBtn">
-          <button className="text-brandPrimary text-2xl" onClick={() => setMobileActive(!mobileActive)}>
+          <button className="text-brandPrimary text-4xl" onClick={() => setMobileActive(!mobileActive)}>
             {mobileActive ? <IoClose className="text-brandPrimary" /> : <IoMenu />}
           </button>
         </div>
         {mobileActive && (
-          <ul className="bg-[#1f1f1f] absolute text-lg top-20 w-full pt-7 pl-8 pb-16 grid grid-cols-1 gap-5 rounded-lg transition-all duration-300 shadow-md shadow-blueLight">
-            <li>
-              <Link
-                onClick={() => setMobileActive(!mobileActive)}
-                href={"/"}
-                className={`${
-                  currentPath === "/" ? "text-brandPrimary" : "text-white"
-                } p-[10px] text-center  font-poppins font-medium capitalize `}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => setMobileActive(!mobileActive)}
-                href={"#team"}
-                className={`${
-                  currentPath === "/team" ? "text-brandPrimary " : "text-white"
-                } p-[10px] text-center font-poppins font-medium capitalize `}
-              >
-                Team
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => setMobileActive(!mobileActive)}
-                href={"#services"}
-                className={`${
-                  currentPath === "/services" ? "text-brandPrimary " : "text-white"
-                } p-[10px] text-center font-poppins font-medium capitalize `}
-              >
-                Service
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => setMobileActive(!mobileActive)}
-                href={"#projects"}
-                className={`${
-                  currentPath === "/projects" ? "text-brandPrimary " : "text-white"
-                } p-[10px] text-center font-poppins font-medium capitalize `}
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => setMobileActive(!mobileActive)}
-                href={"#testimonials"}
-                className={`${
-                  currentPath === "/testimonials" ? "text-brandPrimary" : "text-white"
-                } p-[10px] text-center font-poppins font-medium capitalize `}
-              >
-                Testimonials
-              </Link>
-            </li>
+          <ul className="bg-black bg-opacity-65 backdrop-blur-lg absolute text-lg top-20 w-full pt-7 pb-16 grid grid-cols-1 gap-8 text-center rounded-lg transition-all duration-300 shadow-md shadow-[#2b2b2b]">
+            {navbarLinks.map((item) => (
+              <li>
+                <Link
+                  key={item.name}
+                  onClick={() => setMobileActive(!mobileActive)}
+                  href={item.href}
+                  className={`${
+                    item.href === "/" ? "text-blueLight" : "text-white"
+                  } p-[10px] text-center  font-poppins font-medium capitalize `}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
 
             {/* <li className="my-5">
               <Link
