@@ -22,7 +22,7 @@ const avenir = localFont({
 });
 
 export const metadata = {
-  title: "Creative Agency ",
+  title: "The Travels of Zee",
   description: "A agency for build your business",
 };
 
