@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaFacebookF, FaLinkedin } from "react-icons/fa";
 import { teamMembers } from "@/constants";
 
 const Team = () => {
@@ -24,28 +24,52 @@ const Team = () => {
                   alt="tem member image"
                 />
                 <div className="social_links flex items-center justify-between bg-white py-4 px-5 shadow-teamShadow rounded-[25px] absolute bottom-8 gap-4 left-1/2 -translate-x-1/2">
-                  <Link className="text-[#737588] hover:text-blueLight duration-300 " href={member.facebook}>
+                  <Link
+                    className="text-[#737588] hover:text-blueLight duration-300 "
+                    href={member.facebook}
+                    target="_blank"
+                  >
                     {" "}
                     <FaFacebookF />{" "}
                   </Link>
 
                   <div className="line bg-[#E3E3E3] w-[1px] h-4 "></div>
 
-                  <Link className="text-[#737588] hover:text-blueLight duration-300 " href={member.twitter}>
+                  <Link
+                    className="text-[#737588] hover:text-blueLight duration-300 "
+                    href={member.linkedIn}
+                    target="_blank"
+                  >
+                    {" "}
+                    <FaLinkedin />{" "}
+                  </Link>
+
+                  <div className="line bg-[#E3E3E3] w-[1px] h-4 "></div>
+
+                  <Link
+                    className="text-[#737588] hover:text-blueLight duration-300 "
+                    href={member.twitter}
+                    target="_blank"
+                  >
                     {" "}
                     <FaTwitter />{" "}
                   </Link>
 
                   <div className="line bg-[#E3E3E3] w-[1px] h-4 "></div>
 
-                  <Link className="text-[#737588] hover:text-blueLight duration-300 " href={member.instagram}>
+                  <Link
+                    className="text-[#737588] hover:text-brandDanger duration-300 "
+                    href={member.instagram}
+                    target="_blank"
+                  >
                     {" "}
                     <FaInstagram />{" "}
                   </Link>
                 </div>
               </div>
               <div className="pt-7 pb-12">
-                <h3 className="text-[#101A29] font-poppins text-[30px] font-semibold text-center ">{member.name}</h3>
+                <h3 className="text-[#101A29] font-poppins text-[24px] font-semibold text-center">{member.name}</h3>
+                <p className="text-[#2f3338] font-poppins text-[18px] text-center">{member.designation}</p>
               </div>
             </div>
           ))}
@@ -54,5 +78,4 @@ const Team = () => {
     </section>
   );
 };
-
 export default Team;

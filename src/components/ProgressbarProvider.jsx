@@ -7,7 +7,7 @@ const ProgressbarProvider = ({ children }) => {
             {children}
             <ProgressBar
                 height="4px"
-                color="#20B15A"
+                color="#39A9DB"
                 options={{ showSpinner: false }}
                 shallowRouting
             />
