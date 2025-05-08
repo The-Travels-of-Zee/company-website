@@ -1,6 +1,6 @@
 import { statLinks } from "@/constants";
 
-const StatList = async () => {
+const StatList = () => {
   return (
     <section className="py-10 sm:py-16">
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-between  gap-[30px]">

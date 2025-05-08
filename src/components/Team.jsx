@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
 import { teamMembers } from "@/constants";
 
-const Team = async () => {
+const Team = () => {
   return (
     <section className="pt-16 pb-20" id="team">
       <div className="container">

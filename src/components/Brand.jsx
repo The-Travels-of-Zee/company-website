@@ -1,12 +1,21 @@
 import { brands } from "@/constants";
+import Marquee from "react-fast-marquee";
 
-const Brand = async () => {
+const Brand = () => {
   return (
     <div className="py-11 bg-brandsBG">
-      <div className="grid grid-cols-2  sm:flex items-center justify-between justify-items-center gap-y-10 container">
-        {brands.map((imageData) => (
-          <img src={imageData.image} alt={imageData.name} />
-        ))}
+      <div className="container">
+        <Marquee pauseOnHover={true} gradient={false} autoFill={true}>
+          {brands.map((imageData, index) => (
+            <div key={index} className="mx-8 flex items-center">
+              <img
+                src={imageData.image}
+                alt={imageData.name}
+                className="h-12 w-auto"
+              />
+            </div>
+          ))}
+        </Marquee>
       </div>
     </div>
   );

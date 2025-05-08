@@ -1,6 +1,6 @@
 import { testimonials } from "@/constants";
 
-const TestimonialList = async () => {
+const TestimonialList = () => {
   return (
     <section className="pt-16 pb-20" id="testimonials">
       <div className="container">

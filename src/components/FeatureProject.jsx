@@ -2,7 +2,7 @@ import { parseDate } from "@/utils/helper";
 import Link from "next/link";
 import { featureProjects } from "@/constants";
 
-const FeatureProject = async () => {
+const FeatureProject = () => {
   const withoutFirstProject = featureProjects.slice(1);
 
   return (
