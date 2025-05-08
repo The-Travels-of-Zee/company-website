@@ -1,6 +1,6 @@
 import Brand from "./Brand";
 
-const Hero = async () => {
+const Hero = () => {
   return (
     <section className=" hero_bg pt-36 pb-9">
       <div>

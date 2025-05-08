@@ -1,6 +1,6 @@
 import { services } from "@/constants";
 
-const Services = async () => {
+const Services = () => {
   return (
     <section className="pt-16 pb-20" id="services">
       <div className="container">

@@ -1,6 +1,6 @@
 import { workLists } from "@/constants";
 
-const WorkList = async () => {
+const WorkList = () => {
   return (
     <section className="py-16 bg-white" id="worklist">
       <div className="container">
