@@ -59,11 +59,11 @@ export const featureProjects = [
   },
 ];
 
-export const statLinks = [
-  { name: "Followers", value: "240,324", image: "/icons/stats.png" },
-  { name: "Solved Problems", value: "6,510", image: "/icons/solved.png" },
-  { name: "Happy Customers", value: "4,350", image: "/icons/customer.png" },
-  { name: "Projects", value: "19,324", image: "/icons/project.png" },
+export const statsList = [
+  { name: "Followers", value: "240324", image: "/icons/stats.png" },
+  { name: "Solved Problems", value: "6510", image: "/icons/solved.png" },
+  { name: "Happy Customers", value: "4350", image: "/icons/customer.png" },
+  { name: "Projects", value: "19324", image: "/icons/project.png" },
 ];
 
 export const workLists = [

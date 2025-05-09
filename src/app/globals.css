@@ -47,3 +47,13 @@
 }
 
 @tailwind utilities;
+
+/* Swipper CSS */
+.testimonial_swiper {
+  position: relative;
+  height: auto;
+}
+
+.testimonial_swiper {
+  position: relative;
+}
