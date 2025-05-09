@@ -1,3 +1,4 @@
+import { Content } from "next/font/google";
 import { FaFacebook, FaTwitter, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import { PiInstagramLogoFill } from "react-icons/pi";
 
@@ -60,34 +61,34 @@ export const featureProjects = [
 ];
 
 export const statsList = [
-  { name: "Followers", value: "240324", image: "/icons/stats.png" },
-  { name: "Solved Problems", value: "6510", image: "/icons/solved.png" },
-  { name: "Happy Customers", value: "4350", image: "/icons/customer.png" },
-  { name: "Projects", value: "19324", image: "/icons/project.png" },
+  { name: "Followers", value: "20324", video: "./videos/followers.mp4" },
+  { name: "Solved Problems", value: "2510", video: "./videos/thumbs-up.mp4" },
+  { name: "Happy Customers", value: "350", video: "./videos/smiley-face.mp4" },
+  { name: "Projects", value: "154", video: "./videos/projects.mp4" },
 ];
 
 export const workLists = [
   {
-    title: "AI Website Design",
-    image: "./icons/Heart.png",
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et recusandae veniam magnam? Eum, repudiandae accusantium.",
+    title: "Strategic Planning & Consulting",
+    video: "./videos/Strategic-planning-onsulting.mp4",
+    desc: "We analyze your business model and develop a clear roadmap tailored to your goals, helping you scale effectively and efficiently.",
   },
   {
-    title: "Mobile App Concept",
-    image: "./icons/Heart.png",
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et recusandae veniam magnam? Eum, repudiandae accusantium.",
+    title: "Marketing & Brand Visibility",
+    video: "./videos/marketing-brand-visibility.mp4",
+    desc: "From SEO to social media, we amplify your brand’s reach and attract the right customers through data-driven campaigns.",
   },
   {
-    title: "Desktop App Concept",
-    image: "./icons/Heart.png",
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et recusandae veniam magnam? Eum, repudiandae accusantium.",
+    title: "Modern Technology & Automation",
+    video: "./videos/technology-automation.mp4",
+    desc: "Leverage the power of modern tools and automation to streamline operations, reduce costs, and boost productivity.",
   },
 ];
 
 export const services = [
   {
     id: 1,
-    title: "Web Design",
+    title: "Software Development",
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
     image1: "./static/T-logo.png",
     image2: "./static/T-logo.png",
@@ -96,7 +97,7 @@ export const services = [
   },
   {
     id: 2,
-    title: "Mobile App Design",
+    title: "Content Writing",
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
     image1: "./static/T-logo.png",
     image2: "./static/T-logo.png",
@@ -105,24 +106,6 @@ export const services = [
   },
   {
     id: 3,
-    title: "UI/UX Design",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
-    image1: "./static/T-logo.png",
-    image2: "./static/T-logo.png",
-    image3: "./static/T-logo.png",
-    image4: "./static/T-logo.png",
-  },
-  {
-    id: 4,
-    title: "Branding",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
-    image1: "./static/T-logo.png",
-    image2: "./static/T-logo.png",
-    image3: "./static/T-logo.png",
-    image4: "./static/T-logo.png",
-  },
-  {
-    id: 5,
     title: "Graphic Design",
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
     image1: "./static/T-logo.png",
@@ -137,7 +120,7 @@ export const teamMembers = [
     id: 1,
     name: "Zaineb Nawaz",
     designation: "CEO",
-    image: "./static/T-logo.png",
+    image: "/static/T-logo.png",
     facebook: "#",
     twitter: "#",
     linkedIn: "https://www.linkedin.com/in/zaineb-nawaz/",
@@ -147,7 +130,7 @@ export const teamMembers = [
     id: 2,
     name: "Shaheer Mansoor",
     designation: "Full Stack Software Engineer",
-    image: "./static/T-logo.png",
+    image: "/images/shaheer-potrait.webp",
     facebook: "#",
     twitter: "#",
     linkedIn: "https://www.linkedin.com/in/shaheer-mansoor/",
@@ -157,7 +140,7 @@ export const teamMembers = [
     id: 3,
     name: "Umair Bilal",
     designation: "Mobile App Developer",
-    image: "./static/T-logo.png",
+    image: "/static/T-logo.png",
     facebook: "#",
     twitter: "#",
     linkedIn: "https://www.linkedin.com/in/umair-bilal-/",
@@ -165,9 +148,9 @@ export const teamMembers = [
   },
   {
     id: 4,
-    name: "Salman Waqqar",
-    designation: "Business Analyst",
-    image: "./static/T-logo.png",
+    name: "Suleman Waqqar",
+    designation: "Business Development & Operations Manager",
+    image: "/images/salman-potrait.webp",
     facebook: "#",
     twitter: "#",
     linkedIn: "https://www.linkedin.com/in/suleman-waqqar/",
@@ -178,16 +161,16 @@ export const teamMembers = [
 export const testimonials = [
   {
     id: 1,
-    name: "John Doe",
-    designation: "CEO, Company",
-    msg: "This is a testimonial message.",
+    name: "Satya Nadella",
+    designation: "CEO, Microsoft",
+    msg: "Team 'The Travels of Zee' routinely impressed not only me but the entire Microsoft team.",
     image: "./static/T-logo.png",
   },
   {
     id: 2,
     name: "Jane Smith",
     designation: "CTO, Company",
-    msg: "This is another testimonial message.",
+    msg: "The Travels of Zee team excelled in crafting our impressive website, garnering client praise and ongoing benefits.",
     image: "./static/T-logo.png",
   },
   {
