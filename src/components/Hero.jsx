@@ -13,9 +13,14 @@ const Hero = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas
               lobortis.
             </p>
-            <button className="font-poppins font-normal text-lg text-white mt-5 md:mt-[50px] bg-brandPrimary px-[30px] py-5 rounded-[16px] hover:bg-brandPrimary/90 duration-300">
-              Get Started
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 mt-5 md:mt-[50px]">
+              <button className="font-poppins font-normal text-lg text-white mt-5 md:mt-[50px] bg-brandPrimary px-[30px] py-5 rounded-[16px] hover:bg-brandPrimary/90 duration-300">
+                Get Started
+              </button>
+              <button className="font-poppins font-normal text-lg text-brandPrimary border border-brandPrimary mt-5 md:mt-[50px] px-[30px] py-5 rounded-[16px] hover:bg-brandPrimary/10 duration-300">
+                Learn More
+              </button>
+            </div>
           </div>
           <div className="w-full order-first md:order-last lg:px-4">
             <div className="flex flex-wrap ">
