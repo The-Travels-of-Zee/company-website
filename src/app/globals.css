@@ -43,7 +43,7 @@
 
 /*============= Hero Section Css ========= */
 .hero_bg {
-  background: linear-gradient(180deg, #d7f5dc 0%, #d7f5dc 100%);
+  background: #ffead7;
 }
 
 @tailwind utilities;
