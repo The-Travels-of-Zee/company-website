@@ -6,14 +6,14 @@ const Services = () => {
       <div className="container">
         <div className="content">
           <p className="tagline_text">Our All Services</p>
-          <h2 className="sub_heading mt-4 max-w-[500px]">We Provide Best Web Design Services</h2>
+          <h2 className="sub_heading mt-4 max-w-[500px]">We Provide Best In Class Services</h2>
         </div>
 
         <div className="service_card_container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-[50px]">
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-white cursor-pointer shadow-brandShadow rounded-[20px] overflow-hidden aspect-[1/1] max-w-full flex flex-col p-6"
+              className="bg-white shadow-brandShadow hover:shadow-brandOrange transition-all duration-300 rounded-[20px] overflow-hidden aspect-[1/1] max-w-full flex flex-col p-6"
             >
               {/* Title & Description */}
               <div className="flex flex-col flex-1">

@@ -28,7 +28,7 @@ const SiteNavbar = () => {
                 <Link
                   href={item.href}
                   className={`${
-                    currentPath === item.href && (item.href === "/" || item.href === "/services")
+                    currentPath === item.href && (item.href === "/" || item.href === "/contact")
                       ? "text-brandPrimary border-b border-brandPrimary"
                       : "text-black"
                   } p-[10px] text-center font-poppins font-medium capitalize`}
@@ -37,18 +37,11 @@ const SiteNavbar = () => {
                 </Link>
               </li>
             ))}
-
-            {/* <li>
-              <Link
-                href={""}
-                className="font-poppins  font-medium text-black py-[10px] px-6 border-brandPrimary border rounded-lg hover:border-transparent hover:bg-brandPrimary duration-300 hover:text-white"
-              >
-                Login
-              </Link>
-            </li> */}
             <li>
               <Link
-                href=""
+                href="https://calendly.com/shaheermansoor321/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-poppins font-medium text-white py-[10px] px-6 bg-brandPrimary border-2 border-transparent rounded-lg hover:bg-transparent hover:border-brandPrimary duration-300 hover:text-black"
               >
                 <IoCall className="text-xl" />
@@ -74,34 +67,27 @@ const SiteNavbar = () => {
             {navbarLinks.map((item) => (
               <li>
                 <Link
-                  key={item.name}
-                  onClick={() => setMobileActive(!mobileActive)}
                   href={item.href}
                   className={`${
-                    item.href === "/" ? "text-blueLight" : "text-white"
-                  } p-[10px] text-center  font-poppins font-medium capitalize `}
+                    currentPath === item.href && (item.href === "/" || item.href === "/contact")
+                      ? "text-brandPrimary border-b border-brandPrimary"
+                      : "text-black"
+                  } p-[10px] text-center font-poppins font-medium capitalize`}
                 >
                   {item.name}
                 </Link>
               </li>
             ))}
-
-            {/* <li className="my-5">
-              <Link
-                href={""}
-                className="font-poppins  font-medium text-black py-[10px] px-6 border-brandPrimary border rounded-lg hover:border-transparent hover:bg-brandPrimary duration-300 hover:text-white"
-              >
-                Login
-              </Link>
-            </li> */}
             <li>
-              <Link
-                href=""
+              <a
+                href="https://calendly.com/shaheermansoor321/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-poppins font-medium text-white py-[10px] px-6 bg-brandPrimary border border-transparent rounded-lg hover:bg-transparent hover:border-brandPrimary duration-300 hover:text-black"
               >
                 <IoCall className="text-xl" />
                 <span>Book a free call</span>
-              </Link>
+              </a>
             </li>
           </ul>
         )}

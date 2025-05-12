@@ -10,7 +10,8 @@ const SiteFooter = () => {
           <div className="logo_items">
             <img className="invert w-64" src="./static/full-logo-black.png" alt="logo" />
             <p className="font_avenir font-normal text-xl text-white max-w-[320px] text-left mt-5">
-              Some footer text about the Agency. Just a little description to help people understand you better
+              Our team has experience delivering solutions for startups, small businesses, and nonprofits across various
+              industries.
             </p>
             <div className="social_links flex items-center justify-start gap-4 mt-5">
               {socialLinks.map((item) => (
@@ -55,7 +56,7 @@ const SiteFooter = () => {
 
         <div className="copy_rights mt-16">
           <p className="font_avenir font-normal text-xl text-white text-left">
-            {`Copyright Design Agency ${new Date().getFullYear()}`}
+            {`Copyright The Travels of Zee ${new Date().getFullYear()}`}
           </p>
         </div>
       </div>

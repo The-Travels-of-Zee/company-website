@@ -4,24 +4,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   email: "",
-  //   message: "",
-  // });
-
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData((prev) => ({ ...prev, [name]: value }));
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log("Form Submitted:", formData);
-  //   // Optionally send form data to an API or service here
-  // };
 
   const form = useRef();
 
@@ -43,10 +26,10 @@ const ContactForm = () => {
       );
   };
   return (
-    <section className="pb-20 bg-gray-50">
+    <section className="py-20 hero-bg">
       <div className="container">
         {isSubmitted ? (
-          <div className="text-center max-w-2xl mx-auto bg-white px-10 py-20 rounded-[12px] shadow-brandShadow">
+          <div className="text-center max-w-2xl mx-auto bg-white px-10 py-20 rounded-[6px] shadow-brandShadow">
             <h2 className="text-4xl font-bold text-brandOrange mb-4">Thank You!</h2>
             <p className="text-lg text-gray-700">We will be reaching you in no time.</p>
           </div>
@@ -54,57 +37,114 @@ const ContactForm = () => {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="bg-white px-[20px] pt-10 pb-[30px] rounded-[12px] shadow-brandShadow max-w-2xl mx-auto"
+            className="bg-brandsBG text-black border border-gray-500 px-6 py-8 rounded-lg max-w-3xl mx-auto"
           >
-            <div className="mb-2">
-              <label htmlFor="name" className="block mb-2 text-lg font-medium text-gray-700">
-                Full Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="user_name"
-                required
-                // value={formData.name}
-                // onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-brandColor"
-              />
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* First Name */}
+              <div>
+                <label className="block text-sm font-medium mb-2">
+                  First Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="first_name"
+                  placeholder="E.g. John"
+                  required
+                  className="w-full bg-brandsBG border border-gray-700 text-black rounded-[8px] placeholder-gray-600 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-brandOrange"
+                />
+              </div>
+
+              {/* Last Name */}
+              <div>
+                <label className="block text-sm font-medium mb-2">
+                  Last Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="last_name"
+                  placeholder="E.g. Doe"
+                  required
+                  className="w-full bg-brandsBG border border-gray-700 text-black rounded-[8px] placeholder-gray-600 px-4 py-3 rounded-md"
+                />
+              </div>
+
+              {/* Email Address */}
+              <div>
+                <label className="block text-sm font-medium mb-2">
+                  Email Address <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  name="user_email"
+                  placeholder="E.g. name@website.com"
+                  required
+                  className="w-full bg-brandsBG border border-gray-700 text-black rounded-[8px] placeholder-gray-600 px-4 py-3 rounded-md"
+                />
+              </div>
+
+              {/* Phone Number */}
+              <div>
+                <label className="block text-sm font-medium mb-2">
+                  Phone Number <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="phone_number"
+                  placeholder="E.g. +1 3006005000"
+                  required
+                  className="w-full bg-brandsBG border border-gray-700 text-black rounded-[8px] placeholder-gray-600 px-4 py-3 rounded-md"
+                />
+              </div>
+
+              {/* Select Service */}
+              <div>
+                <label className="block text-sm font-medium mb-2">Select Service</label>
+                <select
+                  name="service"
+                  className="w-full bg-brandsBG border border-gray-700 text-black rounded-[8px] px-4 py-3 rounded-md"
+                >
+                  <option>Web Development</option>
+                  <option>App Development</option>
+                  <option>UI/UX Design</option>
+                  <option>Consultation</option>
+                </select>
+              </div>
+
+              {/* Your Budget */}
+              <div>
+                <label className="block text-sm font-medium mb-2">
+                  Your Budget <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="budget"
+                  placeholder="E.g. $3000"
+                  required
+                  className="w-full bg-brandsBG border border-gray-700 text-black rounded-[8px] placeholder-gray-600 px-4 py-3 rounded-md"
+                />
+              </div>
             </div>
 
-            <div className="mb-2">
-              <label htmlFor="email" className="block mb-2 text-lg font-medium text-gray-700">
-                Email Address
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="user_email"
-                required
-                // value={formData.email}
-                // onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-brandColor"
-              />
-            </div>
-
-            <div className="mb-2">
-              <label htmlFor="message" className="block mb-2 text-lg font-medium text-gray-700">
-                Message
+            {/* Message */}
+            <div className="mt-6 relative">
+              <label className="block text-sm font-medium mb-2">
+                Message <span className="text-red-500">*</span>
               </label>
               <textarea
-                id="message"
                 name="message"
                 rows="5"
+                maxLength={500}
+                placeholder="Enter your message..."
                 required
-                // value={formData.message}
-                // onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-brandColor"
-              ></textarea>
+                className="w-full bg-brandsBG border border-gray-700 text-black rounded-[8px] placeholder-gray-600 px-4 py-3 rounded-md resize-none"
+              />
+              <div className="text-sm text-right text-gray-600 mt-1">0 / 500</div>
             </div>
 
+            {/* Submit Button */}
             <button
               type="submit"
-              value={"Send"}
-              className="bg-brandOrange text-white px-6 py-3 rounded-[10px] font-medium hover:bg-opacity-90 transition"
+              className="mt-6 bg-brandOrange text-black rounded-[8px] px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition border-2 border-white"
             >
               Send Message
             </button>
