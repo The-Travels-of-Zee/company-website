@@ -1,5 +1,4 @@
-import { Content } from "next/font/google";
-import { FaFacebook, FaTwitter, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
+import { FaFacebook, FaLinkedinIn, FaEnvelope, FaBehance } from "react-icons/fa";
 import { PiInstagramLogoFill } from "react-icons/pi";
 
 export const navbarLinks = [
@@ -31,29 +30,22 @@ export const brands = [
 
 export const featureProjects = [
   {
-    title: "AI Website Design",
-    image: "./static/slack.png",
+    title: "Brainwave - AI Website Design",
+    image: "./static/projects-ai-landing-page.png",
     live: "#",
     created_at: "2024-05-01",
     updated_at: "2024-05-02",
   },
   {
-    title: "Mobile App Concept",
-    image: "./static/dropbox.png",
+    title: "Mobile Banking/Trading App",
+    image: "./static/projects-mobile-app-mockup.avif",
     live: "#",
     created_at: "2024-05-03",
     updated_at: "2024-05-04",
   },
   {
-    title: "Desktop App Concept",
-    image: "./static/spotify.png",
-    live: "#",
-    created_at: "2024-05-03",
-    updated_at: "2024-05-04",
-  },
-  {
-    title: "Desktop App Concept",
-    image: "./static/stripe.png",
+    title: "E-Banking Web App",
+    image: "./static/projects-banking-app.png",
     live: "#",
     created_at: "2024-05-03",
     updated_at: "2024-05-04",
@@ -89,29 +81,29 @@ export const services = [
   {
     id: 1,
     title: "Software Development",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
-    image1: "./static/T-logo.png",
-    image2: "./static/T-logo.png",
-    image3: "./static/T-logo.png",
-    image4: "./static/T-logo.png",
+    des: "Websites, Web Apps, Mobile Apps, MVPs",
+    image1: "./static/services-website-design.webp",
+    image2: "./static/services-ai-image.avif",
+    image3: "./static/services-mobile-mockup.avif",
+    image4: "./static/services-mobileapp-design.avif",
   },
   {
     id: 2,
     title: "Content Writing",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
-    image1: "./static/T-logo.png",
-    image2: "./static/T-logo.png",
-    image3: "./static/T-logo.png",
-    image4: "./static/T-logo.png",
+    des: "Blogs, SEO Content, Product Descriptions, Web Copy",
+    image1: "./static/services-travel-blog.png",
+    image2: "./static/services-web-copy.webp",
+    image3: "./static/services-seo.avif",
+    image4: "./static/services-product-description.avif",
   },
   {
     id: 3,
     title: "Graphic Design",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
-    image1: "./static/T-logo.png",
-    image2: "./static/T-logo.png",
-    image3: "./static/T-logo.png",
-    image4: "./static/T-logo.png",
+    des: "Logos, Branding, Social Creatives, UI/UX Design",
+    image1: "./static/services-palm-trees-design.png",
+    image2: "./static/services-shirt-poster.png",
+    image3: "./static/services-south-korea-cover.png",
+    image4: "./static/services-mountain-design.png",
   },
 ];
 
@@ -130,7 +122,7 @@ export const teamMembers = [
     id: 2,
     name: "Shaheer Mansoor",
     designation: "Full Stack Software Engineer",
-    image: "/images/shaheer-potrait.webp",
+    image: "/images/shaheer-portrait.webp",
     facebook: "#",
     twitter: "#",
     linkedIn: "https://www.linkedin.com/in/shaheer-mansoor/",
@@ -140,7 +132,7 @@ export const teamMembers = [
     id: 3,
     name: "Umair Bilal",
     designation: "Mobile App Developer",
-    image: "/static/T-logo.png",
+    image: "/images/umair-portrait.webp",
     facebook: "#",
     twitter: "#",
     linkedIn: "https://www.linkedin.com/in/umair-bilal-/",
@@ -150,7 +142,7 @@ export const teamMembers = [
     id: 4,
     name: "Suleman Waqqar",
     designation: "Business Development & Operations Manager",
-    image: "/images/salman-potrait.webp",
+    image: "/images/salman-portrait.webp",
     facebook: "#",
     twitter: "#",
     linkedIn: "https://www.linkedin.com/in/suleman-waqqar/",
@@ -161,46 +153,34 @@ export const teamMembers = [
 export const testimonials = [
   {
     id: 1,
-    name: "Satya Nadella",
-    designation: "CEO, Microsoft",
-    msg: "Team 'The Travels of Zee' routinely impressed not only me but the entire Microsoft team.",
-    image: "./static/T-logo.png",
+    name: "Kathy Ceuvas",
+    project_name: "Web Page Redesign",
+    designation: "Financial Coach",
+    msg: "I am beyond thrilled with the work The Travels of Zee did on my website! From start to finish, the entire process was smooth, efficient, and professional.",
+    image: "./images/client-kathy-portrait.webp",
   },
   {
     id: 2,
-    name: "Jane Smith",
-    designation: "CTO, Company",
-    msg: "The Travels of Zee team excelled in crafting our impressive website, garnering client praise and ongoing benefits.",
-    image: "./static/T-logo.png",
-  },
-  {
-    id: 3,
-    name: "Alice Johnson",
-    designation: "CFO, Company",
-    msg: "This is yet another testimonial message.",
-    image: "./static/T-logo.png",
-  },
-  {
-    id: 3,
-    name: "Alice Johnson",
-    designation: "CFO, Company",
-    msg: "This is yet another testimonial message.",
+    name: "Yasir",
+    project_name: "Website copywriter + SEO",
+    designation: "Blogger",
+    msg: "Great to work with you, very hardworking and honest with highly polished skills. Extremely recommended. I'll keep you in mind.",
     image: "./static/T-logo.png",
   },
 ];
 
 export const footerLinks = [
-  { name: "About Us", href: "/about" },
-  { name: "Portfolio", href: "/portfolio" },
+  // { name: "About Us", href: "/about" },
+  // { name: "Portfolio", href: "/portfolio" },
   { name: "Services", href: "/services" },
   { name: "Contact Us", href: "/contact" },
 ];
 
 export const socialLinks = [
-  { name: <FaFacebook />, href: "https://www.facebook.com/" },
-  { name: <FaTwitter />, href: "https://twitter.com/" },
-  { name: <FaLinkedinIn />, href: "https://www.linkedin.com/" },
-  { name: <PiInstagramLogoFill />, href: "https://www.instagram.com/" },
+  { name: <FaFacebook />, href: "https://www.facebook.com/profile.php?id=61561092740301" },
+  { name: <FaBehance />, href: "https://www.behance.net/thetravelsofzee/" },
+  { name: <FaLinkedinIn />, href: "https://www.linkedin.com/company/the-travels-of-zee/" },
+  { name: <PiInstagramLogoFill />, href: "https://www.instagram.com/thetravelsofzeeuk/" },
   { name: <FaEnvelope />, href: "mailto:info@thetravelsofzee.com" },
 ];
 

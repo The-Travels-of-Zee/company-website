@@ -16,7 +16,7 @@ const Team = () => {
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="member hover:shadow-bgBlueLight grayscale hover:grayscale-0 transition-all duration-300 shadow-brandShadow rounded-[20px] bg-white max-h-[400px]"
+              className="member hover:shadow-bgBlueLight grayscale hover:grayscale-0 transition-all duration-300 shadow-brandShadow rounded-[20px] bg-white md:max-h-[400px]"
             >
               <div className="image_container relative">
                 <Image

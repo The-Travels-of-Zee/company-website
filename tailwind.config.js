@@ -21,7 +21,7 @@ module.exports = {
         brandOrange: "#F39237",
         brandsBG: "#F8FFF9",
         brandSecondary: "#2E3E5C",
-        bgGray: "#F8F9FC",
+        bgGray: "#f2f2f7",
         brandDanger: "#D63230",
       },
       boxShadow: {

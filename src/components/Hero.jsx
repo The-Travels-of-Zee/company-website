@@ -49,9 +49,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="brand_container mt-20">
+        {/* <div className="brand_container mt-20">
           <Brand />
-        </div>
+        </div> */}
       </div>
     </section>
   );
