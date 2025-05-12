@@ -39,7 +39,7 @@ const SiteNavbar = () => {
             ))}
             <li>
               <Link
-                href="https://calendly.com/shaheermansoor321/30min"
+                href="https://calendly.com/thetravelsofzee-info/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-poppins font-medium text-white py-[10px] px-6 bg-brandPrimary border-2 border-transparent rounded-lg hover:bg-transparent hover:border-brandPrimary duration-300 hover:text-black"
@@ -80,7 +80,7 @@ const SiteNavbar = () => {
             ))}
             <li>
               <a
-                href="https://calendly.com/shaheermansoor321/30min"
+                href="https://calendly.com/thetravelsofzee-info/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-poppins font-medium text-white py-[10px] px-6 bg-brandPrimary border border-transparent rounded-lg hover:bg-transparent hover:border-brandPrimary duration-300 hover:text-black"

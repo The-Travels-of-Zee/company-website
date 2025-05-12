@@ -1,4 +1,5 @@
 import { services } from "@/constants";
+import Link from "next/link";
 
 const Services = () => {
   return (
@@ -13,7 +14,7 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-white shadow-brandShadow hover:shadow-brandOrange transition-all duration-300 rounded-[20px] overflow-hidden aspect-[1/1] max-w-full flex flex-col p-6"
+              className="bg-white py-[24px] pb-10 px-[30px] h-[520px] md:h-[480px] shadow-brandShadow hover:shadow-brandOrange transition-all duration-300 rounded-[20px] overflow-hidden aspect-[1/1] max-w-full flex flex-col p-6"
             >
               {/* Title & Description */}
               <div className="flex flex-col flex-1">
@@ -32,6 +33,14 @@ const Services = () => {
                   <img className="rounded-lg w-1/3 h-[120px] object-cover" src={service.image3} alt="services image" />
                   <img className="rounded-lg w-2/3 h-[120px] object-cover" src={service.image4} alt="services image" />
                 </div>
+                <Link href={service.link} target="_blank" rel="noopener noreferrer">
+                  <button className="font_avenir text-lg font-normal rounded-lg border-2 border-brandOrange bg-transparent hover:bg-brandOrange  duration-300 px-3 py-[10px] mt-11">
+                    <span className="flex items-center gap-2">
+                      Learn More
+                      <img src="/icons/arrow.png" alt="icon" />
+                    </span>
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

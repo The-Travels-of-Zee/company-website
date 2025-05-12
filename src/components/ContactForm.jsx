@@ -26,8 +26,13 @@ const ContactForm = () => {
       );
   };
   return (
-    <section className="py-20 hero-bg">
+    <section className="py-20 bg-[#ffead7]" id="contact">
       <div className="container">
+        <p className="tagline_text text-center">Get in Touch</p>
+        <h2 className="sub_heading max-w-[500px] mx-auto text-center capitalize mt-5">We are here to help you.</h2>
+        <p className="font_avenir text-[#8B8B8B] font-medium capitalize text-center mt-1 mb-10">
+          We will reach you in an instant.
+        </p>
         {isSubmitted ? (
           <div className="text-center max-w-2xl mx-auto bg-white px-10 py-20 rounded-[6px] shadow-brandShadow">
             <h2 className="text-4xl font-bold text-brandOrange mb-4">Thank You!</h2>

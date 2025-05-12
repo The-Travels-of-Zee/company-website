@@ -5,7 +5,7 @@ import Subscribe from "@/components/Subscribe";
 const Contact = () => {
   return (
     <>
-      <div className="pt-48 pb-20 bg-[#ffead7]">
+      <div className="pt-48 pb-20">
         <div className="container">
           <h1 className="heading">Get in Touch</h1>
           <p className="sub_heading font-light">We are here to help you.</p>
@@ -17,7 +17,7 @@ const Contact = () => {
       </div>
 
       <ContactForm />
-      <Subscribe />
+      {/* <Subscribe /> */}
     </>
   );
 };

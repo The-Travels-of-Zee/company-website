@@ -11,20 +11,40 @@ export const navbarLinks = [
 
 export const brands = [
   {
-    title: "slack",
-    image: "./static/slack.png",
+    title: "react",
+    image: "./static/react_icon.webp",
   },
   {
-    title: "dropbox",
-    image: "./static/dropbox.png",
+    title: "wordpress",
+    image: "./static/wordpress_icon.webp",
   },
   {
-    title: "spotify",
-    image: "./static/spotify.png",
+    title: "wix",
+    image: "./static/wix_icon.webp",
   },
   {
-    title: "stripe",
-    image: "./static/stripe.png",
+    title: "shopify",
+    image: "./static/shopify_icon.webp",
+  },
+  {
+    title: "figma",
+    image: "./static/figma_icon.webp",
+  },
+  {
+    title: "adobe",
+    image: "./static/adobe_icon.webp",
+  },
+  {
+    title: "flutter",
+    image: "./static/flutter_icon.webp",
+  },
+  {
+    title: "nextjs",
+    image: "./static/nextjs_icon.webp",
+  },
+  {
+    title: "nodejs",
+    image: "./static/nodejs_icon.webp",
   },
 ];
 
@@ -53,9 +73,9 @@ export const featureProjects = [
 ];
 
 export const statsList = [
-  { name: "Followers", value: "20324", video: "./videos/followers.mp4" },
-  { name: "Solved Problems", value: "2510", video: "./videos/thumbs-up.mp4" },
+  // { name: "Clients", value: "300+", video: "./videos/followers.mp4" },
   { name: "Happy Customers", value: "350", video: "./videos/smiley-face.mp4" },
+  { name: "Client Satifaction", value: "100%", video: "./videos/thumbs-up.mp4" },
   { name: "Projects", value: "154", video: "./videos/projects.mp4" },
 ];
 
@@ -77,11 +97,35 @@ export const workLists = [
   },
 ];
 
+export const workLists2 = [
+  {
+    title: "Complimentary Initial Meeting",
+    desc: "We understand your business goals and assess your needs.",
+  },
+  {
+    title: "Budget-Friendly Plan",
+    desc: "Tailored strategies that align with your budget and objectives.",
+  },
+  {
+    title: "Professional Implementation",
+    desc: "We bring the plan to life using best-in-class tools and expertise.",
+  },
+  {
+    title: "Thorough Quality Review",
+    desc: "Every step is reviewed to ensure it meets your expectations.",
+  },
+  {
+    title: "Continued Assistance",
+    desc: "Ongoing support to help your business grow beyond launch.",
+  },
+];
+
 export const services = [
   {
     id: 1,
     title: "Software Development",
-    des: "Websites, Web Apps, Mobile Apps, MVPs",
+    link: "https://thetravelsofzee.com/collections/frontpage",
+    des: "Websites(Wordpress, Wix), Ecommerce Platforms(Shopify), Web Apps, Mobile Apps",
     image1: "./static/services-website-design.webp",
     image2: "./static/services-ai-image.avif",
     image3: "./static/services-mobile-mockup.avif",
@@ -90,6 +134,7 @@ export const services = [
   {
     id: 2,
     title: "Content Writing",
+    link: "https://thetravelsofzee.com/",
     des: "Blogs, SEO Content, Product Descriptions, Web Copy",
     image1: "./static/services-travel-blog.png",
     image2: "./static/services-web-copy.webp",
@@ -99,6 +144,7 @@ export const services = [
   {
     id: 3,
     title: "Graphic Design",
+    link: "https://www.behance.net/thetravelsofzee",
     des: "Logos, Branding, Social Creatives, UI/UX Design",
     image1: "./static/services-palm-trees-design.png",
     image2: "./static/services-shirt-poster.png",
