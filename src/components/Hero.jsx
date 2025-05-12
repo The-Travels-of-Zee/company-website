@@ -3,7 +3,7 @@ import Brand from "./Brand";
 
 const Hero = () => {
   return (
-    <section className=" hero_bg pt-36 pb-9">
+    <section className=" hero_bg pt-36">
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 items-center container mx-auto ">
           <div className="content_container mt-5 md:mt-0">
@@ -49,9 +49,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        {/* <div className="brand_container mt-20">
+        <div className="brand_container mt-20">
           <Brand />
-        </div> */}
+        </div>
       </div>
     </section>
   );

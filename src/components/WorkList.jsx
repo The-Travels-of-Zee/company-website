@@ -1,5 +1,4 @@
-import { workLists } from "@/constants";
-import { TiTick } from "react-icons/ti";
+import { workLists, workLists2 } from "@/constants";
 
 const WorkList = () => {
   return (
@@ -9,25 +8,50 @@ const WorkList = () => {
           <p className="mb-4 tagline_text">Our Process</p>
           <h2 className="sub_heading max-w-[500px]">We provide the Perfect Solution to your business growth</h2>
         </div>
-        <div className="flex items-center justify-between mt-8 mb-12 relative">
-          {[
-            "Complimentary Initial Meeting",
-            "Budget-Friendly Plan",
-            "Professional Implementation",
-            "Thorough Quality Review",
-            "Continued Assistance",
-          ].map((step, index, arr) => (
-            <div key={index} className="flex flex-col items-center text-center flex-1 relative">
-              {/* Dot */}
-              <div className="w-4 h-4 bg-brandOrange rounded-lg z-10 mb-2" />
-              {/* Label */}
-              <p className="text-sm font-medium text-black max-w-[120px]">{step}</p>
-              {/* Line (except for last item) */}
-              {index !== arr.length - 1 && (
-                <div className="absolute top-2 left-1/2 w-full h-[2px] bg-gray-300 z-0" />
-              )}
-            </div>
-          ))}
+        <div className="relative my-20">
+          {/* Central vertical line */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-brandOrange transform -translate-x-1/2 z-0" />
+
+          <div className="flex flex-col space-y-16">
+            {workLists2.map((item, index) => {
+              const isLeft = index % 2 === 0;
+              return (
+                <div key={index} className="grid grid-cols-1 md:grid-cols-9 items-center relative">
+                  {/* Left side (on desktop only) */}
+                  <div className={`hidden md:block md:col-span-4 ${isLeft ? "text-right pr-8" : ""}`}>
+                    {isLeft && (
+                      <div className="bg-white p-6 rounded-lg shadow-md inline-block">
+                        <h3 className="text-xl font-semibold text-brandOrange">{item.title}</h3>
+                        <p className="mt-2 text-gray-700">{item.desc}</p>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Center dot + content (mobile & desktop center) */}
+                  <div className="col-span-1 flex flex-col items-center relative z-10">
+                    <div className="w-5 h-5 bg-brandOrange rounded-full border-4 border-white shadow-md" />
+                    {/* Mobile content (always shown on small screens) */}
+                    <div className="md:hidden mt-4 text-center px-4">
+                      <div className="bg-white p-6 rounded-lg shadow-md inline-block">
+                        <h3 className="text-xl font-semibold text-brandOrange">{item.title}</h3>
+                        <p className="mt-2 text-gray-700">{item.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right side (on desktop only) */}
+                  <div className={`hidden md:block md:col-span-4 ${!isLeft ? "text-left pl-8" : ""}`}>
+                    {!isLeft && (
+                      <div className="bg-white p-6 rounded-lg shadow-md inline-block">
+                        <h3 className="text-xl font-semibold text-brandOrange">{item.title}</h3>
+                        <p className="mt-2 text-gray-700">{item.desc}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 items-center mt-11">
