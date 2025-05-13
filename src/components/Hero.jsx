@@ -14,8 +14,8 @@ const Hero = () => {
               Ready to embark on this journey? Let’s create something amazing together
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-5 md:mt-[10px]">
-              <button className="font-poppins font-normal text-lg text-white mt-5 md:mt-[50px] bg-brandPrimary px-[30px] py-5 rounded-[16px] hover:bg-brandPrimary/90 duration-300">
-                <Link href="/contact">Get Started</Link>
+              <button className="font-poppins font-normal text-lg border-2 border-brandPrimary text-white mt-5 md:mt-[50px] bg-brandPrimary px-[24px] py-4 rounded-[16px] hover:bg-transparent hover:text-brandPrimary duration-300">
+                <Link href="#contact">Get Started</Link>
               </button>
               {/* <button className="font-poppins font-normal text-lg text-brandPrimary border border-brandPrimary mt-5 md:mt-[50px] px-[30px] py-5 rounded-[16px] hover:bg-brandPrimary/10 duration-300">
                 Learn More
