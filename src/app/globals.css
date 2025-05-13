@@ -41,6 +41,9 @@
 }
 /*-------------------End Headings Styles ---------------------*/
 
+html {
+  scroll-behavior: smooth;
+}
 /*============= Hero Section Css ========= */
 .hero_bg {
   background: #ffead7;

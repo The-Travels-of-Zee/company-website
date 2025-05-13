@@ -6,7 +6,7 @@ export const navbarLinks = [
   { name: "Services", href: "#services" },
   { name: "Projects", href: "#projects" },
   { name: "Testimonials", href: "#testimonials" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Contact Us", href: "#contact" },
 ];
 
 export const brands = [

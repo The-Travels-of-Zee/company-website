@@ -63,15 +63,15 @@ const SiteNavbar = () => {
           </button>
         </div>
         {mobileActive && (
-          <ul className="bg-black bg-opacity-65 backdrop-blur-lg absolute text-lg top-20 w-full pt-7 pb-16 grid grid-cols-1 gap-8 text-center rounded-lg transition-all duration-300 shadow-md shadow-[#2b2b2b]">
+          <ul className="bg-black/60 bg-opacity-65 backdrop-blur-lg absolute text-lg top-20 w-full pt-7 pb-16 grid grid-cols-1 gap-8 text-center rounded-lg transition-all duration-300 shadow-md shadow-[#2b2b2b]">
             {navbarLinks.map((item) => (
               <li>
                 <Link
                   href={item.href}
                   className={`${
                     currentPath === item.href && (item.href === "/" || item.href === "/contact")
-                      ? "text-brandPrimary border-b border-brandPrimary"
-                      : "text-black"
+                      ? "text-brandsBG border-b-4 border-blueLight"
+                      : "text-bgGray"
                   } p-[10px] text-center font-poppins font-medium capitalize`}
                 >
                   {item.name}
