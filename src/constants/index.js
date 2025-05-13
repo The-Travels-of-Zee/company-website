@@ -51,13 +51,13 @@ export const brands = [
 export const featureProjects = [
   {
     title: "Brainwave - AI Website Design",
-    image: "./static/projects-ai-landing-page.png",
+    image: "./static/projects-landing-page-design.webp",
     live: "#",
     created_at: "2024-05-01",
     updated_at: "2024-05-02",
   },
   {
-    title: "Mobile Banking/Trading App",
+    title: "Mobile Banking App",
     image: "./static/projects-mobile-app-mockup.avif",
     live: "#",
     created_at: "2024-05-03",
@@ -124,17 +124,17 @@ export const services = [
   {
     id: 1,
     title: "Software Development",
-    link: "https://thetravelsofzee.com/collections/frontpage",
+    link: "https://thetravelsofzee.com/",
     des: "Websites(Wordpress, Wix), Ecommerce Platforms(Shopify), Web Apps, Mobile Apps",
-    image1: "./static/services-website-design.webp",
-    image2: "./static/services-ai-image.avif",
+    image1: "./static/services-ai-image.avif",
+    image2: "./static/services-website-design.webp",
     image3: "./static/services-mobile-mockup.avif",
     image4: "./static/services-mobileapp-design.avif",
   },
   {
     id: 2,
     title: "Content Writing",
-    link: "https://thetravelsofzee.com/",
+    link: "https://thetravelsofzee.com/blogs/muslim-friendly-travel-tips/top-halal-friendly-accommodations-in-tokyo",
     des: "Blogs, SEO Content, Product Descriptions, Web Copy",
     image1: "./static/services-travel-blog.png",
     image2: "./static/services-web-copy.webp",

@@ -37,7 +37,7 @@ const FeatureProject = () => {
               {withoutFirstProject.map((project, index) => (
                 <div key={index} className="porject">
                   <Link href={project.live}>
-                    <img className="rounded-[20px]" src={project.image} alt="feature project" />
+                    <img className="rounded-[20px] h-28 md:h-48 w-auto object-cover" src={project.image} alt="feature project" />
                   </Link>
                   <p className="text-bgGray font_poppins font-normal text-sm mt-4">
                     App Design - {parseDate(project.created_at)}

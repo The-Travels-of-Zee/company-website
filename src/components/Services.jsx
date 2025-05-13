@@ -14,7 +14,7 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-white py-[24px] pb-10 px-[30px] h-[520px] md:h-[480px] shadow-brandShadow hover:shadow-brandOrange transition-all duration-300 rounded-[20px] overflow-hidden aspect-[1/1] max-w-full flex flex-col p-6"
+              className="bg-white py-[24px] px-[24px] h-[440px] md:h-[420px] shadow-brandShadow hover:shadow-brandOrange transition-all duration-300 rounded-[20px] overflow-hidden aspect-[1/1] max-w-full flex flex-col"
             >
               {/* Title & Description */}
               <div className="flex flex-col flex-1">
@@ -22,26 +22,28 @@ const Services = () => {
                 <p className="font-poppins font-normal text-[#9D9D9D] text-sm mt-3 line-clamp-3">{service.des}</p>
               </div>
 
-              {/* Images Section */}
-              <div className="mt-6 space-y-3">
-                <div className="flex gap-3">
-                  <img className="rounded-lg w-2/3 h-[90px] object-cover" src={service.image1} alt="services image" />
-                  <img className="rounded-lg w-1/3 h-[90px] object-cover" src={service.image2} alt="services image" />
-                </div>
-
-                <div className="flex gap-3">
-                  <img className="rounded-lg w-1/3 h-[120px] object-cover" src={service.image3} alt="services image" />
-                  <img className="rounded-lg w-2/3 h-[120px] object-cover" src={service.image4} alt="services image" />
-                </div>
-                <Link href={service.link} target="_blank" rel="noopener noreferrer">
-                  <button className="font_avenir text-lg font-normal rounded-lg border-2 border-brandOrange bg-transparent hover:bg-brandOrange  duration-300 px-3 py-[10px] mt-11">
-                    <span className="flex items-center gap-2">
-                      Learn More
-                      <img src="/icons/arrow.png" alt="icon" />
-                    </span>
-                  </button>
-                </Link>
+              {/* Images Section - Updated */}
+              <div className="flex gap-3">
+                <img
+                  className="rounded-lg w-1/2 h-[200px] object-contain shadow-brandShadow"
+                  src={service.image2}
+                  alt="services image"
+                />
+                <img
+                  className="rounded-lg w-1/2 h-[200px] object-contain shadow-brandShadow"
+                  src={service.image3}
+                  alt="services image"
+                />
               </div>
+
+              <Link href={service.link} target="_blank" rel="noopener noreferrer">
+                <button className="font_avenir text-lg font-normal rounded-lg border-2 border-brandOrange bg-transparent hover:bg-brandOrange duration-300 px-3 py-[10px] mt-6">
+                  <span className="flex items-center gap-2">
+                    Learn More
+                    <img src="/icons/arrow.png" alt="icon" />
+                  </span>
+                </button>
+              </Link>
             </div>
           ))}
         </div>
