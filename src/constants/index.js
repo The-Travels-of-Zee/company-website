@@ -88,7 +88,7 @@ export const workLists = [
   {
     title: "Marketing & Brand Visibility",
     video: "./videos/marketing-brand-visibility.mp4",
-    desc: "From SEO to social media, we amplify your brand’s reach and attract the right customers through data-driven campaigns.",
+    desc: "From Design to Development, we amplify your brand’s reach and attract the right customers through data-driven campaigns.",
   },
   {
     title: "Modern Technology & Automation",

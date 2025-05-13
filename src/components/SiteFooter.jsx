@@ -18,6 +18,8 @@ const SiteFooter = () => {
                 <Link
                   key={item.name}
                   href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-[100px]  bg-brandPrimary text-white flex items-center justify-center"
                 >
                   {item.name}
