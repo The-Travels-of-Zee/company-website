@@ -15,7 +15,16 @@ const StatsList = () => {
             ref={(el) => (itemRefs.current[index] = el)}
             className="w-full px-[47px] py-[71px] rounded-[20px] shadow-statsShadow flex items-center justify-center flex-col stats"
           >
-            <video src={item.video} autoPlay loop muted width={96} height={96} />
+            <video
+                src={item.video}
+                autoPlay
+                loop
+                muted
+                width={128}
+                height={128}
+                playsInline
+                className="pointer-events-none select-none"
+              />
             <p className="font-poppins font-semibold text-3xl text-black mt-5">
               {visibleStats[item.name] ? <CountUp end={parseInt(item.value)} duration={2} separator="," /> : 0}
               {item.name === "Client Satifaction" ? <span className="text-[16px]">%</span>: <span>+</span> }

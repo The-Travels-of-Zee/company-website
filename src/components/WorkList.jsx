@@ -60,7 +60,17 @@ const WorkList = () => {
               key={item.name}
               className="py-[24px] pb-10 px-[30px] card md:max-w-[380px]  hover:shadow-bgBlueLight transition-all duration-300 shadow-brandShadow rounded-[20px] bg-white"
             >
-              <video src={item.video} autoPlay loop muted width={128} height={128} />
+              <video
+                src={item.video}
+                autoPlay
+                loop
+                muted
+                width={128}
+                height={128}
+                playsInline
+                className="pointer-events-none select-none"
+              />
+
               <h3 className="font-poppins font-semibold text-2xl text-left text-black mt-4">{item.title}</h3>
               <p className="font_avenir font-normal text-lg text-black mt-4">{item.desc}</p>
               {/* <button className="font_avenir text-lg font-normal rounded-lg border-2 border-brandOrange bg-transparent hover:bg-brandOrange  duration-300 px-3 py-[10px] mt-11">
