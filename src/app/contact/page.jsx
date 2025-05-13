@@ -17,7 +17,7 @@ const Contact = () => {
       </div>
 
       <ContactForm />
-      {/* <Subscribe /> */}
+      <Subscribe />
     </>
   );
 };
