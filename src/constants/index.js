@@ -158,7 +158,7 @@ export const teamMembers = [
     id: 1,
     name: "Zaineb Nawaz",
     designation: "CEO",
-    image: "/static/T-logo.png",
+    image: "/images/zaineb-portrait.webp",
     facebook: "#",
     twitter: "#",
     linkedIn: "https://www.linkedin.com/in/zaineb-nawaz/",
