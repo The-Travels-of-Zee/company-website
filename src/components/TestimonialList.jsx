@@ -48,9 +48,9 @@ const TestimonialList = () => {
                   <p className="font-poppins font-normal text-[#9D9D9D] capitalize text-center mt-10 w-[70%]">
                     "{t.msg}"
                   </p>
-                  <h4 className="font-poppins font-semibold text-brandOrange text-[18px] text-center mt-7">
+                  <h6 className="font-poppins font-semibold text-brandOrange text-[18px] text-center mt-7">
                     {t.project_name}
-                  </h4>
+                  </h6>
                   <p className="font-poppins font-normal text-black mt-[10px] text-center">
                     {t.name}, {t.designation}
                   </p>

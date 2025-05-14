@@ -223,11 +223,11 @@ export const footerLinks = [
 ];
 
 export const socialLinks = [
-  { name: <FaFacebook />, href: "https://www.facebook.com/profile.php?id=61561092740301" },
-  { name: <FaBehance />, href: "https://www.behance.net/thetravelsofzee/" },
-  { name: <FaLinkedinIn />, href: "https://www.linkedin.com/company/the-travels-of-zee/" },
-  { name: <PiInstagramLogoFill />, href: "https://www.instagram.com/thetravelsofzeeuk/" },
-  { name: <FaEnvelope />, href: "mailto:info@thetravelsofzee.com" },
+  { name: "facebook", icon: <FaFacebook />, href: "https://www.facebook.com/profile.php?id=61561092740301" },
+  { name: "behance", icon: <FaBehance />, href: "https://www.behance.net/thetravelsofzee/" },
+  { name: "linkedIn", icon: <FaLinkedinIn />, href: "https://www.linkedin.com/company/the-travels-of-zee/" },
+  { name: "instagram", icon: <PiInstagramLogoFill />, href: "https://www.instagram.com/thetravelsofzeeuk/" },
+  { name: "email", icon: <FaEnvelope />, href: "mailto:info@thetravelsofzee.com" },
 ];
 
 // Not currently used in the project

@@ -42,6 +42,8 @@ const Team = () => {
                     className="text-[#737588] hover:text-blueLight duration-300 "
                     href={member.linkedIn}
                     target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="linkedin"
                   >
                     {" "}
                     <FaLinkedin className="size-8" />{" "}
