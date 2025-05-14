@@ -36,7 +36,7 @@ const Services = () => {
                 />
               </div>
 
-              <Link href={service.link} target="_blank" rel="noopener noreferrer">
+              <Link href={service.link} target="_blank" rel="noopener noreferrer" aria-label="Learn More">
                 <button className="font_avenir text-lg font-normal rounded-lg border-2 border-brandOrange bg-transparent hover:bg-brandOrange duration-300 px-3 py-[10px] mt-6">
                   <span className="flex items-center gap-2">
                     Learn More
