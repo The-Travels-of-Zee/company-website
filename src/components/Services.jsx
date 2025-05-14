@@ -18,7 +18,7 @@ const Services = () => {
             >
               {/* Title & Description */}
               <div className="flex flex-col flex-1">
-                <h4 className="font-poppins font-semibold text-[22px] text-black uppercase">{service.title}</h4>
+                <p className="font-poppins font-semibold text-[22px] text-black uppercase">{service.title}</p>
                 <p className="font-poppins font-normal text-[#9D9D9D] text-sm mt-3 line-clamp-3">{service.des}</p>
               </div>
 

@@ -19,8 +19,8 @@ export default function CustomNewsletterForm({ title = 'Subscribe', apiUrl = '/a
     }
 
     try {
-      console.log("Submitting to:", apiUrl);
-      console.log("Email:", email);
+      // console.log("Submitting to:", apiUrl);
+      // console.log("Email:", email);
       
       const response = await fetch(apiUrl, {
         method: 'POST',
@@ -32,7 +32,7 @@ export default function CustomNewsletterForm({ title = 'Subscribe', apiUrl = '/a
 
       console.log("Response status:", response.status);
       const data = await response.json();
-      console.log("Response data:", data);
+      // console.log("Response data:", data);
 
       if (!response.ok) {
         throw new Error(data.error || 'Something went wrong');

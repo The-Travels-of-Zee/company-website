@@ -12,15 +12,15 @@ export async function POST(req) {
     }
 
     // Log the email to verify we're getting it correctly
-    console.log("Subscribing email:", email);
+    // console.log("Subscribing email:", email);
 
     // Email Octopus API details
     const API_KEY = process.env.EMAIL_OCTOPUS_API_KEY;
     const LIST_ID = process.env.EMAIL_OCTOPUS_LIST_ID;
     
     // Log environment variables (redacted for security)
-    console.log("API Key available:", !!API_KEY);
-    console.log("List ID available:", !!LIST_ID);
+    // console.log("API Key available:", !!API_KEY);
+    // console.log("List ID available:", !!LIST_ID);
     
     if (!API_KEY || !LIST_ID) {
       console.error("Missing API key or List ID for EmailOctopus");
@@ -32,7 +32,7 @@ export async function POST(req) {
 
     // Make a direct API call to EmailOctopus
     const apiUrl = `https://emailoctopus.com/api/1.6/lists/${LIST_ID}/contacts`;
-    console.log("Making request to:", apiUrl);
+    // console.log("Making request to:", apiUrl);
     
     const response = await fetch(apiUrl, {
       method: 'POST',
@@ -47,11 +47,11 @@ export async function POST(req) {
     });
 
     const data = await response.json();
-    console.log("EmailOctopus API response:", data);
+    // console.log("EmailOctopus API response:", data);
 
     if (!response.ok) {
       // EmailOctopus returned an error
-      console.error("EmailOctopus API error:", data);
+      // console.error("EmailOctopus API error:", data);
       
       // Check for specific error codes from EmailOctopus
       if (data.error?.code === 'MEMBER_EXISTS_WITH_EMAIL_ADDRESS') {

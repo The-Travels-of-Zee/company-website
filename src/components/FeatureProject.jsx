@@ -26,9 +26,9 @@ const FeatureProject = () => {
               <p className="text-brandsBG font_poppins font-normal text-sm mt-4">
                 App Design - {parseDate(featureProjects[0].updated_at)}
               </p>
-              <h5 className="text-2xl font-bold font_poppins text-brandsBG mt-[10px]">
+              <p className="text-2xl font-bold font_poppins text-brandsBG mt-[10px]">
                 {featureProjects[0].title}
-              </h5>
+              </p>
             </div>
           </div>
 
@@ -42,9 +42,9 @@ const FeatureProject = () => {
                   <p className="text-bgGray font_poppins font-normal text-sm mt-4">
                     App Design - {parseDate(project.created_at)}
                   </p>
-                  <h6 className="text-lg font-bold font_poppins text-brandsBG text-left mt-[10px] max-w-[263px]">
+                  <p className="text-lg font-bold font_poppins text-brandsBG text-left mt-[10px] max-w-[263px]">
                     {project.title}
-                  </h6>
+                  </p>
                 </div>
               ))}
             </div>
