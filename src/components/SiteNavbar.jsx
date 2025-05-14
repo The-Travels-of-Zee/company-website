@@ -59,7 +59,7 @@ const SiteNavbar = () => {
         </div>
         <div className="menuBtn">
           <button className="text-brandPrimary text-4xl" onClick={() => setMobileActive(!mobileActive)}>
-            {mobileActive ? <IoClose className="text-brandPrimary" /> : <IoMenu />}
+            {mobileActive ? <IoClose className="text-brandPrimary" aria-label="open-menu" /> : <IoMenu aria-label="close-menu"/>}
           </button>
         </div>
         {mobileActive && (
