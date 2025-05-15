@@ -7,7 +7,7 @@ const Services = () => {
       <div className="container">
         <div className="content">
           <p className="tagline_text">Our All Services</p>
-          <h2 className="sub_heading mt-4 max-w-[500px]">We Provide Best In Class Services</h2>
+          <h2 className="sub_heading mt-4 max-w-[500px]">We Provide Best-in-Class Services</h2>
         </div>
 
         <div className="service_card_container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-[50px]">

@@ -10,7 +10,9 @@ const FeatureProject = () => {
       <div className="container">
         <div className="feature_project_content">
           <p className="tagline_text text-brandsBG">Featured Project</p>
-          <h2 className="sub_heading mt-6 max-w-[500px] text-brandsBG">We provide the Perfect Solution to your business growth</h2>
+          <h2 className="sub_heading mt-6 max-w-[500px] text-brandsBG">
+            We Provide the Perfect Solution for Your Business Growth
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-[30px] mt-[70px] projects_container">
@@ -24,11 +26,9 @@ const FeatureProject = () => {
                 />
               </Link>
               <p className="text-brandsBG font_poppins font-normal text-sm mt-4">
-                App Design - {parseDate(featureProjects[0].updated_at)}
+                {featureProjects[0].category} - {parseDate(featureProjects[0].updated_at)}
               </p>
-              <p className="text-2xl font-bold font_poppins text-brandsBG mt-[10px]">
-                {featureProjects[0].title}
-              </p>
+              <p className="text-2xl font-bold font_poppins text-brandsBG mt-[10px]">{featureProjects[0].title}</p>
             </div>
           </div>
 
@@ -37,10 +37,14 @@ const FeatureProject = () => {
               {withoutFirstProject.map((project, index) => (
                 <div key={index} className="porject">
                   <Link href={project.live}>
-                    <img className="rounded-[20px] h-28 md:h-48 w-auto object-cover" src={project.image} alt="feature project" />
+                    <img
+                      className="rounded-[20px] h-28 md:h-48 w-auto object-cover"
+                      src={project.image}
+                      alt="feature project"
+                    />
                   </Link>
                   <p className="text-bgGray font_poppins font-normal text-sm mt-4">
-                    App Design - {parseDate(project.created_at)}
+                    {project.category} - {parseDate(project.created_at)}
                   </p>
                   <p className="text-lg font-bold font_poppins text-brandsBG text-left mt-[10px] max-w-[263px]">
                     {project.title}

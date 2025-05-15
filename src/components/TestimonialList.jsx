@@ -14,7 +14,7 @@ const TestimonialList = () => {
     <section className="pt-16 pb-20 bg-brandsBG" id="testimonials">
       <div className="container">
         <div className="content">
-          <p className="tagline_text">Testimonial List</p>
+          <p className="tagline_text">Testimonials</p>
           <h2 className="sub_heading mt-4 max-w-[500px]">Our Happy Clients</h2>
         </div>
 

@@ -50,15 +50,17 @@ export const brands = [
 
 export const featureProjects = [
   {
-    title: "Brainwave - AI Website Design",
+    title: "Financial Freedom Pathway",
     image: "./static/projects-landing-page-design.webp",
-    live: "#",
+    category: "Website Design",
+    live: "https://www.financialfreedompathway.us/",
     created_at: "2024-05-01",
     updated_at: "2024-05-02",
   },
   {
     title: "Mobile Banking App",
     image: "./static/projects-mobile-app-mockup.avif",
+    category: "Mobile App Design",
     live: "#",
     created_at: "2024-05-03",
     updated_at: "2024-05-04",
@@ -66,6 +68,7 @@ export const featureProjects = [
   {
     title: "E-Banking Web App",
     image: "./static/projects-banking-app.png",
+    category: "Web App Design",
     live: "#",
     created_at: "2024-05-03",
     updated_at: "2024-05-04",
@@ -74,9 +77,9 @@ export const featureProjects = [
 
 export const statsList = [
   // { name: "Clients", value: "300+", video: "./videos/followers.mp4" },
-  { name: "Happy Customers", value: "350", video: "./videos/smiley-face.mp4" },
+  { name: "Happy Customers", value: "30", video: "./videos/smiley-face.mp4" },
   { name: "Client Satifaction", value: "100%", video: "./videos/thumbs-up.mp4" },
-  { name: "Projects", value: "154", video: "./videos/projects.mp4" },
+  { name: "Projects", value: "50", video: "./videos/projects.mp4" },
 ];
 
 export const workLists = [
