@@ -58,8 +58,8 @@ export const featureProjects = [
     updated_at: "2024-05-02",
   },
   {
-    title: "Mobile Banking App",
-    image: "./static/projects-mobile-app-mockup.avif",
+    title: "FarahGPT - Islamic Mentorship",
+    image: "./static/projects-mobile-app-mockup.webp",
     category: "Mobile App Design",
     live: "#",
     created_at: "2024-05-03",
