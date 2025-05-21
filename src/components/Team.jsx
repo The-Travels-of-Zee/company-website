@@ -26,8 +26,15 @@ const Team = () => {
                   width={200}
                   height={300}
                 />
-                <div className="social_links flex items-center justify-center bg-white py-4 px-4 shadow-teamShadow rounded-[50px] absolute bottom-4 gap-4 left-12 -translate-x-1/2">
-                  {/* <Link
+                <Link
+                  className="text-[#737588] hover:text-blueLight duration-300 "
+                  href={member.linkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="linkedin"
+                >
+                  <div className="social_links flex items-center justify-center bg-white py-4 px-4 shadow-teamShadow rounded-[50px] absolute bottom-4 gap-4 left-12 -translate-x-1/2">
+                    {/* <Link
                     className="text-[#737588] hover:text-blueLight duration-300 "
                     href={member.facebook}
                     target="_blank"
@@ -38,18 +45,9 @@ const Team = () => {
 
                   <div className="line bg-[#E3E3E3] w-[1px] h-4 "></div> */}
 
-                  <Link
-                    className="text-[#737588] hover:text-blueLight duration-300 "
-                    href={member.linkedIn}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="linkedin"
-                  >
-                    {" "}
-                    <FaLinkedin className="size-8" />{" "}
-                  </Link>
+                    <FaLinkedin className="size-8" />
 
-                  {/* <div className="line bg-[#E3E3E3] w-[1px] h-4 "></div>
+                    {/* <div className="line bg-[#E3E3E3] w-[1px] h-4 "></div>
 
                   <Link
                     className="text-[#737588] hover:text-blueLight duration-300 "
@@ -70,7 +68,8 @@ const Team = () => {
                     {" "}
                     <FaInstagram />{" "}
                   </Link> */}
-                </div>
+                  </div>
+                </Link>
               </div>
               <div className="pt-4 pb-10">
                 <h3 className="text-[#101A29] font-poppins text-[20px] font-semibold text-center">{member.name}</h3>

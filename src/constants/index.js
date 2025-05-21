@@ -223,6 +223,7 @@ export const footerLinks = [
   // { name: "Portfolio", href: "/portfolio" },
   { name: "Services", href: "/services" },
   { name: "Contact Us", href: "/contact" },
+  { name: "Privacy Policy", href: "/privacy-policy" },
 ];
 
 export const socialLinks = [
@@ -262,3 +263,36 @@ export const allProjects = [
     updated_at: "2024-05-04",
   },
 ];
+
+export const privacyPolicy = `
+# Privacy Policy
+
+**Last Updated: May 21, 2025**
+
+At **The Travels of Zee**, your privacy matters to us. We only collect your email address when you voluntarily provide it through our **newsletter subscription form** or **contact form**.
+
+## What We Collect
+
+- **Email Address** — when you subscribe to our newsletter or reach out through our contact form.
+
+## How We Use It
+
+- To send you updates, travel stories, and occasional newsletters.  
+- To respond to your inquiries or messages.
+
+## What We Don’t Do
+
+- We **do not sell**, share, or rent your email to third parties.  
+- We **do not track** or store any personal data beyond your email address.
+
+## Your Choices
+
+You can unsubscribe from our emails at any time using the link at the bottom of any newsletter.  
+If you’d like your email removed from our records, just contact us directly.
+
+---
+
+### **Contact Us**
+
+If you have any questions about this policy, please reach out via our _[contact form](/contact)_.
+`;
