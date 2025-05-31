@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
           <div className="navigation">
             <Breadcrumb />
           </div>
-          <div className="mt-10">
+          <div className="mt-10 prose md:prose-lg mx-auto">
             <Markdown>{privacyPolicy}</Markdown>
           </div>
         </div>

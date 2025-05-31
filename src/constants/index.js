@@ -265,8 +265,6 @@ export const allProjects = [
 ];
 
 export const privacyPolicy = `
-# Privacy Policy
-
 **Last Updated: May 21, 2025**
 
 At **The Travels of Zee**, your privacy matters to us. We only collect your email address when you voluntarily provide it through our **newsletter subscription form** or **contact form**.
