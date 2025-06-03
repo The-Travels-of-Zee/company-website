@@ -60,16 +60,16 @@ export const featureProjects = [
   {
     title: "FarahGPT - Islamic Mentorship",
     image: "./static/projects-mobile-app-mockup.webp",
-    category: "Mobile App Design",
-    live: "#",
+    category: "Mobile App",
+    live: "https://farahgpt.com/",
     created_at: "2024-05-03",
     updated_at: "2024-05-04",
   },
   {
-    title: "E-Banking Web App",
-    image: "./static/projects-banking-app.png",
-    category: "Web App Design",
-    live: "#",
+    title: "The Natalie Strong Foundation",
+    image: "./static/projects-natalie-strong-foundation.webp",
+    category: "Website Redesign",
+    live: "https://www.nataliestrong.org/",
     created_at: "2024-05-03",
     updated_at: "2024-05-04",
   },
@@ -130,8 +130,8 @@ export const services = [
     link: "https://thetravelsofzee.com/",
     des: "Websites(Wordpress, Wix), Ecommerce Platforms(Shopify), Web Apps, Mobile Apps",
     image1: "./static/services-ai-image.avif",
-    image2: "./static/services-website-design.webp",
-    image3: "./static/services-mobile-mockup.avif",
+    image2: "./static/projects-natalie-strong-foundation.webp",
+    image3: "./static/projects-mobile-app-mockup.webp",
     image4: "./static/services-mobileapp-design.avif",
   },
   {
@@ -215,6 +215,14 @@ export const testimonials = [
     designation: "Blogger",
     msg: "Great to work with you, very hardworking and honest with highly polished skills. Extremely recommended. I'll keep you in mind.",
     image: "./static/T-logo.png",
+  },
+  {
+    id: 3,
+    name: "Oscar A. Rodriguez",
+    project_name: "Website Redesign + SEO",
+    designation: "Executive Director at The Natalie Strong Foundation",
+    msg: "The Travels of Zee did a fantastic job redesigning the website. They were professional, creative, and incredibly easy to work with and they delivered exactly what we needed.",
+    image: "./images/Oscar-A-Rodriguez.avif",
   },
 ];
 
