@@ -1,6 +1,7 @@
-import FeatureProject from "@/components/FeatureProject";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import FeatureProject from "@/components/ClientProjects";
+import CompanyProjects from "@/components/CompanyProjects";
 import StatsList from "@/components/StatList";
 import Subscribe from "@/components/Subscribe";
 import Team from "@/components/Team";
@@ -15,6 +16,7 @@ export default function Home() {
       <WorkList />
       <Services />
       <FeatureProject />
+      <CompanyProjects />
       <StatsList />
       <TestimonialList />
       <Team />
