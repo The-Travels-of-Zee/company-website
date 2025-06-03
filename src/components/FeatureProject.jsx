@@ -24,11 +24,11 @@ const FeatureProject = () => {
                   src={featureProjects[0].image}
                   alt="feature project"
                 />
+                <p className="text-brandsBG font_poppins font-normal text-sm mt-4">
+                  {featureProjects[0].category} - {parseDate(featureProjects[0].updated_at)}
+                </p>
+                <p className="text-2xl font-bold font_poppins text-brandsBG mt-[10px]">{featureProjects[0].title}</p>
               </Link>
-              <p className="text-brandsBG font_poppins font-normal text-sm mt-4">
-                {featureProjects[0].category} - {parseDate(featureProjects[0].updated_at)}
-              </p>
-              <p className="text-2xl font-bold font_poppins text-brandsBG mt-[10px]">{featureProjects[0].title}</p>
             </div>
           </div>
 
@@ -36,19 +36,19 @@ const FeatureProject = () => {
             <div className="grid grid-cols-2 items-start gap-[30px]">
               {withoutFirstProject.map((project, index) => (
                 <div key={index} className="porject">
-                  <Link href={project.live}>
+                  <Link href={project.live} target="_blank" rel="noopener noreferrer">
                     <img
                       className="rounded-[20px] h-28 md:h-48 w-auto object-cover"
                       src={project.image}
                       alt="feature project"
                     />
+                    <p className="text-bgGray font_poppins font-normal text-sm mt-4">
+                      {project.category} - {parseDate(project.created_at)}
+                    </p>
+                    <p className="text-lg font-bold font_poppins text-brandsBG text-left mt-[10px] max-w-[263px]">
+                      {project.title}
+                    </p>
                   </Link>
-                  <p className="text-bgGray font_poppins font-normal text-sm mt-4">
-                    {project.category} - {parseDate(project.created_at)}
-                  </p>
-                  <p className="text-lg font-bold font_poppins text-brandsBG text-left mt-[10px] max-w-[263px]">
-                    {project.title}
-                  </p>
                 </div>
               ))}
             </div>
