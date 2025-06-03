@@ -48,7 +48,7 @@ export const brands = [
   },
 ];
 
-export const featureProjects = [
+export const clientProjects = [
   {
     title: "Financial Freedom Pathway",
     image: "./static/projects-landing-page-design.webp",
@@ -58,18 +58,21 @@ export const featureProjects = [
     updated_at: "2024-05-02",
   },
   {
-    title: "FarahGPT - Islamic Mentorship",
-    image: "./static/projects-mobile-app-mockup.webp",
-    category: "Mobile App",
-    live: "https://farahgpt.com/",
-    created_at: "2024-05-03",
-    updated_at: "2024-05-04",
-  },
-  {
     title: "The Natalie Strong Foundation",
     image: "./static/projects-natalie-strong-foundation.webp",
     category: "Website Redesign",
     live: "https://www.nataliestrong.org/",
+    created_at: "2024-05-03",
+    updated_at: "2024-05-04",
+  },
+];
+
+export const companyProjects = [
+  {
+    title: "FarahGPT - Islamic Mentorship",
+    image: "./static/projects-mobile-app-mockup.webp",
+    category: "Mobile App",
+    live: "https://farahgpt.com/",
     created_at: "2024-05-03",
     updated_at: "2024-05-04",
   },

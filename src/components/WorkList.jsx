@@ -12,41 +12,49 @@ const WorkList = () => {
           {/* Central vertical line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-brandOrange transform -translate-x-1/2 z-0" />
 
-          <div className="flex flex-col space-y-16">
+          <div className="flex flex-col space-y-8 md:space-y-4">
             {workLists2.map((item, index) => {
               const isLeft = index % 2 === 0;
               return (
-                <div key={index} className="grid grid-cols-1 md:grid-cols-9 items-center relative">
-                  {/* Left side (on desktop only) */}
-                  <div className={`hidden md:block md:col-span-4 ${isLeft ? "text-right pr-8" : ""}`}>
-                    {isLeft && (
-                      <div className="bg-white p-6 rounded-lg shadow-md inline-block">
+                <div key={index} className="grid grid-cols-1 md:grid-cols-9 items-center justify-center relative">
+                  {/* Left card */}
+                  <div className={`hidden md:flex md:col-span-4 justify-end ${isLeft ? "" : "invisible"}`}>
+                    <div className="relative">
+                      <div className="bg-white w-[350px] h-[140px] p-6 rounded-xl shadow-md flex flex-col justify-center items-center text-center">
                         <h3 className="text-xl font-semibold text-brandOrange">{item.title}</h3>
                         <p className="mt-2 text-gray-700">{item.desc}</p>
                       </div>
-                    )}
-                  </div>
-
-                  {/* Center dot + content (mobile & desktop center) */}
-                  <div className="col-span-1 flex flex-col items-center relative z-10">
-                    <div className="w-5 h-5 bg-brandOrange rounded-full border-4 border-white shadow-md" />
-                    {/* Mobile content (always shown on small screens) */}
-                    <div className="md:hidden mt-4 text-center px-4">
-                      <div className="bg-white p-6 rounded-lg shadow-md inline-block">
-                        <h3 className="text-xl font-semibold text-brandOrange">{item.title}</h3>
-                        <p className="mt-2 text-gray-700">{item.desc}</p>
-                      </div>
+                      {/* Connector line to dot */}
+                      <div className="absolute top-1/2 right-[-32px] w-[32px] h-[2px] bg-brandOrange transform -translate-y-1/2" />
                     </div>
                   </div>
 
-                  {/* Right side (on desktop only) */}
-                  <div className={`hidden md:block md:col-span-4 ${!isLeft ? "text-left pl-8" : ""}`}>
-                    {!isLeft && (
-                      <div className="bg-white p-6 rounded-lg shadow-md inline-block">
+                  {/* Center dot */}
+                  <div className="col-span-1 flex flex-col items-center z-10">
+                    <span className="relative flex h-5 w-5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandOrange opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-5 w-5 bg-brandOrange border-4 border-white shadow-md"></span>
+                    </span>
+                  </div>
+
+                  {/* Right card */}
+                  <div className={`hidden md:flex md:col-span-4 justify-start ${!isLeft ? "" : "invisible"}`}>
+                    <div className="relative">
+                      <div className="bg-white w-[350px] h-[140px] p-6 rounded-xl shadow-md flex flex-col justify-center items-center text-center">
                         <h3 className="text-xl font-semibold text-brandOrange">{item.title}</h3>
                         <p className="mt-2 text-gray-700">{item.desc}</p>
                       </div>
-                    )}
+                      {/* Connector line to dot */}
+                      <div className="absolute top-1/2 left-[-32px] w-[32px] h-[2px] bg-brandOrange transform -translate-y-1/2" />
+                    </div>
+                  </div>
+
+                  {/* Mobile fallback card */}
+                  <div className="md:hidden mt-4 text-center px-4">
+                    <div className="bg-white p-6 rounded-xl shadow-md">
+                      <h3 className="text-xl font-semibold text-brandOrange">{item.title}</h3>
+                      <p className="mt-2 text-gray-700">{item.desc}</p>
+                    </div>
                   </div>
                 </div>
               );

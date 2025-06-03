@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Brand from "./Brand";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -24,10 +25,12 @@ const Hero = () => {
               </button> */}
             </div>
           </div>
-          <img
+          <Image
             className="w-auto mx-auto size-[400px] md:size-[480px] lg:size-[680px] object-cover"
             src="./static/digital-nomad-hero-img.svg"
-            alt="hero image"
+            alt="hero-image"
+            width={680}
+            height={480}
           />
         </div>
         <div className="brand_container">
