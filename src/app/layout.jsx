@@ -22,12 +22,22 @@ const avenir = localFont({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://business.thetravelsofzee.com/"),
   title: "The Travels of Zee",
   description: "A Software Development Company",
+  openGraph: {
+    title: "The Travels of Zee",
+    description: "A Software Development Company",
+    url: "./", // You can update this to the actual URL if needed
+    siteName: "The Travels of Zee",
+    images: ["/favicon/banner.png"],
+    locale: "en_US",
+    type: "website",
+  },
   twitter: {
     title: "The Travels of Zee",
     card: "summary_large_image",
-    images: "/favicon/banner.png",
+    images: ["/favicon/banner.png"],
   },
 };
 
