@@ -59,7 +59,11 @@ const SiteNavbar = () => {
         </div>
         <div className="menuBtn">
           <button className="text-brandPrimary text-4xl" onClick={() => setMobileActive(!mobileActive)}>
-            {mobileActive ? <IoClose className="text-brandPrimary" aria-label="open-menu" /> : <IoMenu aria-label="close-menu"/>}
+            {mobileActive ? (
+              <IoClose className="text-brandPrimary" aria-label="open-menu" />
+            ) : (
+              <IoMenu aria-label="close-menu" />
+            )}
           </button>
         </div>
         {mobileActive && (
@@ -73,6 +77,7 @@ const SiteNavbar = () => {
                       ? "text-brandsBG border-b-4 border-blueLight"
                       : "text-bgGray"
                   } p-[10px] text-center font-poppins font-medium capitalize`}
+                  onClick={() => setMobileActive(false)}
                 >
                   {item.name}
                 </Link>

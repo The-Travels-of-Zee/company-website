@@ -13,7 +13,7 @@ const StatsList = () => {
           <div
             key={item.name}
             ref={(el) => (itemRefs.current[index] = el)}
-            className="w-full px-[47px] py-[71px] rounded-[20px] shadow-statsShadow flex items-center justify-center flex-col stats"
+            className="w-full py-[50px] rounded-[20px] shadow-statsShadow flex items-center justify-center flex-col stats"
           >
             <video
                 src={item.video}
