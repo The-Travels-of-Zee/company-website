@@ -10,11 +10,11 @@ const Services = () => {
           <h2 className="sub_heading mt-4 max-w-[500px]">We Provide Best-in-Class Services</h2>
         </div>
 
-        <div className="service_card_container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-[50px]">
+        <div className="service_card_container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-8 mt-[50px]">
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-white py-[24px] px-[24px] h-[440px] md:h-[420px] shadow-brandShadow hover:shadow-brandOrange transition-all duration-300 rounded-[20px] overflow-hidden aspect-[1/1] max-w-full flex flex-col"
+              className="bg-white py-[24px] px-[24px] h-[380px] shadow-brandShadow hover:shadow-brandOrange transition-all duration-300 rounded-[20px] overflow-hidden aspect-[1/1] max-w-full flex flex-col"
             >
               {/* Title & Description */}
               <div className="flex flex-col flex-1">
@@ -23,14 +23,14 @@ const Services = () => {
               </div>
 
               {/* Images Section - Updated */}
-              <div className="flex gap-3">
+              <div className="flex justify-center gap-3">
                 <img
-                  className="rounded-lg w-1/2 h-[200px] object-contain shadow-brandShadow"
+                  className="rounded-lg w-1/2 aspect-[5/4] object-cover shadow-brandShadow"
                   src={service.image2}
                   alt="services image"
                 />
                 <img
-                  className="rounded-lg w-1/2 h-[200px] object-contain shadow-brandShadow"
+                  className="rounded-lg w-1/2 aspect-[5/4] object-cover shadow-brandShadow"
                   src={service.image3}
                   alt="services image"
                 />

@@ -17,7 +17,7 @@ const ClientProjects = () => {
             <div key={index} className="project w-full">
               <Link href={project.live} target="_blank" rel="noopener noreferrer">
                 <img
-                  className="h-64 md:h-[400px] w-full object-cover rounded-[20px]"
+                  className="w-full aspect-[4/3] object-cover rounded-[20px]"
                   src={project.image}
                   alt={`feature project ${index}`}
                 />

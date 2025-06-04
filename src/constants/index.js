@@ -70,7 +70,7 @@ export const clientProjects = [
 export const companyProjects = [
   {
     title: "FarahGPT - Islamic Mentorship",
-    image: "./static/projects-mobile-app-mockup.webp",
+    image: "./static/projects-mobile-app-farahgpt.webp",
     category: "Mobile App",
     live: "https://farahgpt.com/",
     created_at: "2024-05-03",
@@ -134,7 +134,7 @@ export const services = [
     des: "Websites(Wordpress, Wix), Ecommerce Platforms(Shopify), Web Apps, Mobile Apps",
     image1: "./static/services-ai-image.avif",
     image2: "./static/projects-natalie-strong-foundation.webp",
-    image3: "./static/projects-mobile-app-mockup.webp",
+    image3: "./static/projects-mobile-app-farahgpt.webp",
     image4: "./static/services-mobileapp-design.avif",
   },
   {
