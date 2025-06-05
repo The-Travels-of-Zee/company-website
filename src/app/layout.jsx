@@ -30,14 +30,14 @@ export const metadata = {
     description: "A Software Development Company",
     url: "./", // You can update this to the actual URL if needed
     siteName: "The Travels of Zee",
-    images: ["/favicon/banner.png"],
+    images: ["/favicon/web-app-manifest-512x512.png"],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     title: "The Travels of Zee",
     card: "summary_large_image",
-    images: ["/favicon/banner.png"],
+    images: ["/favicon/web-app-manifest-512x512.png"],
   },
 };
 
