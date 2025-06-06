@@ -16,7 +16,7 @@ const SiteNavbar = () => {
       {/* NAVITEMS FOR DESKTOP  */}
       <nav className="lg:flex items-center hidden justify-between py-9 relative">
         <div className="logo_container w-48">
-          <Link href={"/"}>
+          <Link href="/">
             <img src="./static/full-logo-black.png" alt="logo" />
           </Link>
         </div>
@@ -55,7 +55,9 @@ const SiteNavbar = () => {
       {/* NAV FOR MOBILE  */}
       <nav className="flex items-center lg:hidden justify-between py-9 relative">
         <div className="logo_container w-48">
-          <img src="./static/full-logo-black.png" alt="logo" />
+          <Link href="/">
+            <img src="./static/full-logo-black.png" alt="logo" />
+          </Link>
         </div>
         <div className="menuBtn">
           <button className="text-brandPrimary text-4xl" onClick={() => setMobileActive(!mobileActive)}>

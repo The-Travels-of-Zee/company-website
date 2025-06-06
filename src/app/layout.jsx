@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import SiteNavbar from "@/components/SiteNavbar";
 import SiteFooter from "@/components/SiteFooter";
-import ProgressbarProvider from "@/components/ProgressbarProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -24,7 +23,8 @@ const avenir = localFont({
 export const metadata = {
   metadataBase: new URL("https://business.thetravelsofzee.com/"),
   title: "The Travels of Zee",
-  description: "A Software Development Company",
+  description:
+    "A Full-Spectrum Software Development Company Delivering Cutting-Edge Solutions Across AI, Web, Mobile, Cloud, and Enterprise Systems",
   openGraph: {
     title: "The Travels of Zee",
     description: "A Software Development Company",
@@ -56,11 +56,9 @@ export default function RootLayout({ children }) {
         <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5" />
       </head>
       <body className={`${poppins.variable} ${jakarta_sans.variable} ${avenir.variable}`}>
-        <ProgressbarProvider>
-          <SiteNavbar />
-          {children}
-          <SiteFooter />
-        </ProgressbarProvider>
+        <SiteNavbar />
+        {children}
+        <SiteFooter />
       </body>
     </html>
   );
