@@ -27,8 +27,9 @@ export const metadata = {
     "A Full-Spectrum Software Development Company Delivering Cutting-Edge Solutions Across AI, Web, Mobile, Cloud, and Enterprise Systems",
   openGraph: {
     title: "The Travels of Zee",
-    description: "A Software Development Company",
-    url: "./", // You can update this to the actual URL if needed
+    description:
+      "A Full-Spectrum Software Development Company Delivering Cutting-Edge Solutions Across AI, Web, Mobile, Cloud, and Enterprise Systems",
+    url: "./",
     siteName: "The Travels of Zee",
     images: ["/favicon/web-app-manifest-512x512.png"],
     locale: "en_US",
@@ -36,6 +37,8 @@ export const metadata = {
   },
   twitter: {
     title: "The Travels of Zee",
+    description:
+      "A Full-Spectrum Software Development Company Delivering Cutting-Edge Solutions Across AI, Web, Mobile, Cloud, and Enterprise Systems",
     card: "summary_large_image",
     images: ["/favicon/web-app-manifest-512x512.png"],
   },
