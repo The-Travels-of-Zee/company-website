@@ -4,9 +4,9 @@
 
 const Error = () => {
   return (
-    <di>
+    <div>
      
-    </di>
+    </div>
   )
 }
 

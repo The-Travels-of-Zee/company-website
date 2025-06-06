@@ -65,7 +65,7 @@ const WorkList = () => {
         <div className="grid md:grid-cols-3 gap-6 items-center mt-11">
           {workLists.map((item) => (
             <div
-              key={item.name}
+              key={item.title}
               className="py-[24px] pb-10 px-[30px] card md:max-w-[380px]  hover:shadow-bgBlueLight transition-all duration-300 shadow-brandShadow rounded-[20px] bg-white"
             >
               <video
