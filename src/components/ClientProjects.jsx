@@ -31,6 +31,16 @@ const ClientProjects = () => {
             </div>
           ))}
         </div>
+        <div className="mt-12">
+          <Link href="/client-projects" className="text-xl font-semibold">
+            <button className="px-6 py-3 bg-brandsBG text-brandPrimary rounded-lg hover:bg-bgBlueLight transition duration-300">
+              <span className="flex items-center gap-2">
+                View All Projects
+                <img src="/icons/arrow.png" alt="icon" className="duration-300" />
+              </span>
+            </button>
+          </Link>
+        </div>
       </div>
     </section>
   );
