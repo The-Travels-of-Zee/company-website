@@ -3,7 +3,7 @@ import { companyProjects } from "@/constants";
 
 const CompanyProjects = () => {
   return (
-    <section className="pt-16 pb-20 bg-brandOrange" id="projects">
+    <section className="pt-16 pb-20 bg-brandOrange">
       <div className="container">
         <div className="feature_project_content">
           <p className="tagline_text text-brandsBG">Company Projects</p>
@@ -30,6 +30,16 @@ const CompanyProjects = () => {
               </Link>
             </div>
           ))}
+        </div>
+        <div className="mt-12">
+          <Link href="/company-projects" className="text-xl font-semibold">
+            <button className="px-6 py-3 bg-brandsBG text-brandPrimary rounded-lg hover:bg-[#ffead7]   transition duration-300">
+              <span className="flex items-center gap-2">
+                View All Projects
+                <img src="/icons/arrow.png" alt="icon" className="duration-300" />
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </section>

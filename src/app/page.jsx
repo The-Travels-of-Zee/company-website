@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import FeatureProject from "@/components/ClientProjects";
+import ClientProjects from "@/components/ClientProjects";
 import CompanyProjects from "@/components/CompanyProjects";
 import StatsList from "@/components/StatList";
 import Subscribe from "@/components/Subscribe";
@@ -11,10 +11,15 @@ import WorkList from "@/components/WorkList";
 import ContactForm from "@/components/ContactForm";
 import Loading from "./loading";
 
-async function AsyncFeatureProject() {
+async function AsyncClientProject() {
   // Simulate server-side data fetching
-  await new Promise((resolve) => setTimeout(resolve, 1200));
-  return <FeatureProject />;
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  return <ClientProjects />;
+}
+async function AsyncCompanyProject() {
+  // Simulate server-side data fetching
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  return <CompanyProjects />;
 }
 
 export default function Home() {
@@ -25,10 +30,13 @@ export default function Home() {
       <Services />
 
       <Suspense fallback={<Loading />}>
-        <AsyncFeatureProject />
+        <AsyncClientProject />
       </Suspense>
 
-      <CompanyProjects />
+      <Suspense fallback={<Loading />}>
+        <AsyncCompanyProject />
+      </Suspense>
+
       <StatsList />
       <TestimonialList />
       <Team />

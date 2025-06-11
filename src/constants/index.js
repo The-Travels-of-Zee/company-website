@@ -3,10 +3,9 @@ import { PiInstagramLogoFill } from "react-icons/pi";
 
 export const navbarLinks = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "#services" },
-  { name: "Projects", href: "#projects" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Contact Us", href: "#contact" },
+  { name: "Services", href: "/#services" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Contact Us", href: "/#contact" },
 ];
 
 export const brands = [
@@ -75,6 +74,14 @@ export const companyProjects = [
     live: "https://farahgpt.com/",
     created_at: "2024-05-03",
     updated_at: "2024-05-04",
+  },
+  {
+    title: "Muslifie - All in One Travel App",
+    image: "./static/projects-mobile-app-muslifie.webp",
+    category: "Mobile App",
+    live: "https://muslifie.com/",
+    created_at: "2024-06-11",
+    updated_at: "2024-06-11",
   },
 ];
 
@@ -243,36 +250,6 @@ export const socialLinks = [
   { name: "linkedIn", icon: <FaLinkedinIn />, href: "https://www.linkedin.com/company/the-travels-of-zee/" },
   { name: "instagram", icon: <PiInstagramLogoFill />, href: "https://www.instagram.com/thetravelsofzeeuk/" },
   { name: "email", icon: <FaEnvelope />, href: "mailto:info@thetravelsofzee.com" },
-];
-
-// Not currently used in the project
-export const allProjects = [
-  {
-    id: 1,
-    title: "AI Website Design",
-    image: "./static/T-logo.png",
-  },
-  {
-    id: 2,
-    title: "Mobile App Concept",
-    image: "./static/T-logo.png",
-  },
-  {
-    id: 3,
-    title: "Desktop App Concept",
-    image: "./static/T-logo.png",
-    live: "#",
-    created_at: "2024-05-03",
-    updated_at: "2024-05-04",
-  },
-  {
-    id: 4,
-    title: "Desktop App Concept",
-    image: "./static/T-logo.png",
-    live: "#",
-    created_at: "2024-05-03",
-    updated_at: "2024-05-04",
-  },
 ];
 
 export const privacyPolicy = `
