@@ -158,7 +158,7 @@ export const services = [
     id: 3,
     title: "Graphic Design",
     link: "https://www.behance.net/thetravelsofzee",
-    des: "Logos, Branding, Social Creatives, UI/UX Design",
+    des: "Logos, Website Design, Mobile App Design, Branding, Social Creatives, UI/UX Design",
     image1: "./static/services-palm-trees-design.png",
     image2: "./static/services-shirt-poster.png",
     image3: "./static/services-south-korea-cover.png",
