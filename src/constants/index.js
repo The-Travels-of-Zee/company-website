@@ -160,7 +160,6 @@ export const services = [
 
 export const teamMembers = [
   {
-    id: 1,
     name: "Zaineb Nawaz",
     designation: "CEO",
     image: "/images/zaineb-portrait.webp",
@@ -170,7 +169,6 @@ export const teamMembers = [
     instagram: "#",
   },
   {
-    id: 2,
     name: "Shaheer Mansoor",
     designation: "Full Stack Software Engineer",
     image: "/images/shaheer-portrait.webp",
@@ -180,7 +178,6 @@ export const teamMembers = [
     instagram: "#",
   },
   {
-    id: 3,
     name: "Umair Bilal",
     designation: "Mobile App Developer",
     image: "/images/umair-portrait.webp",
@@ -190,13 +187,21 @@ export const teamMembers = [
     instagram: "#",
   },
   {
-    id: 4,
     name: "Suleman Waqqar",
     designation: "Business Development & Operations Manager",
     image: "/images/salman-portrait.webp",
     facebook: "#",
     twitter: "#",
     linkedIn: "https://www.linkedin.com/in/suleman-waqqar/",
+    instagram: "#",
+  },
+  {
+    name: "Sarmad Ali",
+    designation: "Marketing Manager",
+    image: "/images/sarmad-portrait.webp",
+    facebook: "#",
+    twitter: "#",
+    linkedIn: "http://www.linkedin.com/in/sarmad01",
     instagram: "#",
   },
 ];

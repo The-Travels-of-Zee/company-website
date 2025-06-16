@@ -13,14 +13,14 @@ const Team = () => {
         </div>
 
         <div className="team_member grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-between gap-8 mt-16">
-          {teamMembers.map((member) => (
+          {teamMembers.map((member, index) => (
             <div
-              key={member.id}
+              key={index}
               className="member hover:shadow-bgBlueLight grayscale hover:grayscale-0 transition-all duration-300 shadow-brandShadow rounded-[20px] bg-white md:max-h-[400px]"
             >
               <div className="image_container relative">
                 <Image
-                  className="object-cover w-full h-full max-h-[387px] rounded-t-[20px] transition-all duration-300"
+                  className="object-cover w-full h-full aspect-square max-h-[387px] rounded-t-[20px] transition-all duration-300"
                   src={member.image}
                   alt="tem member image"
                   width={200}
