@@ -65,8 +65,8 @@ const Services = () => {
 
               {/* Images Section - Enhanced */}
               <div className="flex justify-center gap-3 mb-6">
-                {service.images.map((image) => (
-                  <div className="relative w-full group/img">
+                {service.images.map((image, index) => (
+                  <div key={index} className="relative w-full group/img">
                     <img
                       className="rounded-xl w-full aspect-[5/4] object-cover shadow-md group-hover:shadow-lg transition-all duration-300 border-2 border-white/50 group-hover/img:scale-105"
                       src={image}
