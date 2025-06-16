@@ -37,10 +37,10 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className="group bg-white/80 backdrop-blur-sm py-8 px-7 h-[440px] hover:shadow-brandOrange transition-all duration-300 shadow-brandShadow border border-white/50 hover:border-brandOrange/30 rounded-lg overflow-hidden aspect-[1/1] max-w-full flex flex-col relative transform hover:-translate-y-2 hover:scale-[1.02]"
+              className="group bg-white/80 backdrop-blur-sm py-8 px-7 h-[600px] hover:shadow-brandOrange transition-all duration-300 shadow-brandShadow border border-white/50 hover:border-brandOrange/30 rounded-lg overflow-hidden aspect-[1/1] max-w-full flex flex-col relative transform hover:-translate-y-2 hover:scale-[1.02]"
             >
               {/* Card number indicator */}
-              <div className="absolute top-6 right-6 w-8 h-8 bg-gradient-to-br from-brandOrange to-brandOrange/80 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-md">
+              <div className="absolute top-6 right-6 w-8 h-8 rounded-[100%] bg-gradient-to-br from-brandOrange to-brandOrange/80 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-md">
                 {String(index + 1).padStart(2, "0")}
               </div>
 
@@ -65,28 +65,21 @@ const Services = () => {
 
               {/* Images Section - Enhanced */}
               <div className="flex justify-center gap-3 mb-6">
-                <div className="relative w-1/2 group/img">
-                  <img
-                    className="rounded-xl w-full aspect-[5/4] object-cover shadow-md group-hover:shadow-lg transition-all duration-300 border-2 border-white/50 group-hover/img:scale-105"
-                    src={service.image2}
-                    alt="services image"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brandPrimary/20 to-transparent rounded-xl opacity-0 group-hover/img:opacity-100 transition-opacity duration-300" />
-                </div>
-
-                <div className="relative w-1/2 group/img">
-                  <img
-                    className="rounded-xl w-full aspect-[5/4] object-cover shadow-md group-hover:shadow-lg transition-all duration-300 border-2 border-white/50 group-hover/img:scale-105"
-                    src={service.image3}
-                    alt="services image"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brandOrange/20 to-transparent rounded-xl opacity-0 group-hover/img:opacity-100 transition-opacity duration-300" />
-                </div>
+                {service.images.map((image) => (
+                  <div className="relative w-full group/img">
+                    <img
+                      className="rounded-xl w-full aspect-[5/4] object-cover shadow-md group-hover:shadow-lg transition-all duration-300 border-2 border-white/50 group-hover/img:scale-105"
+                      src={image}
+                      alt="services image"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brandPrimary/20 to-transparent rounded-xl opacity-0 group-hover/img:opacity-100 transition-opacity duration-300" />
+                  </div>
+                ))}
               </div>
 
               {/* Enhanced CTA Button */}
               <Link href={service.link} target="_blank" rel="noopener noreferrer" aria-label="Learn More">
-                <button className="group/btn relative w-full font_avenir text-base font-semibold rounded-xl border-2 border-brandOrange bg-gradient-to-r from-transparent to-transparent hover:from-brandOrange hover:to-brandOrange/90 hover:text-white duration-500 px-4 py-3 overflow-hidden">
+                <button className="group/btn relative w-full font_avenir text-base font-semibold rounded-xl border-2 border-brandOrange rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-brandOrange hover:to-brandOrange/90 hover:text-white duration-500 px-4 py-3 overflow-hidden">
                   {/* Button background effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-brandOrange/0 via-brandOrange/5 to-brandOrange/0 group-hover/btn:from-brandOrange/20 group-hover/btn:via-brandOrange/10 group-hover/btn:to-brandOrange/20 transition-all duration-500" />
 

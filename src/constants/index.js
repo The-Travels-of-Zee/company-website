@@ -1,3 +1,4 @@
+import { images } from "next.config";
 import { FaFacebook, FaLinkedinIn, FaEnvelope, FaBehance } from "react-icons/fa";
 import { PiInstagramLogoFill } from "react-icons/pi";
 
@@ -139,30 +140,21 @@ export const services = [
     title: "Software Development",
     link: "https://muslifie.com/",
     des: "Websites(Wordpress, Wix), Ecommerce Platforms(Shopify), Web Apps, Mobile Apps",
-    image1: "./static/services-ai-image.avif",
-    image2: "./static/projects-mobile-app-muslifie.webp",
-    image3: "./static/projects-mobile-app-farahgpt.webp",
-    image4: "./static/services-mobileapp-design.avif",
+    images: ["./static/projects-mobile-app-muslifie.webp"],
   },
   {
     id: 2,
     title: "Content Writing",
     link: "https://thetravelsofzee.com/blogs/muslim-friendly-travel-tips/top-halal-friendly-accommodations-in-tokyo",
     des: "Blogs, SEO Content, Product Descriptions, Web Copy",
-    image1: "./static/services-travel-blog.png",
-    image2: "./static/services-web-copy.webp",
-    image3: "./static/services-seo.avif",
-    image4: "./static/services-product-description.avif",
+    images: ["./static/services-web-copy.webp"],
   },
   {
     id: 3,
     title: "Graphic Design",
     link: "https://www.behance.net/thetravelsofzee",
     des: "Logos, Website Design, Mobile App Design, Branding, Social Creatives, UI/UX Design",
-    image1: "./static/services-palm-trees-design.png",
-    image2: "./static/services-shirt-poster.png",
-    image3: "./static/services-south-korea-cover.png",
-    image4: "./static/services-mountain-design.png",
+    images: ["./static/services-shirt-poster.png"],
   },
 ];
 
