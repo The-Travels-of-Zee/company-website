@@ -137,10 +137,10 @@ export const services = [
   {
     id: 1,
     title: "Software Development",
-    link: "https://thetravelsofzee.com/",
+    link: "https://muslifie.com/",
     des: "Websites(Wordpress, Wix), Ecommerce Platforms(Shopify), Web Apps, Mobile Apps",
     image1: "./static/services-ai-image.avif",
-    image2: "./static/projects-natalie-strong-foundation.webp",
+    image2: "./static/projects-mobile-app-muslifie.webp",
     image3: "./static/projects-mobile-app-farahgpt.webp",
     image4: "./static/services-mobileapp-design.avif",
   },
