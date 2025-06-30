@@ -195,15 +195,6 @@ export const teamMembers = [
     linkedIn: "https://www.linkedin.com/in/suleman-waqqar/",
     instagram: "#",
   },
-  {
-    name: "Sarmad Ali",
-    designation: "Marketing Manager",
-    image: "/images/sarmad-portrait.webp",
-    facebook: "#",
-    twitter: "#",
-    linkedIn: "http://www.linkedin.com/in/sarmad01",
-    instagram: "#",
-  },
 ];
 
 export const testimonials = [
