@@ -48,15 +48,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png" sizes="180x180" />
-        <link rel="icon" href="./favicon/favicon-96x96.png" sizes="96x96" type="image/png" />
-        <link rel="icon" href="./favicon/favicon-192x192.png" sizes="192x192" type="image/png" />
-        <link rel="icon" href="./favicon/favicon-512x512.png" sizes="512x512" type="image/png" />
-        <link rel="icon" href="./favicon/favicon.svg" type="image/svg+xml" />
-        <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon" sizes="any" />
-        <link rel="manifest" href="./favicon/site.webmanifest" />
-        <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180" />
+        <link rel="icon" href="/favicon/favicon-96x96.png" sizes="96x96" type="image/png" />
+        <link rel="icon" href="/favicon/web-app-manifest-192x192.png" sizes="192x192" type="image/png" />
+        <link rel="icon" href="/favicon/web-app-manifest-512x512.png" sizes="512x512" type="image/png" />
+        <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" sizes="any" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
       </head>
       <body className={`${poppins.variable} ${jakarta_sans.variable} ${avenir.variable}`}>
         <SiteNavbar />

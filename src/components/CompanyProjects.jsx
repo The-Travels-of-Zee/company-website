@@ -3,7 +3,7 @@ import { companyProjects } from "@/constants";
 
 const CompanyProjects = () => {
   return (
-    <section className="pt-16 pb-20 bg-brandOrange">
+    <section id="projects" className="pt-16 pb-20 bg-brandOrange">
       <div className="container">
         <div className="feature_project_content">
           <p className="tagline_text text-brandsBG">Company Projects</p>

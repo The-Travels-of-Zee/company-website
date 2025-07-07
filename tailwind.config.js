@@ -18,7 +18,7 @@ module.exports = {
         brandPrimary: "#003c64",
         blueLight: "#39A9DB",
         bgBlueLight: "#40BCD8",
-        brandOrange: "#E5842A",
+        brandOrange: "#f47a1f",
         brandsBG: "#F8FFF9",
         brandSecondary: "#2E3E5C",
         bgGray: "#f2f2f7",
