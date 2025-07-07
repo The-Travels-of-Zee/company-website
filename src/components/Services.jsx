@@ -10,7 +10,7 @@ const Services = () => {
 
       <div className="container relative z-10">
         <div className="section_content">
-          <p className="mb-4 tagline_text">Our Process</p>
+          <p className="mb-4 tagline_text">Our Services</p>
           <h2 className="sub_heading max-w-[500px]">We provide the Perfect Solution to your business growth</h2>
         </div>
         {/* <div className="content text-center max-w-3xl mx-auto">
