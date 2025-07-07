@@ -10,6 +10,8 @@ import TestimonialList from "@/components/TestimonialList";
 import WorkList from "@/components/WorkList";
 import ContactForm from "@/components/ContactForm";
 import Loading from "./loading";
+import EngagementModels from "@/components/EngagementModels";
+import OffshoringOnshoringServices from "@/components/OffshoringOnshoringServices";
 
 async function AsyncClientProject() {
   // Simulate server-side data fetching
@@ -29,17 +31,20 @@ export default function Home() {
       <WorkList />
       <Services />
 
-      <Suspense fallback={<Loading />}>
+      {/* <Suspense fallback={<Loading />}>
         <AsyncClientProject />
-      </Suspense>
+      </Suspense> */}
 
       <Suspense fallback={<Loading />}>
         <AsyncCompanyProject />
       </Suspense>
 
+      <EngagementModels />
+      <OffshoringOnshoringServices />
+
       <StatsList />
       <TestimonialList />
-      <Team />
+      {/* <Team /> */}
       <ContactForm />
       <Subscribe />
     </>

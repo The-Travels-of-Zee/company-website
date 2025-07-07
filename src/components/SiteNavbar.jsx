@@ -17,7 +17,7 @@ const SiteNavbar = () => {
       <nav className="lg:flex items-center hidden justify-between py-9 relative">
         <div className="logo_container w-48">
           <Link href="/">
-            <img src="./static/full-logo-black.png" alt="logo" />
+            <img src="/static/full-logo-black.png" alt="logo" />
           </Link>
         </div>
 
@@ -56,7 +56,7 @@ const SiteNavbar = () => {
       <nav className="flex items-center lg:hidden justify-between py-9 relative">
         <div className="logo_container w-48">
           <Link href="/">
-            <img src="./static/full-logo-black.png" alt="logo" />
+            <img src="/static/full-logo-black.png" alt="logo" />
           </Link>
         </div>
         <div className="menuBtn">
