@@ -11,7 +11,7 @@ import WorkList from "@/components/WorkList";
 import ContactForm from "@/components/ContactForm";
 import Loading from "./loading";
 import EngagementModels from "@/components/EngagementModels";
-import OffshoringOnshoringServices from "@/components/OffshoringOnshoringServices";
+import ServicesTabsComponent from "@/components/ServicesTabsComponent";
 
 async function AsyncClientProject() {
   // Simulate server-side data fetching
@@ -35,12 +35,12 @@ export default function Home() {
         <AsyncClientProject />
       </Suspense> */}
 
+      <ServicesTabsComponent />
       <Suspense fallback={<Loading />}>
         <AsyncCompanyProject />
       </Suspense>
 
-      <EngagementModels />
-      <OffshoringOnshoringServices />
+      {/* <EngagementModels /> */}
 
       <StatsList />
       <TestimonialList />
