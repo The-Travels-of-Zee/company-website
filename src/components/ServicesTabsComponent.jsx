@@ -8,11 +8,6 @@ import {
   Smartphone,
   ArrowRight,
   CheckCircle,
-  Star,
-  Globe,
-  Zap,
-  Shield,
-  TrendingUp,
   UserCheck,
   Search,
   Award,
@@ -20,11 +15,6 @@ import {
   Monitor,
   Database,
   Cloud,
-  Settings,
-  Rocket,
-  Target,
-  BarChart3,
-  MessageCircle,
 } from "lucide-react";
 
 const ServicesTabsComponent = () => {
