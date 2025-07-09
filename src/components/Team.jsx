@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaInstagram, FaTwitter, FaFacebookF, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { teamMembers } from "@/constants";
 import Image from "next/image";
 

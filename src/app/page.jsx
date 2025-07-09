@@ -28,6 +28,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <ServicesTabsComponent />
       <WorkList />
       <Services />
 
@@ -35,7 +36,6 @@ export default function Home() {
         <AsyncClientProject />
       </Suspense> */}
 
-      <ServicesTabsComponent />
       <Suspense fallback={<Loading />}>
         <AsyncCompanyProject />
       </Suspense>
