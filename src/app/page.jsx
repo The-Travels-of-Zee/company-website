@@ -14,6 +14,7 @@ import EngagementModels from "@/components/EngagementModels";
 import ServicesTabsComponent from "@/components/ServicesTabsComponent";
 import Faq from "@/components/Faq";
 import Pricing from "@/components/Pricing";
+import BusinessOverview from "@/components/BusinessOverview";
 
 async function AsyncClientProject() {
   // Simulate server-side data fetching
@@ -30,6 +31,7 @@ export default function Home() {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
       <Hero />
+      <BusinessOverview />
       <ServicesTabsComponent />
       <Pricing />
       <Faq />

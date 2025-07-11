@@ -6,7 +6,7 @@ import { ArrowRight, Code, Cpu, Database, Shield, Star, ZapIcon } from "lucide-r
 
 const Hero = () => {
   return (
-    <section className="pt-20 sm:pt-24 md:pt-28 relative overflow-hidden">
+    <section className="pt-32 sm:pt-36 md:pt-40 relative overflow-hidden">
       {/* Enhanced Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating geometric shapes */}
@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="absolute bottom-32 left-48 w-2 h-2 bg-emerald-400/30 rounded-full animate-ping delay-700"></div>
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-10 pt-8">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-between mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="content_container mt-5 md:mt-0 px-2 transform hover:scale-[102%] transition-all duration-700">
             {/* Enhanced Badge with AI focus */}
@@ -35,63 +35,61 @@ const Hero = () => {
               <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse ml-2"></div>
             </div>
 
-            <h1 className="pt-5 md:pt-0 lg:text-5xl md:text-4xl text-3xl font-bold font_poppins max-w-[600px] text-left leading-tight">
+            <h1 className="pt-5 mb-4 md:mt-8 md:pt-0 lg:text-5xl md:text-4xl text-3xl font-bold font_poppins max-w-[600px] text-left leading-tight space-y-4">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
-                AI-Driven Technical
+                Where Ideas Travel
               </span>
-              <br />
-              <span className="text-white">Talent Acquisition</span>
-              <br />
-              <span className="text-slate-300 text-lg md:text-xl lg:text-2xl font-normal">
-                Perfect Solution to Your Business Growth
-              </span>
+              <div className="text-white">from Vision to Reality</div>
             </h1>
-
-            <p className="font_avenir text-lg font-normal text-slate-300 max-w-[472px] text-left mt-6 leading-relaxed">
-              Access top-tier developers vetted by AI-backed screening, testing, and portfolio analysis, instantly
-              scalable to your needs.
+            <p className="mt-10 mb-14 text-slate-300 text-lg md:text-xl lg:text-2xl font-normal">
+              Ready to embark on this journey? Let’s create something amazing together
             </p>
 
+            {/* <p className="font_avenir text-lg font-normal text-slate-300 max-w-[472px] text-left mt-6 leading-relaxed">
+        Access top-tier developers vetted by AI-backed screening, testing, and portfolio analysis, instantly
+        scalable to your needs.
+      </p> */}
+
             {/* Enhanced Feature Points with tech icons */}
-            <div className="mt-8 space-y-4">
-              <div className="flex items-center gap-4 p-3 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
-                <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg">
-                  <Cpu className="w-5 h-5 text-cyan-400" />
-                </div>
-                <div>
-                  <span className="text-white font-medium">AI-Driven Precision Screening</span>
-                  <p className="text-slate-400 text-sm">
-                    Automated resume scoring, coding tests & AI video analysis for rapid
-                  </p>
-                </div>
-              </div>
+            {/* <div className="mt-8 space-y-4">
+        <div className="flex items-center gap-4 p-3 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+          <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg">
+            <Cpu className="w-5 h-5 text-cyan-400" />
+          </div>
+          <div>
+            <span className="text-white font-medium">AI-Driven Precision Screening</span>
+            <p className="text-slate-400 text-sm">
+              Automated resume scoring, coding tests & AI video analysis for rapid
+            </p>
+          </div>
+        </div>
 
-              <div className="flex items-center gap-4 p-3 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300">
-                <div className="p-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg">
-                  <Code className="w-5 h-5 text-purple-400" />
-                </div>
-                <div>
-                  <span className="text-white font-medium">Portfolio + Technical Assessments</span>
-                  <p className="text-slate-400 text-sm">
-                    Candidates evaluated via skill-based tests and real-world portfolio reviews
-                  </p>
-                </div>
-              </div>
+        <div className="flex items-center gap-4 p-3 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300">
+          <div className="p-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg">
+            <Code className="w-5 h-5 text-purple-400" />
+          </div>
+          <div>
+            <span className="text-white font-medium">Portfolio + Technical Assessments</span>
+            <p className="text-slate-400 text-sm">
+              Candidates evaluated via skill-based tests and real-world portfolio reviews
+            </p>
+          </div>
+        </div>
 
-              <div className="flex items-center gap-4 p-3 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300">
-                <div className="p-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-lg">
-                  <Database className="w-5 h-5 text-emerald-400" />
-                </div>
-                <div>
-                  <span className="text-white font-medium">Faster Time-to-Hire</span>
-                  <p className="text-slate-400 text-sm">
-                    Lower Cost - reduced hiring overhead with intelligent candidate matching
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="flex items-center gap-4 p-3 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300">
+          <div className="p-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-lg">
+            <Database className="w-5 h-5 text-emerald-400" />
+          </div>
+          <div>
+            <span className="text-white font-medium">Faster Time-to-Hire</span>
+            <p className="text-slate-400 text-sm">
+              Lower Cost - reduced hiring overhead with intelligent candidate matching
+            </p>
+          </div>
+        </div>
+      </div> */}
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+            <div className="flex flex-col sm:flex-row gap-4 mt-18">
               <Link href="#contact">
                 <button className="group font-poppins font-semibold text-lg border-2 border-transparent bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl hover:from-cyan-600 hover:to-blue-700 duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden">
                   <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></span>
@@ -171,7 +169,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="brand_container mt-16">
+        <div className="brand_container mt-24">
           <Brand />
         </div>
       </div>
