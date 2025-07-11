@@ -1,5 +1,6 @@
 import React from "react";
-import { Check, Star, Zap, Shield, Users, Clock } from "lucide-react";
+import { Check, Star, Zap, Shield, Users, Clock, DollarSign } from "lucide-react";
+import Link from "next/link";
 
 const Pricing = () => {
   const pricingTiers = [
@@ -107,7 +108,7 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {pricingTiers.map((tier, index) => {
             const IconComponent = tier.icon;
             return (
@@ -118,7 +119,6 @@ const Pricing = () => {
                 <div
                   className={`relative h-full bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gradient-to-r ${tier.borderGradient} hover:border-opacity-70 transition-all duration-300 transform group-hover:scale-[1.05]`}
                 >
-                  {/* Move the tag here so it scales with the card */}
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
                       <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -165,10 +165,10 @@ const Pricing = () => {
               </div>
             );
           })}
-        </div>
+        </div> */}
 
         {/* Features Section */}
-        <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+        <div className="bg-slate-800/30 flex flex-col items-center backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">All Plans Include</h3>
             <div className="flex justify-center gap-6 text-slate-400 text-sm">
@@ -193,6 +193,15 @@ const Pricing = () => {
               </div>
             ))}
           </div>
+          <Link href="/pricing" className="mt-8">
+            <button className="group font-poppins font-semibold text-lg border-2 border-transparent bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl hover:from-cyan-600 hover:to-blue-700 duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden">
+              <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></span>
+              <span className="relative flex items-center justify-center gap-2">
+                <DollarSign className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                More About Pricings
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </section>
