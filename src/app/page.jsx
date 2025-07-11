@@ -32,7 +32,6 @@ export default function Home() {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
       <Hero />
-      <BusinessOverview />
       <ServicesTabsComponent
         talentAdditionalComponent={
           <>
@@ -56,6 +55,7 @@ export default function Home() {
           </>
         }
       />
+      <BusinessOverview />
       <Pricing />
       <Comparison />
       <Faq />

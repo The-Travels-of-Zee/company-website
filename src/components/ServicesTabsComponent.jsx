@@ -76,7 +76,7 @@ const ServicesTabsComponent = ({
       title: "Technical Talent Acquisition",
       description: "Source skilled developers, engineers, and IT professionals",
       icon: UserCheck,
-      features: ["Full-stack developers", "DevOps engineers", "Data scientists", "Technical skill assessment"],
+      features: ["AI developers", "ML engineers", "Data scientists"],
     },
     {
       title: "Contract & Freelance Staffing",
@@ -158,7 +158,7 @@ const ServicesTabsComponent = ({
     switch (activeTab) {
       case "talent":
         return {
-          title: "Professional Talent Agency Services",
+          title: "AI-Driven Technical Talent Acquisition",
           subtitle: "Connect with Top-Tier Professionals",
           description:
             "We bridge the gap between exceptional talent and innovative companies, providing comprehensive recruitment and staffing solutions tailored to your specific needs.",
