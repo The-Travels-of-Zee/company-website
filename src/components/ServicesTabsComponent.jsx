@@ -19,7 +19,12 @@ import {
   Zap,
 } from "lucide-react";
 
-const ServicesTabsComponent = () => {
+const ServicesTabsComponent = ({
+  // Props to accept custom components for each tab
+  talentAdditionalComponent = null,
+  developmentAdditionalComponent = null,
+  appsAdditionalComponent = null,
+}) => {
   const [activeTab, setActiveTab] = useState("talent");
 
   const tabs = [
@@ -138,13 +143,6 @@ const ServicesTabsComponent = () => {
       ],
       status: "Live Product",
     },
-    // {
-    //   title: "DataViz Studio",
-    //   description: "Interactive data visualization and business intelligence tool",
-    //   icon: BarChart3,
-    //   features: ["Custom dashboards", "Real-time data processing", "Multiple data sources", "Export capabilities"],
-    //   status: "Beta Release",
-    // },
     {
       title: "Muslifie - All in One Travel App",
       description:
@@ -154,13 +152,6 @@ const ServicesTabsComponent = () => {
       features: ["Halal Food Locator", "Nearby Prayer Spaces", "Become Local Guide", "Traverlers Friendly"],
       status: "In Development",
     },
-    // {
-    //   title: "AutoScale AI",
-    //   description: "AI-powered business automation and optimization platform",
-    //   icon: Rocket,
-    //   features: ["Machine learning models", "Process automation", "Predictive analytics", "Custom AI solutions"],
-    //   status: "Research Phase",
-    // },
   ];
 
   const getTabContent = () => {
@@ -178,6 +169,7 @@ const ServicesTabsComponent = () => {
             { value: "<1hr", label: "Average Response" },
           ],
           ctaText: "Find Your Perfect Match",
+          additionalComponent: talentAdditionalComponent,
         };
       case "development":
         return {
@@ -192,6 +184,7 @@ const ServicesTabsComponent = () => {
             { value: "24/7", label: "Support Available" },
           ],
           ctaText: "Start Your Project",
+          additionalComponent: developmentAdditionalComponent,
         };
       case "apps":
         return {
@@ -206,6 +199,7 @@ const ServicesTabsComponent = () => {
             { value: "10+", label: "Awards Won" },
           ],
           ctaText: "Explore Our Apps",
+          additionalComponent: appsAdditionalComponent,
         };
     }
   };
@@ -242,7 +236,7 @@ const ServicesTabsComponent = () => {
 
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
-              Discover Our Range of 
+              Discover Our Range of
             </span>
             <br />
             <span className="text-white">Professional Services</span>
@@ -397,6 +391,12 @@ const ServicesTabsComponent = () => {
             </div>
           </div>
         </div>
+        {/* Additional Component Section */}
+        {currentContent.additionalComponent && (
+          <div className="mt-8 mb-12">
+            <div className="transition-all duration-500 ease-in-out">{currentContent.additionalComponent}</div>
+          </div>
+        )}
       </div>
     </section>
   );
