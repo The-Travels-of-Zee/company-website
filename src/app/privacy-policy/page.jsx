@@ -8,12 +8,12 @@ const PrivacyPolicy = () => {
     <>
       <div className="pt-48 pb-20">
         <div className="container">
-          <h1 className="heading">Privacy Policy</h1>
-          <p className="sub_heading font-light">Your data is safe with us.</p>
+          <h1 className="heading text-white">Privacy Policy</h1>
+          <p className="sub_heading font-light text-white">Your data is safe with us.</p>
           <div className="navigation">
             <Breadcrumb />
           </div>
-          <div className="mt-10 prose md:prose-lg mx-auto">
+          <div className="mt-10 prose md:prose-lg mx-auto prose-white">
             <Markdown>{privacyPolicy}</Markdown>
           </div>
         </div>

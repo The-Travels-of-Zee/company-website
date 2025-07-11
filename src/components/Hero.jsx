@@ -90,7 +90,7 @@ const Hero = () => {
       </div> */}
 
             <div className="flex flex-col sm:flex-row gap-4 mt-18">
-              <Link href="#contact">
+              <Link href="/contact">
                 <button className="group font-poppins font-semibold text-lg border-2 border-transparent bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl hover:from-cyan-600 hover:to-blue-700 duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden">
                   <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></span>
                   <span className="relative flex items-center gap-2">
