@@ -63,7 +63,7 @@ const Pricing = () => {
   // Show loading state until client-side hydration is complete
   if (!isClient || !pdfjs) {
     return (
-      <section className="py-20 relative overflow-hidden min-h-screen">
+      <section className="py-20 mt-10 relative overflow-hidden min-h-screen">
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 -right-40 w-80 h-80 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -119,7 +119,7 @@ const Pricing = () => {
   }
 
   return (
-    <section className="py-20 relative overflow-hidden min-h-screen">
+    <section className="py-20 mt-10 relative overflow-hidden min-h-screen">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 -right-40 w-80 h-80 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -138,9 +138,12 @@ const Pricing = () => {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Pricing Overview PDF
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-relaxed">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Pricing Overview PDF
+            </span>
           </h1>
+
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             Explore detailed engineer rates and roles, visualized through an embedded document viewer.
           </p>
