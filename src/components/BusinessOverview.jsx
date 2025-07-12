@@ -1,5 +1,5 @@
 "use client";
-import { Code, Cpu, Database, Shield, Star, ZapIcon } from "lucide-react";
+import { Code, Cpu, Database, Shield, Star, Zap } from "lucide-react";
 
 const BusinessOverview = () => {
   return (
@@ -22,7 +22,7 @@ const BusinessOverview = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-100 to-blue-100 text-cyan-700 px-6 py-3 rounded-full text-sm font-medium mb-6 border border-cyan-300 shadow-sm">
-            <ZapIcon className="w-4 h-4 text-cyan-500 animate-pulse" />
+            <Zap className="w-4 h-4 text-cyan-500 animate-pulse" />
             <span className="bg-gradient-to-r from-cyan-600 to-blue-500 bg-clip-text text-transparent font-semibold">
               AI-Powered Talent Matching
             </span>
@@ -125,7 +125,7 @@ const BusinessOverview = () => {
             <span className="font-medium">24/7 Support</span>
           </div>
           <div className="flex items-center gap-2">
-            <ZapIcon className="w-5 h-5 text-cyan-500" />
+            <Zap className="w-5 h-5 text-cyan-500" />
             <span className="font-medium">Instant Scaling</span>
           </div>
         </div>

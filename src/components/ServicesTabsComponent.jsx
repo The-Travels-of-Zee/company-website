@@ -9,14 +9,14 @@ import {
   ArrowRight,
   CheckCircle,
   UserCheck,
-  Search,
-  Award,
   Briefcase,
   Monitor,
   Database,
   Cloud,
-  ZapIcon,
   Zap,
+  Cpu,
+  Star,
+  Shield,
 } from "lucide-react";
 
 const ServicesTabsComponent = ({
@@ -62,14 +62,15 @@ const ServicesTabsComponent = ({
 
   const talentServices = [
     {
-      title: "Executive Search & Recruitment",
-      description: "Connect with C-level executives and senior management professionals",
-      icon: Search,
+      title: "AI-Driven Precision Screening",
+      description:
+        "Automated resume scoring, coding tests & AI video analysis for rapid candidate evaluation and selection.",
+      icon: Cpu,
       features: [
-        "Executive headhunting",
-        "Leadership assessment",
-        "Cultural fit evaluation",
-        "Compensation benchmarking",
+        "Automated resume parsing and scoring",
+        "AI-based video interview analysis",
+        "Skill-based coding assessments",
+        "Behavioral and fit prediction algorithms",
       ],
     },
     {
@@ -79,16 +80,28 @@ const ServicesTabsComponent = ({
       features: ["AI developers", "ML engineers", "Data scientists"],
     },
     {
-      title: "Contract & Freelance Staffing",
-      description: "Flexible workforce solutions for project-based requirements",
+      title: "Portfolio + Technical Assessments",
+      description:
+        "Candidates evaluated via comprehensive skill-based tests and real-world portfolio reviews for quality assurance.",
       icon: Briefcase,
-      features: ["Short-term contracts", "Project-based hiring", "Freelance management", "Rapid deployment"],
+      features: [
+        "Real-world portfolio analysis",
+        "Role-specific technical assessments",
+        "Skill benchmarking and validation",
+        "Hands-on project simulations",
+      ],
     },
     {
-      title: "Talent Consulting",
-      description: "Strategic workforce planning and HR consulting services",
-      icon: Award,
-      features: ["Workforce strategy", "Talent pipeline development", "Market intelligence", "Retention strategies"],
+      title: "Faster Time-to-Hire",
+      description:
+        "Lower cost and reduced hiring overhead with intelligent candidate matching and streamlined processes.",
+      icon: Database,
+      features: [
+        "Automated candidate matching",
+        "Streamlined onboarding workflows",
+        "Reduced time-to-fill metrics",
+        "Cost-efficient hiring models",
+      ],
     },
   ];
 
@@ -208,7 +221,7 @@ const ServicesTabsComponent = ({
   const activeTabData = tabs.find((tab) => tab.id === activeTab);
 
   return (
-    <section className="py-16 relative overflow-hidden">
+    <section className="py-16 relative overflow-hidden" id="services">
       {/* Enhanced Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating geometric shapes */}
@@ -371,9 +384,9 @@ const ServicesTabsComponent = ({
               can help transform your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-block">
+              <Link href="#contact" className="inline-block">
                 <button
-                  className={`group text-poppins font-bold px-8 py-4 bg-gradient-to-r ${
+                  className={`group text-poppins rounded-2xl font-bold px-8 py-4 bg-gradient-to-r ${
                     activeTabData.color === "text-cyan-400"
                       ? "from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
                       : activeTabData.color === "text-emerald-400"
@@ -397,6 +410,20 @@ const ServicesTabsComponent = ({
             <div className="transition-all duration-500 ease-in-out">{currentContent.additionalComponent}</div>
           </div>
         )}
+        <div className="flex flex-wrap justify-center items-center gap-8 text-white">
+          <div className="flex items-center gap-2">
+            <Shield className="w-5 h-5 text-emerald-500" />
+            <span>Enterprise Security</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Star className="w-5 h-5 text-yellow-400" />
+            <span>24/7 Support</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Zap className="w-5 h-5 text-cyan-500" />
+            <span>Instant Scaling</span>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -13,7 +13,7 @@ import { testimonials } from "@/constants";
 const TestimonialList = () => {
   return (
     <section className="py-20 relative overflow-hidden" id="testimonials">
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm text-cyan-300 px-6 py-3 rounded-full text-sm font-medium mb-6 border border-cyan-500/30">
@@ -93,7 +93,7 @@ const TestimonialList = () => {
 
           {/* Custom Navigation Buttons */}
           <div className="swiper-button-prev !text-cyan-400 !text-2xl after:!content-['←'] !-left-10 !top-2/3 !transform !-translate-y-1/2 !w-12 !h-12 !bg-slate-800/50 !backdrop-blur-sm !border !border-slate-700/50 !rounded-[50%] !flex !items-center !justify-center hover:!bg-slate-700/50 hover:!border-cyan-500/50 !transition-all !duration-300"></div>
-          <div className="swiper-button-next !text-cyan-400 !text-2xl after:!content-['→'] !-right-10 !top-2/3 !transform !-translate-y-1/3 !w-12 !h-12 !bg-slate-800/50 !backdrop-blur-sm !border !border-slate-700/50 !rounded-[50%] !flex !items-center !justify-center hover:!bg-slate-700/50 hover:!border-cyan-500/50 !transition-all !duration-300"></div>
+          <div className="swiper-button-next !text-cyan-400 !text-2xl after:!content-['→'] !-right-10 !top-2/3 !transform !-translate-y-1/2 !w-12 !h-12 !bg-slate-800/50 !backdrop-blur-sm !border !border-slate-700/50 !rounded-[50%] !flex !items-center !justify-center hover:!bg-slate-700/50 hover:!border-cyan-500/50 !transition-all !duration-300"></div>
 
           {/* Custom Pagination */}
           <div className="swiper-pagination !bottom-0 !relative !mt-8"></div>

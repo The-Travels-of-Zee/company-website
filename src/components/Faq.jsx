@@ -144,7 +144,7 @@ const Faq = () => {
               Our AI-powered recruitment experts are here to help. Get personalized answers and discover how we can
               transform your hiring process.
             </p>
-            <Link href="/contact">
+            <Link href="#contact">
               <button className="px-6 py-3 bg-white border border-gray-200 rounded-lg text-gray-800 font-medium hover:bg-gray-50 transition">
                 Contact Support
               </button>

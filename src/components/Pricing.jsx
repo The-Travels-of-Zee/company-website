@@ -77,7 +77,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-20 bg-white relative overflow-hidden" id="pricing">
       {/* Background Grid */}
       <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
 
@@ -88,12 +88,12 @@ const Pricing = () => {
             <Zap className="w-4 h-4" />
             <span>AI-Powered Pricing</span>
           </div>
-
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Transparent Pricing <br />
-            <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-              For Every Stage
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Transparent Pricing
             </span>
+            <br />
+            <span className="text-gray-900">For Every Stage</span>
           </h2>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">

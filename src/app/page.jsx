@@ -35,14 +35,14 @@ export default function Home() {
       <ServicesTabsComponent
         talentAdditionalComponent={
           <>
-            <ContactForm />
+            <ContactForm activeTab="talent" />
           </>
         }
         developmentAdditionalComponent={
           <>
             <WorkList />
             <Services />
-            <ContactForm />
+            <ContactForm activeTab="development" />
             <TestimonialList />
           </>
         }
@@ -51,11 +51,11 @@ export default function Home() {
             <Suspense fallback={<Loading />}>
               <AsyncCompanyProject />
             </Suspense>
-            <ContactForm />
+            <ContactForm activeTab="apps" />
           </>
         }
       />
-      <BusinessOverview />
+      {/* <BusinessOverview /> */}
       <Pricing />
       <Comparison />
       <Faq />

@@ -5,7 +5,7 @@ import { PiInstagramLogoFill } from "react-icons/pi";
 export const navbarLinks = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/#services" },
-  { name: "Projects", href: "/#projects" },
+  { name: "Pricings", href: "/#pricing" },
   { name: "Contact Us", href: "/#contact" },
 ];
 

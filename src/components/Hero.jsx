@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Brand from "./Brand";
 import Image from "next/image";
-import { ArrowRight, Code, Cpu, Database, Shield, Star, ZapIcon } from "lucide-react";
+import { ArrowRight, Code, Cpu, Database, Shield, Star, Zap } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -28,7 +28,7 @@ const Hero = () => {
           <div className="content_container mt-5 md:mt-0 px-2 transform hover:scale-[102%] transition-all duration-700">
             {/* Enhanced Badge with AI focus */}
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm text-cyan-300 px-6 py-3 rounded-full text-sm font-medium sm:mb-6 border border-cyan-500/30 shadow-lg">
-              <ZapIcon className="w-4 h-4 animate-pulse" />
+              <Zap className="w-4 h-4 animate-pulse" />
               <span className="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
                 AI-Powered Talent Matching
               </span>
@@ -90,7 +90,7 @@ const Hero = () => {
       </div> */}
 
             <div className="flex flex-col sm:flex-row gap-4 mt-18">
-              <Link href="/contact">
+              <Link href="/#contact">
                 <button className="group font-poppins font-semibold text-lg border-2 border-transparent bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl hover:from-cyan-600 hover:to-blue-700 duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden">
                   <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></span>
                   <span className="relative flex items-center gap-2">
