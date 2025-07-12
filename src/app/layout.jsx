@@ -58,7 +58,9 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
       </head>
-      <body className={`${poppins.variable} ${jakarta_sans.variable} ${avenir.variable}`}>
+      <body
+        className={`${poppins.variable} ${jakarta_sans.variable} ${avenir.variable} bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800`}
+      >
         <SiteNavbar />
         {children}
         <SiteFooter />

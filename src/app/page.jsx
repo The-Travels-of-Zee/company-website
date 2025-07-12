@@ -12,6 +12,10 @@ import ContactForm from "@/components/ContactForm";
 import Loading from "./loading";
 import EngagementModels from "@/components/EngagementModels";
 import ServicesTabsComponent from "@/components/ServicesTabsComponent";
+import Faq from "@/components/Faq";
+import Pricing from "@/components/Pricing";
+import BusinessOverview from "@/components/BusinessOverview";
+import Comparison from "@/components/Comparison";
 
 async function AsyncClientProject() {
   // Simulate server-side data fetching
@@ -26,27 +30,46 @@ async function AsyncCompanyProject() {
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
       <Hero />
-      <ServicesTabsComponent />
-      <WorkList />
-      <Services />
+      <ServicesTabsComponent
+        talentAdditionalComponent={
+          <>
+            <ContactForm activeTab="talent" />
+          </>
+        }
+        developmentAdditionalComponent={
+          <>
+            <WorkList />
+            <Services />
+            <ContactForm activeTab="development" />
+            <TestimonialList />
+          </>
+        }
+        appsAdditionalComponent={
+          <>
+            <Suspense fallback={<Loading />}>
+              <AsyncCompanyProject />
+            </Suspense>
+            <ContactForm activeTab="apps" />
+          </>
+        }
+      />
+      {/* <BusinessOverview /> */}
+      <Pricing />
+      <Comparison />
+      <Faq />
 
       {/* <Suspense fallback={<Loading />}>
         <AsyncClientProject />
       </Suspense> */}
 
-      <Suspense fallback={<Loading />}>
-        <AsyncCompanyProject />
-      </Suspense>
-
       {/* <EngagementModels /> */}
 
-      <StatsList />
-      <TestimonialList />
+      {/* <StatsList /> */}
       {/* <Team /> */}
-      <ContactForm />
+      {/* <ContactForm /> */}
       <Subscribe />
-    </>
+    </div>
   );
 }

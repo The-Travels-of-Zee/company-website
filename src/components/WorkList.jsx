@@ -1,116 +1,81 @@
+import React from "react";
 import { workLists, workLists2 } from "@/constants";
+import { Zap, Check, Star } from "lucide-react";
 
 const WorkList = () => {
   return (
-    <section className="py-16 bg-brandsBG" id="worklist">
-      <div className="container">
-        <div className="section_content">
-          <p className="mb-4 tagline_text">Our Process</p>
-          <h2 className="sub_heading max-w-[500px]">We provide the Perfect Solution to your business growth</h2>
-        </div>
-        <div className="relative my-20">
-          {/* Central vertical line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-brandOrange transform -translate-x-1/2 z-0" />
+    <section className="py-20 relative overflow-hidden" id="worklist">
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm text-cyan-300 px-6 py-3 text-sm font-medium mb-6 border border-cyan-500/30">
+            <Zap className="w-4 h-4 animate-pulse" />
+            <span className="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
+              Our Process
+            </span>
+          </div>
 
-          <div className="flex flex-col space-y-12 md:space-y-8">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Perfect Solution
+            </span>
+            <br />
+            <span className="text-white">to Your Business Growth</span>
+          </h2>
+
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Explore our streamlined and proven process to deliver high-impact results with clarity and confidence.
+          </p>
+        </div>
+
+        {/* Process Timeline */}
+        <div className="relative my-20">
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-300 to-blue-300 transform -translate-x-1/2 z-0" />
+
+          <div className="flex flex-col space-y-12 md:space-y-8 z-10 relative">
             {workLists2.map((item, index) => {
               const isLeft = index % 2 === 0;
+
               return (
-                <div key={index} className="grid grid-cols-1 md:grid-cols-9 items-center justify-center relative group">
-                  {/* Left card */}
+                <div key={index} className="grid grid-cols-1 md:grid-cols-9 items-center justify-center relative">
+                  {/* Left Card */}
                   <div className={`hidden md:flex md:col-span-4 justify-end ${isLeft ? "" : "invisible"}`}>
-                    <div className="relative transform transition-all duration-300 hover:scale-105">
-                      <div className="bg-gradient-to-br from-white to-brandsBG w-[380px] h-[160px] p-7 rounded-[16px] shadow-lg hover:shadow-xl border border-blueLight/20 backdrop-blur-sm relative overflow-hidden group-hover:border-brandOrange/30 transition-all duration-300">
-                        {/* Decorative corner element */}
-                        <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-brandOrange/10 to-transparent rounded-bl-[24px]" />
-
-                        <div className="relative z-10 flex flex-col justify-center items-center text-center h-full">
-                          <div className="w-12 h-1 bg-gradient-to-r from-brandOrange to-blueLight mb-3" />
-                          <h3 className="text-xl font-bold text-brandPrimary mb-2 group-hover:text-brandOrange transition-colors duration-300">
-                            {item.title}
-                          </h3>
-                          <p className="text-brandSecondary/80 leading-relaxed text-sm">{item.desc}</p>
-                        </div>
-
-                        {/* Subtle pattern overlay */}
-                        <div className="absolute inset-0 opacity-5 bg-gradient-to-r from-brandPrimary to-blueLight" />
-                      </div>
-
-                      {/* Enhanced connector line */}
-                      <div className="absolute top-1/2 right-[-40px] w-[40px] h-[3px] bg-gradient-to-r from-brandOrange to-blueLight transform -translate-y-1/2 rounded-[50%] shadow-sm" />
-                      <div className="absolute top-1/2 right-[-35px] w-[30px] h-[1px] bg-white/60 transform -translate-y-1/2 rounded-[50%]" />
+                    <div className="p-6 bg-slate-800/40 backdrop-blur-md border border-cyan-300/10 rounded-xl max-w-[380px] transition-transform hover:scale-105">
+                      <h3 className="text-xl font-bold text-cyan-300 mb-2">{item.title}</h3>
+                      <p className="text-slate-300 text-sm">{item.desc}</p>
                     </div>
                   </div>
 
-                  {/* Enhanced center dot */}
-                  <div className="col-span-1 flex flex-col items-center z-20 relative">
+                  {/* Center Dot + Lines */}
+                  <div className="col-span-1 flex flex-col items-center z-10 relative">
                     <div className="relative">
-                      {/* Outer glow ring */}
                       <span className="absolute inline-flex h-8 w-8 -top-1.5 -left-1.5">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-[50%] bg-brandOrange/40 opacity-75"></span>
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-[50%] bg-cyan-400/30"></span>
                       </span>
+                      <span className="relative inline-flex rounded-[50%] h-5 w-5 bg-gradient-to-br from-cyan-400 to-blue-400 border-2 border-white shadow-lg" />
 
-                      {/* Main dot */}
-                      <span className="relative inline-flex rounded-[50%] h-5 w-5 bg-gradient-to-br from-brandOrange to-brandOrange/80 border-3 border-white shadow-lg ring-4 ring-blueLight/20">
-                        <span className="absolute inset-0.5 rounded-[50%] bg-white/30"></span>
-                      </span>
-
-                      {/* Vertical line segments */}
                       {index !== 0 && (
-                        <div className="absolute -top-12 left-1/2 w-0.5 h-12 bg-gradient-to-b from-transparent via-blueLight/60 to-brandOrange transform -translate-x-1/2" />
+                        <div className="absolute -top-12 left-1/2 w-0.5 h-12 bg-gradient-to-b from-transparent via-cyan-300 to-blue-300 transform -translate-x-1/2" />
                       )}
                       {index !== workLists2.length - 1 && (
-                        <div className="absolute -bottom-12 left-1/2 w-0.5 h-12 bg-gradient-to-t from-transparent via-blueLight/60 to-brandOrange transform -translate-x-1/2" />
+                        <div className="absolute -bottom-12 left-1/2 w-0.5 h-12 bg-gradient-to-t from-transparent via-cyan-300 to-blue-300 transform -translate-x-1/2" />
                       )}
                     </div>
                   </div>
 
-                  {/* Right card */}
+                  {/* Right Card */}
                   <div className={`hidden md:flex md:col-span-4 justify-start ${!isLeft ? "" : "invisible"}`}>
-                    <div className="relative transform transition-all duration-300 hover:scale-105">
-                      <div className="bg-gradient-to-bl from-white to-brandsBG w-[380px] h-[160px] p-7 rounded-[16px] shadow-lg hover:shadow-xl border border-blueLight/20 backdrop-blur-sm relative overflow-hidden group-hover:border-brandOrange/30 transition-all duration-300">
-                        {/* Decorative corner element */}
-                        <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-blueLight/10 to-transparent rounded-br-3xl" />
-
-                        <div className="relative z-10 flex flex-col justify-center items-center text-center h-full">
-                          <div className="w-12 h-1 bg-gradient-to-r from-blueLight to-brandOrange mb-3" />
-                          <h3 className="text-xl font-bold text-brandPrimary mb-2 group-hover:text-brandOrange transition-colors duration-300">
-                            {item.title}
-                          </h3>
-                          <p className="text-brandSecondary/80 leading-relaxed text-sm">{item.desc}</p>
-                        </div>
-
-                        {/* Subtle pattern overlay */}
-                        <div className="absolute inset-0 opacity-5 bg-gradient-to-l from-brandPrimary to-blueLight" />
-                      </div>
-
-                      {/* Enhanced connector line */}
-                      <div className="absolute top-1/2 left-[-40px] w-[40px] h-[3px] bg-gradient-to-l from-brandOrange to-blueLight transform -translate-y-1/2 rounded-[50%] shadow-sm" />
-                      <div className="absolute top-1/2 left-[-35px] w-[30px] h-[1px] bg-white/60 transform -translate-y-1/2 rounded-[50%]" />
+                    <div className="p-6 bg-slate-800/40 backdrop-blur-md border border-cyan-400/10 rounded-xl max-w-[380px] transition-transform hover:scale-105">
+                      <h3 className="text-xl font-bold text-cyan-300 mb-2">{item.title}</h3>
+                      <p className="text-slate-300 text-sm">{item.desc}</p>
                     </div>
                   </div>
 
-                  {/* Enhanced mobile card */}
+                  {/* Mobile View */}
                   <div className="md:hidden mt-6 px-4">
-                    <div className="relative transform transition-all duration-300 hover:scale-105">
-                      <div className="bg-gradient-to-br from-white to-brandsBG p-7 rounded-[16px] shadow-lg border border-blueLight/20 relative overflow-hidden">
-                        {/* Mobile decorative elements */}
-                        <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-brandOrange/8 to-transparent rounded-bl-[24px]" />
-                        <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-blueLight/8 to-transparent rounded-tr-[24px]" />
-
-                        <div className="relative z-10 text-center">
-                          <div className="w-16 h-1 bg-gradient-to-r from-brandOrange to-blueLight rounded-[50%] mx-auto mb-4" />
-                          <h3 className="text-xl font-bold text-brandPrimary mb-3">{item.title}</h3>
-                          <p className="text-brandSecondary/80 leading-relaxed">{item.desc}</p>
-                        </div>
-
-                        {/* Mobile connecting dot */}
-                        <div className="absolute -left-3 top-1/2 transform -translate-y-1/2">
-                          <span className="inline-flex h-6 w-6 rounded-[50%] bg-gradient-to-br from-brandOrange to-brandOrange/80 border-2 border-white shadow-md ring-2 ring-blueLight/20">
-                            <span className="absolute inset-1 rounded-[50%] bg-white/30"></span>
-                          </span>
-                        </div>
-                      </div>
+                    <div className="p-6 bg-slate-800/30 border border-cyan-300/10 rounded-xl backdrop-blur-md">
+                      <h3 className="text-lg font-semibold text-blue-300">{item.title}</h3>
+                      <p className="text-slate-300 mt-2 text-sm">{item.desc}</p>
                     </div>
                   </div>
                 </div>
@@ -119,31 +84,25 @@ const WorkList = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 items-center mt-11">
-          {workLists.map((item) => (
+        {/* Bottom Card Section */}
+        <div className="grid md:grid-cols-3 gap-6 items-start mt-20">
+          {workLists.map((item, index) => (
             <div
-              key={item.title}
-              className="py-[24px] pb-10 px-[30px] card md:max-w-[380px]  hover:shadow-bgBlueLight transition-all duration-300 shadow-brandShadow rounded-[20px] bg-white"
+              key={index}
+              className="px-6 py-12 bg-slate-800/40 h-full backdrop-blur-lg border border-slate-700 rounded-2xl hover:shadow-xl hover:shadow-blue-500/10 transition-all"
             >
               <video
                 src={item.video}
                 autoPlay
                 loop
                 muted
+                playsInline
                 width={128}
                 height={128}
-                playsInline
-                className="pointer-events-none select-none"
+                className="mb-4 mx-auto rounded-lg pointer-events-none"
               />
-
-              <h3 className="font-poppins font-semibold text-2xl text-left text-black mt-4">{item.title}</h3>
-              <p className="font_avenir font-normal text-lg text-black mt-4">{item.desc}</p>
-              {/* <button className="font_avenir text-lg font-normal rounded-lg border-2 border-brandOrange bg-transparent hover:bg-brandOrange  duration-300 px-3 py-[10px] mt-11">
-                <span className="flex items-center gap-2">
-                  Learn More
-                  <img src="/icons/arrow.png" alt="icon" />
-                </span>
-              </button> */}
+              <h3 className="text-xl text-center font-semibold text-white mb-2">{item.title}</h3>
+              <p className="text-slate-300 text-center text-sm">{item.desc}</p>
             </div>
           ))}
         </div>

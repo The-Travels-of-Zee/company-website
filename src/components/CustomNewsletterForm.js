@@ -1,79 +1,72 @@
 "use client";
-import { useState } from 'react';
+import { useState } from "react";
 
-export default function CustomNewsletterForm({ title = 'Subscribe', apiUrl = '/api/newsletter' }) {
-  const [email, setEmail] = useState('');
-  const [error, setError] = useState('');
-  const [status, setStatus] = useState('idle');
-  const [successMessage, setSuccessMessage] = useState('');
+export default function CustomNewsletterForm({ title = "Subscribe", apiUrl = "/api/newsletter" }) {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [status, setStatus] = useState("idle");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const subscribe = async (e) => {
     e.preventDefault();
-    setStatus('loading');
-    setError('');
+    setStatus("loading");
+    setError("");
 
     if (!email) {
-      setError('Email is required');
-      setStatus('error');
+      setError("Email is required");
+      setStatus("error");
       return;
     }
 
     try {
-      // console.log("Submitting to:", apiUrl);
-      // console.log("Email:", email);
-      
       const response = await fetch(apiUrl, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ email }),
       });
 
-      console.log("Response status:", response.status);
       const data = await response.json();
-      // console.log("Response data:", data);
 
       if (!response.ok) {
-        throw new Error(data.error || 'Something went wrong');
+        throw new Error(data.error || "Something went wrong");
       }
 
-      setStatus('success');
-      setSuccessMessage(data.message || 'Successfully subscribed!');
-      setEmail('');
+      setStatus("success");
+      setSuccessMessage(data.message || "Successfully subscribed!");
+      setEmail("");
     } catch (error) {
-      setStatus('error');
-      setError(error.message || 'An error occurred. Please try again.');
-      console.error('Subscription error:', error);
+      setStatus("error");
+      setError(error.message || "An error occurred. Please try again.");
+      console.error("Subscription error:", error);
     }
   };
 
   return (
     <div className="w-full max-w-md mx-auto">
       <form onSubmit={subscribe} className="relative">
-        <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+        <div className="flex items-center border border-cyan-200 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-cyan-400">
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
             required
-            disabled={status === 'loading'}
-            className="w-full px-4 py-3 outline-none text-gray-700"
+            disabled={status === "loading"}
+            className="w-full px-4 py-3 outline-none text-blue-800 placeholder:text-blue-300 bg-white"
           />
           <button
             type="submit"
-            disabled={status === 'loading'}
-            className="bg-brandOrange hover:bg-brandOrange/80 text-white px-4 py-3 font-medium whitespace-nowrap"
+            disabled={status === "loading"}
+            className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-3 font-medium transition whitespace-nowrap"
           >
-            {status === 'loading' ? 'Subscribing...' : title}
+            {status === "loading" ? "Subscribing..." : title}
           </button>
         </div>
-        
-        {status === 'error' && <p className="text-red-500 mt-2 text-sm">{error}</p>}
-        {status === 'success' && (
-          <p className="text-green-500 mt-2 text-sm">{successMessage}</p>
-        )}
+
+        {status === "error" && <p className="text-red-500 mt-2 text-sm">{error}</p>}
+        {status === "success" && <p className="text-cyan-600 mt-2 text-sm">{successMessage}</p>}
       </form>
     </div>
   );

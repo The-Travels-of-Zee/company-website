@@ -6,9 +6,6 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    borderRadius: {
-      lg: "10px",
-    },
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
@@ -30,6 +27,21 @@ module.exports = {
         statsShadow: "4px 9px 20px 0px rgba(0, 0, 0, 0.07)",
         serviceImageShadow: "1px 4px 30px 0px rgba(0, 0, 0, 0.20)",
       },
+      typography: (theme) => ({
+        white: {
+          css: {
+            color: theme("colors.white"),
+            a: { color: theme("colors.white") },
+            strong: { color: theme("colors.white") },
+            h1: { color: theme("colors.white") },
+            h2: { color: theme("colors.white") },
+            h3: { color: theme("colors.white") },
+            h4: { color: theme("colors.white") },
+            code: { color: theme("colors.white") },
+            "blockquote p": { color: theme("colors.white") },
+          },
+        },
+      }),
     },
   },
   plugins: [require("@tailwindcss/typography")],
