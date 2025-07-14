@@ -35,6 +35,10 @@ export default function Home() {
       <ServicesTabsComponent
         talentAdditionalComponent={
           <>
+            <BusinessOverview />
+            <Comparison />
+            <Pricing />
+            <Faq />
             <ContactForm activeTab="talent" />
           </>
         }
@@ -42,8 +46,8 @@ export default function Home() {
           <>
             <WorkList />
             <Services />
-            <ContactForm activeTab="development" />
             <TestimonialList />
+            <ContactForm activeTab="development" />
           </>
         }
         appsAdditionalComponent={
@@ -55,10 +59,6 @@ export default function Home() {
           </>
         }
       />
-      {/* <BusinessOverview /> */}
-      <Pricing />
-      <Comparison />
-      <Faq />
 
       {/* <Suspense fallback={<Loading />}>
         <AsyncClientProject />

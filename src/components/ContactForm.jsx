@@ -14,63 +14,49 @@ const ContactForm = ({ activeTab = "talent", className = "" }) => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    const formData = new FormData();
-    const inputs = form.current.querySelectorAll("input, select, textarea");
-
-    inputs.forEach((input) => {
-      if (input.name) {
-        formData.append(input.name, input.value);
-      }
-    });
-
     emailjs
       .sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, form.current, {
         publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
       })
       .then(
-        () => {
-          setIsSubmitted(true);
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
+        () => setIsSubmitted(true),
+        (error) => console.log("FAILED...", error.text)
       );
   };
 
   const themes = {
     talent: {
-      primary: "from-cyan-400 to-blue-500",
-      secondary: "from-cyan-500/10 to-blue-500/10",
-      accent: "text-cyan-400",
-      border: "border-cyan-500/30",
-      shadow: "shadow-cyan-500/25",
-      focus: "focus:ring-cyan-500/20 focus:border-cyan-500",
-      hover: "hover:border-cyan-300",
+      primary: "from-cyan-500 to-blue-600",
+      secondary: "from-cyan-50 to-blue-50",
+      accent: "text-cyan-600",
+      border: "border-cyan-200",
+      shadow: "shadow-cyan-300/30",
+      focus: "focus:ring-cyan-200 focus:border-cyan-300",
+      hover: "hover:border-cyan-400",
       gradient: "from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700",
-      ping: "from-cyan-400/20 to-blue-500/20",
+      ping: "from-cyan-200 to-blue-200",
     },
     development: {
-      primary: "from-emerald-400 to-teal-500",
-      secondary: "from-emerald-500/10 to-teal-500/10",
-      accent: "text-emerald-400",
-      border: "border-emerald-500/30",
-      shadow: "shadow-emerald-500/25",
-      focus: "focus:ring-emerald-500/20 focus:border-emerald-500",
-      hover: "hover:border-emerald-300",
+      primary: "from-emerald-500 to-teal-600",
+      secondary: "from-emerald-50 to-teal-50",
+      accent: "text-emerald-600",
+      border: "border-emerald-200",
+      shadow: "shadow-emerald-300/30",
+      focus: "focus:ring-emerald-200 focus:border-emerald-300",
+      hover: "hover:border-emerald-400",
       gradient: "from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700",
-      ping: "from-emerald-400/20 to-teal-500/20",
+      ping: "from-emerald-200 to-teal-200",
     },
     apps: {
-      primary: "from-purple-400 to-pink-500",
-      secondary: "from-purple-500/10 to-pink-500/10",
-      accent: "text-purple-400",
-      border: "border-purple-500/30",
-      shadow: "shadow-purple-500/25",
-      focus: "focus:ring-purple-500/20 focus:border-purple-500",
-      hover: "hover:border-purple-300",
+      primary: "from-purple-500 to-pink-600",
+      secondary: "from-purple-50 to-pink-50",
+      accent: "text-purple-600",
+      border: "border-purple-200",
+      shadow: "shadow-purple-300/30",
+      focus: "focus:ring-purple-200 focus:border-purple-300",
+      hover: "hover:border-purple-400",
       gradient: "from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700",
-      ping: "from-purple-400/20 to-pink-500/20",
+      ping: "from-purple-200 to-pink-200",
     },
   };
 
@@ -95,10 +81,9 @@ const ContactForm = ({ activeTab = "talent", className = "" }) => {
   };
 
   return (
-    <section className={`py-20 relative overflow-hidden ${className}`} id="contact">
-      {/* Background */}
+    <section className={`py-10 bg-transparent relative overflow-hidden ${className}`} id="contact">
+      {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
         <div
           className={`absolute top-20 left-20 w-4 h-4 bg-gradient-to-r ${currentTheme.ping} rounded-full animate-ping`}
         />
@@ -110,29 +95,27 @@ const ContactForm = ({ activeTab = "talent", className = "" }) => {
         />
       </div>
 
-      {/* Content */}
       <div className="container relative z-10 max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <div
-            className={`inline-flex items-center gap-2 bg-gradient-to-r ${currentTheme.secondary} backdrop-blur-sm ${currentTheme.accent} px-6 py-3 rounded-full text-sm font-medium mb-6 ${currentTheme.border}`}
+            className={`inline-flex items-center gap-2 bg-gradient-to-r ${currentTheme.secondary} text-sm font-medium px-6 py-3 rounded-full ${currentTheme.border}`}
           >
             <Mail className="w-4 h-4 animate-pulse" />
-            <span className={`bg-gradient-to-r ${currentTheme.primary} bg-clip-text text-transparent`}>Contact Us</span>
+            <span className={`bg-gradient-to-r ${currentTheme.primary} bg-clip-text text-transparent font-semibold`}>
+              Contact Us
+            </span>
           </div>
           <h2
-            className={`text-5xl font-bold bg-gradient-to-r ${currentTheme.primary} bg-clip-text text-transparent mb-4 leading-tight`}
+            className={`text-5xl font-bold bg-gradient-to-r ${currentTheme.primary} bg-clip-text text-transparent mb-4`}
           >
             We are here to help you.
           </h2>
-          <p className="text-xl text-slate-300 font-medium max-w-md mx-auto">We will reach you in an instant.</p>
+          <p className="text-xl text-gray-600 max-w-md mx-auto">We will reach you in an instant.</p>
         </div>
 
-        {/* Form or Success Message */}
         {isSubmitted ? (
-          <div className="text-center max-w-2xl mx-auto">
-            <div className="bg-slate-800/50 backdrop-blur-md px-12 py-20 rounded-[24px] shadow-lg border border-slate-700/50 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-slate-800/10 to-slate-700/5 rounded-[24px]" />
-              <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${currentTheme.primary}`} />
+          <div className="text-center max-w-2xl mx-auto overflow-hidden">
+            <div className="bg-gray-50/50 border border-gray-200 shadow-xl rounded-xl px-12 py-20 relative overflow-hidden">
               <div className="relative z-10">
                 <div
                   className={`w-24 h-24 bg-gradient-to-r ${currentTheme.primary} rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg animate-pulse`}
@@ -144,17 +127,14 @@ const ContactForm = ({ activeTab = "talent", className = "" }) => {
                 >
                   Thank You!
                 </h2>
-                <p className="text-lg text-slate-300">We will be reaching you in no time.</p>
+                <p className="text-lg text-gray-600">We will be reaching you in no time.</p>
               </div>
             </div>
           </div>
         ) : (
           <form ref={form} onSubmit={sendEmail} className="max-w-4xl mx-auto relative z-10">
-            <div className="bg-slate-800/50 backdrop-blur-md rounded-[24px] shadow-lg border border-slate-700/50 p-8 relative overflow-hidden">
-              <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${currentTheme.primary}`} />
-              <div className="absolute inset-0 bg-gradient-to-r from-slate-800/10 to-slate-700/5 rounded-[24px]" />
+            <div className="bg-gray-50/50 border border-gray-200 shadow-lg rounded-[24px] p-8  overflow-hidden">
               <div className="relative z-10 grid md:grid-cols-2 gap-6">
-                {/* Form Fields */}
                 {[
                   { label: "First Name", name: "first_name", icon: User },
                   { label: "Last Name", name: "last_name", icon: User },
@@ -163,32 +143,31 @@ const ContactForm = ({ activeTab = "talent", className = "" }) => {
                   { label: "Your Budget", name: "budget", icon: DollarSign },
                 ].map(({ label, name, icon: Icon, type = "text" }) => (
                   <div className="group" key={name}>
-                    <label className={`flex items-center gap-2 text-sm font-semibold text-slate-300 mb-3`}>
+                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-3">
                       <Icon className={`w-4 h-4 ${currentTheme.accent}`} />
-                      {label} <span className="text-red-400">*</span>
+                      {label} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type={type}
                       name={name}
                       required
-                      placeholder={`E.g. ${label.includes("Email") ? "name@website.com" : label.split(" ")[0]}`}
-                      className={`w-full bg-slate-700/50 border-2 border-slate-600 text-white rounded-2xl placeholder-slate-400 px-5 py-4 text-lg transition-all duration-300 focus:outline-none ${currentTheme.focus} focus:bg-slate-700/70 ${currentTheme.hover}`}
+                      placeholder={`E.g. ${label.includes("Email") ? "name@site.com" : label.split(" ")[0]}`}
+                      className={`w-full bg-white border-2 border-gray-200 text-gray-900 rounded-2xl placeholder-gray-400 px-5 py-4 text-lg transition-all duration-300 focus:outline-none ${currentTheme.focus} ${currentTheme.hover}`}
                     />
                   </div>
                 ))}
 
-                {/* Service Select */}
                 <div className="group">
-                  <label className="flex items-center gap-2 text-sm font-semibold text-slate-300 mb-3">
+                  <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-3">
                     <Briefcase className={`w-4 h-4 ${currentTheme.accent}`} />
                     Select Service
                   </label>
                   <select
                     name="service"
-                    className={`w-full bg-slate-700/50 border-2 border-slate-600 text-white rounded-2xl px-5 py-4 text-lg transition-all duration-300 focus:outline-none ${currentTheme.focus} focus:bg-slate-700/70 ${currentTheme.hover} cursor-pointer appearance-none`}
+                    className={`w-full bg-white border-2 border-gray-200 text-gray-900 rounded-2xl px-5 py-4 text-lg transition-all duration-300 focus:outline-none ${currentTheme.focus} ${currentTheme.hover}`}
                   >
                     {getServiceOptions().map((s, i) => (
-                      <option key={i} value={s} className="bg-slate-700 text-white">
+                      <option key={i} value={s}>
                         {s}
                       </option>
                     ))}
@@ -196,25 +175,24 @@ const ContactForm = ({ activeTab = "talent", className = "" }) => {
                 </div>
               </div>
 
-              {/* Message */}
               <div className="mt-8 group">
-                <label className="flex items-center gap-2 text-sm font-semibold text-slate-300 mb-3">
+                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-3">
                   <MessageSquare className={`w-4 h-4 ${currentTheme.accent}`} />
-                  Message <span className="text-red-400">*</span>
+                  Message <span className="text-red-500">*</span>
                 </label>
                 <textarea
                   name="message"
                   required
                   rows="5"
                   maxLength={500}
-                  placeholder="Enter your message..."
                   onChange={handleMessageChange}
-                  className={`w-full bg-slate-700/50 border-2 border-slate-600 text-white rounded-2xl placeholder-slate-400 px-5 py-4 text-lg transition-all duration-300 focus:outline-none ${currentTheme.focus} focus:bg-slate-700/70 ${currentTheme.hover} resize-none`}
+                  placeholder="Enter your message..."
+                  className={`w-full bg-white border-2 border-gray-200 text-gray-900 rounded-2xl placeholder-gray-400 px-5 py-4 text-lg transition-all duration-300 focus:outline-none ${currentTheme.focus} ${currentTheme.hover} resize-none`}
                 />
-                <div className="text-sm text-right text-slate-400 mt-2 font-medium">
+                <div className="text-sm text-right mt-2 font-medium">
                   <span
                     className={
-                      messageLength > 450 ? "text-red-400" : messageLength > 400 ? "text-yellow-400" : "text-slate-400"
+                      messageLength > 450 ? "text-red-500" : messageLength > 400 ? "text-yellow-500" : "text-gray-500"
                     }
                   >
                     {messageLength}
@@ -223,7 +201,6 @@ const ContactForm = ({ activeTab = "talent", className = "" }) => {
                 </div>
               </div>
 
-              {/* Submit */}
               <div className="mt-8 flex justify-center">
                 <button
                   type="submit"
