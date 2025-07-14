@@ -3,14 +3,11 @@ import { Code, Cpu, Database, Shield, Star, Target, Zap } from "lucide-react";
 
 const BusinessOverview = () => {
   return (
-    <section className="py-20 relative overflow-hidden bg-gradient-to-b from-white via-sky-50 to-white">
+    <section className="py-20 relative overflow-hidden bg-transparent">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-25 left-20 w-80 h-80 bg-gradient-to-r from-blue-400/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-
-        {/* Grid Overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(14,165,233,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(14,165,233,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
 
         {/* Floating Points */}
         <div className="absolute top-32 left-1/4 w-3 h-3 bg-cyan-400/40 rounded-full animate-ping"></div>
@@ -97,9 +94,8 @@ const BusinessOverview = () => {
 
           <div className="text-center p-6 bg-sky-50 border border-blue-200 rounded-2xl">
             <div className="flex items-center justify-center gap-2 mb-2">
-              <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
               <div className="text-4xl font-bold bg-gradient-to-r from-blue-500 to-sky-500 bg-clip-text text-transparent">
-                30+%
+                +30%
               </div>
             </div>
             <div className="text-gray-600 font-medium">

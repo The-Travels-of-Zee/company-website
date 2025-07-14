@@ -35,7 +35,7 @@ export default function Home() {
       <ServicesTabsComponent
         talentAdditionalComponent={
           <>
-            <BusinessOverview />
+            {/* <BusinessOverview /> */}
             <Comparison />
             <Pricing />
             <Faq />

@@ -85,7 +85,7 @@ const ServicesTabsComponent = ({
     {
       title: "Portfolio + Technical Assessments",
       description:
-        "Candidates evaluated via comprehensive skill-based tests and real-world portfolio reviews for quality assurance.",
+        "Candidates evaluated via skill-based tests and real-world portfolio reviews, ensuring quality hires.",
       icon: Briefcase,
       features: [
         "Real-world portfolio analysis",
@@ -96,8 +96,7 @@ const ServicesTabsComponent = ({
     },
     {
       title: "Faster Time-to-Hire",
-      description:
-        "Lower cost and reduced hiring overhead with intelligent candidate matching and streamlined processes.",
+      description: "Lower Cost - Save weeks and reduce hiring overhead with intelligent candidate matching.",
       icon: Database,
       features: [
         "Automated candidate matching",
@@ -175,14 +174,14 @@ const ServicesTabsComponent = ({
       case "talent":
         return {
           title: "AI-Driven Technical Talent Acquisition",
-          subtitle: "Connect with Top-Tier Professionals",
+          subtitle: "Perfect Solution to Your Business Growth",
           description:
-            "We bridge the gap between exceptional talent and innovative companies, providing comprehensive recruitment and staffing solutions tailored to your specific needs.",
+            "Access top-tier developers vetted by AI-backed screening, testing, and portfolio analysis—instantly scalable to your needs.",
           services: talentServices,
           stats: [
-            { value: "800+", label: "Candidates Placed" },
-            { value: "98%", label: "Success Rate" },
-            { value: "<1hr", label: "Average Response" },
+            { value: "50%", label: "Time-to-Fill Reduction: Faster Placement" },
+            { value: "+30%", label: "Engagement Boost: AI-personalized outreach increases candidate response rates" },
+            { value: "98%", label: "Hiring Accuracy: Smarter matches reduce early turnover" },
           ],
           ctaText: "Find Your Perfect Match",
           additionalComponent: talentAdditionalComponent,
