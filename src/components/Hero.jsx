@@ -141,7 +141,7 @@ const Hero = () => {
               <div className="flex items-center gap-2 mb-1">
                 <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
                 <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                  99.2%
+                  98%
                 </div>
               </div>
               <div className="text-sm text-slate-400">AI Match Accuracy</div>
@@ -151,7 +151,7 @@ const Hero = () => {
               <div className="flex items-center gap-2 mb-1">
                 <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
                 <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  4.8h
+                  {"<1h"}
                 </div>
               </div>
               <div className="text-sm text-slate-400">Avg. Processing Time</div>
@@ -161,7 +161,7 @@ const Hero = () => {
               <div className="flex items-center gap-2 mb-1">
                 <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
                 <div className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                  500+
+                  300+
                 </div>
               </div>
               <div className="text-sm text-slate-400">Elite Developers</div>

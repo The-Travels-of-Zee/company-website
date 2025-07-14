@@ -222,6 +222,22 @@ export const testimonials = [
     msg: "The Travels of Zee did a fantastic job redesigning the website. They were professional, creative, and incredibly easy to work with and they delivered exactly what we needed.",
     image: "./images/Oscar-A-Rodriguez.avif",
   },
+  {
+    id: 4,
+    name: "",
+    project_name: "Machine Learning Backend",
+    designation: "CTO, FinTech Startup",
+    msg: "We hired 3 senior backend engineers in under 2 weeks, AI-powered screening matched our tech stack precisely.",
+    image: "./static/T-logo.png",
+  },
+  {
+    id: 5,
+    name: "",
+    project_name: "Data Analyst",
+    designation: "HR Head, eCommerce Brand",
+    msg: "Their AI skill tests and portfolio scoring gave us total confidence in the candidates.",
+    image: "./static/T-logo.png",
+  },
 ];
 
 export const footerLinks = [

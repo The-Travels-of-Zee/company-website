@@ -77,9 +77,9 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden" id="pricing">
+    <section className="py-20 min-w-full bg-transparent relative overflow-hidden" id="pricing">
       {/* Background Grid */}
-      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+      {/* <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div> */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -154,7 +154,7 @@ const Pricing = () => {
         </div> */}
 
         {/* Features */}
-        <div className="bg-gray-100 rounded-2xl border border-gray-200 px-8 py-12 text-gray-800">
+        <div className="bg-gray-100 rounded-2xl border bg-gray-100/60 border-gray-200 px-8 py-12 text-gray-800">
           <div className="text-center mb-10">
             <h3 className="text-2xl font-bold mb-2">All Plans Include</h3>
             <div className="flex justify-center gap-6 text-sm text-gray-600">

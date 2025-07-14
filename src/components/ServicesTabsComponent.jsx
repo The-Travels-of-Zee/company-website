@@ -32,31 +32,34 @@ const ServicesTabsComponent = ({
       id: "talent",
       label: "Talent Agency",
       icon: Users,
-      color: "text-cyan-400",
-      bgColor: "bg-slate-800/50",
-      borderColor: "border-cyan-500/30",
-      shadowColor: "shadow-lg shadow-cyan-500/25",
-      gradientBg: "bg-gradient-to-r from-cyan-500/10 to-blue-500/10",
+      color: "text-cyan-600",
+      bgColor: "bg-white",
+      borderColor: "border-cyan-300",
+      shadowColor: "shadow-xl shadow-cyan-500/20",
+      gradientBg: "bg-gradient-to-r from-cyan-50/80 to-blue-50/80",
+      buttonGradient: "from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700",
     },
     {
       id: "development",
       label: "Development Services",
       icon: Code,
-      color: "text-emerald-400",
-      bgColor: "bg-slate-800/50",
-      borderColor: "border-emerald-500/30",
-      shadowColor: "shadow-lg shadow-emerald-500/25",
-      gradientBg: "bg-gradient-to-r from-emerald-500/10 to-teal-500/10",
+      color: "text-emerald-600",
+      bgColor: "bg-white",
+      borderColor: "border-emerald-300",
+      shadowColor: "shadow-xl shadow-emerald-500/20",
+      gradientBg: "bg-gradient-to-r from-emerald-50/80 to-teal-50/80",
+      buttonGradient: "from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700",
     },
     {
       id: "apps",
       label: "In-House Apps",
       icon: Smartphone,
-      color: "text-purple-400",
-      bgColor: "bg-slate-800/50",
-      borderColor: "border-purple-500/30",
-      shadowColor: "shadow-lg shadow-purple-500/25",
-      gradientBg: "bg-gradient-to-r from-purple-500/10 to-pink-500/10",
+      color: "text-purple-600",
+      bgColor: "bg-white",
+      borderColor: "border-purple-300",
+      shadowColor: "shadow-xl shadow-purple-500/20",
+      gradientBg: "bg-gradient-to-r from-purple-50/80 to-pink-50/80",
+      buttonGradient: "from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700",
     },
   ];
 
@@ -82,7 +85,7 @@ const ServicesTabsComponent = ({
     {
       title: "Portfolio + Technical Assessments",
       description:
-        "Candidates evaluated via comprehensive skill-based tests and real-world portfolio reviews for quality assurance.",
+        "Candidates evaluated via skill-based tests and real-world portfolio reviews, ensuring quality hires.",
       icon: Briefcase,
       features: [
         "Real-world portfolio analysis",
@@ -93,8 +96,7 @@ const ServicesTabsComponent = ({
     },
     {
       title: "Faster Time-to-Hire",
-      description:
-        "Lower cost and reduced hiring overhead with intelligent candidate matching and streamlined processes.",
+      description: "Lower Cost - Save weeks and reduce hiring overhead with intelligent candidate matching.",
       icon: Database,
       features: [
         "Automated candidate matching",
@@ -113,7 +115,7 @@ const ServicesTabsComponent = ({
       features: [
         "React & Next.js applications",
         "E-commerce platforms",
-        "Progressive Web Apps",
+        "Wix, Shopify, Wordpress",
         "API development & integration",
       ],
     },
@@ -172,14 +174,14 @@ const ServicesTabsComponent = ({
       case "talent":
         return {
           title: "AI-Driven Technical Talent Acquisition",
-          subtitle: "Connect with Top-Tier Professionals",
+          subtitle: "Perfect Solution to Your Business Growth",
           description:
-            "We bridge the gap between exceptional talent and innovative companies, providing comprehensive recruitment and staffing solutions tailored to your specific needs.",
+            "Access top-tier developers vetted by AI-backed screening, testing, and portfolio analysis—instantly scalable to your needs.",
           services: talentServices,
           stats: [
-            { value: "800+", label: "Candidates Placed" },
-            { value: "98%", label: "Success Rate" },
-            { value: "<1hr", label: "Average Response" },
+            { value: "50%", label: "Time-to-Fill Reduction: Faster Placement" },
+            { value: "+30%", label: "Engagement Boost: AI-personalized outreach increases candidate response rates" },
+            { value: "98%", label: "Hiring Accuracy: Smarter matches reduce early turnover" },
           ],
           ctaText: "Find Your Perfect Match",
           additionalComponent: talentAdditionalComponent,
@@ -221,41 +223,41 @@ const ServicesTabsComponent = ({
   const activeTabData = tabs.find((tab) => tab.id === activeTab);
 
   return (
-    <section className="py-16 relative overflow-hidden" id="services">
+    <section className="py-16 bg-white relative overflow-hidden" id="services">
       {/* Enhanced Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating geometric shapes */}
-        <div className="absolute top-20 -right-40 w-80 h-80 bg-gradient-to-r from-cyan-400/5 to-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-purple-400/4 to-pink-500/4 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-emerald-400/3 to-teal-500/3 rounded-full blur-3xl animate-pulse delay-500"></div>
+        <div className="absolute top-20 -right-40 w-80 h-80 bg-gradient-to-r from-cyan-100/20 to-blue-100/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-purple-100/15 to-pink-100/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-emerald-100/10 to-teal-100/10 rounded-full blur-3xl animate-pulse delay-500"></div>
 
         {/* Tech grid overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
 
         {/* Floating tech elements */}
-        <div className="absolute top-20 left-20 w-4 h-4 bg-cyan-400/20 rounded-full animate-ping"></div>
-        <div className="absolute top-40 right-32 w-3 h-3 bg-purple-400/20 rounded-full animate-ping delay-300"></div>
-        <div className="absolute bottom-32 left-48 w-2 h-2 bg-emerald-400/20 rounded-full animate-ping delay-700"></div>
+        <div className="absolute top-20 left-20 w-4 h-4 bg-cyan-300/40 rounded-full animate-ping"></div>
+        <div className="absolute top-40 right-32 w-3 h-3 bg-purple-300/40 rounded-full animate-ping delay-300"></div>
+        <div className="absolute bottom-32 left-48 w-2 h-2 bg-emerald-300/40 rounded-full animate-ping delay-700"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm text-cyan-300 px-6 py-3 rounded-full text-sm font-medium mb-6 border border-cyan-500/30">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-sm text-cyan-600 px-6 py-3 rounded-full text-sm font-medium mb-6 border border-cyan-200">
             <Zap className="w-4 h-4 animate-pulse" />
-            <span className="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent font-semibold">
               Our Comprehensive
             </span>
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
+            <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
               Discover Our Range of
             </span>
             <br />
-            <span className="text-white">Professional Services</span>
+            <span className="text-gray-900">Professional Services</span>
           </h2>
 
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Designed to accelerate your business growth and digital transformation.
           </p>
         </div>
@@ -269,7 +271,7 @@ const ServicesTabsComponent = ({
               className={`flex items-center gap-3 px-6 py-4 rounded-[16px] font-semibold transition-all duration-300 backdrop-blur-sm ${
                 activeTab === tab.id
                   ? `${tab.bgColor} ${tab.color} ${tab.borderColor} border-2 ${tab.shadowColor}`
-                  : "bg-slate-800/30 text-slate-400 border-2 border-slate-700/50 hover:border-slate-600/50 hover:text-slate-300"
+                  : "bg-white/80 text-gray-500 border-2 border-gray-200 hover:border-gray-300 hover:text-gray-700 hover:shadow-lg"
               }`}
             >
               <tab.icon className="w-5 h-5" />
@@ -285,9 +287,9 @@ const ServicesTabsComponent = ({
             className={`${activeTabData.gradientBg} backdrop-blur-sm rounded-[24px] p-8 mb-8 border ${activeTabData.borderColor} ${activeTabData.shadowColor}`}
           >
             <div className="text-center">
-              <h3 className="text-3xl font-bold text-white mb-4">{currentContent.title}</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">{currentContent.title}</h3>
               <p className={`text-xl font-semibold ${activeTabData.color} mb-4`}>{currentContent.subtitle}</p>
-              <p className="text-slate-300 max-w-4xl mx-auto leading-relaxed">{currentContent.description}</p>
+              <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed">{currentContent.description}</p>
             </div>
 
             {/* Stats */}
@@ -295,20 +297,20 @@ const ServicesTabsComponent = ({
               {currentContent.stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="text-center bg-slate-800/50 backdrop-blur-sm rounded-[16px] p-6 border border-slate-700/50 shadow-lg"
+                  className="text-center bg-white/80 backdrop-blur-sm rounded-[16px] p-6 border border-gray-200 shadow-lg"
                 >
                   <div
                     className={`text-3xl font-bold mb-2 bg-gradient-to-r ${
-                      activeTabData.color === "text-cyan-400"
-                        ? "from-cyan-400 to-blue-400"
-                        : activeTabData.color === "text-emerald-400"
-                        ? "from-emerald-400 to-teal-400"
-                        : "from-purple-400 to-pink-400"
+                      activeTabData.color === "text-cyan-600"
+                        ? "from-cyan-600 to-blue-600"
+                        : activeTabData.color === "text-emerald-600"
+                        ? "from-emerald-600 to-teal-600"
+                        : "from-purple-600 to-pink-600"
                     } bg-clip-text text-transparent`}
                   >
                     {stat.value}
                   </div>
-                  <div className="text-slate-400">{stat.label}</div>
+                  <div className="text-gray-600">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -319,12 +321,12 @@ const ServicesTabsComponent = ({
             {currentContent.services.map((service, index) => (
               <div
                 key={index}
-                className={`bg-slate-800/50 backdrop-blur-sm rounded-[16px] p-8 border border-slate-700/50 transition-all duration-300 hover:border-slate-600/50 ${
+                className={`bg-white/90 backdrop-blur-sm rounded-[16px] p-8 border border-gray-200 transition-all duration-300 hover:border-gray-300 hover:shadow-xl ${
                   activeTab === "talent"
-                    ? "hover:shadow-lg hover:shadow-cyan-500/25"
+                    ? "hover:shadow-cyan-500/20"
                     : activeTab === "development"
-                    ? "hover:shadow-lg hover:shadow-emerald-500/25"
-                    : "hover:shadow-lg hover:shadow-purple-500/25"
+                    ? "hover:shadow-emerald-500/20"
+                    : "hover:shadow-purple-500/20"
                 }`}
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -332,21 +334,20 @@ const ServicesTabsComponent = ({
                     className={`w-14 h-14 ${activeTabData.gradientBg} rounded-[16px] flex items-center justify-center backdrop-blur-sm border ${activeTabData.borderColor}`}
                   >
                     {service.icon && <service.icon className={`w-7 h-7 ${activeTabData.color}`} />}
-
-                    {service.img && <img src={service.img} className={`w-9 h-9 ${activeTabData.color}`} />}
+                    {service.img && <img src={service.img} className="w-9 h-9" alt={service.title} />}
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-white">{service.title}</h4>
+                    <h4 className="text-xl font-bold text-gray-900">{service.title}</h4>
                     {service.status && (
                       <span
-                        className={`inline-block px-3 py-1 rounded-lg text-sm font-medium ${
+                        className={`inline-block px-3 py-1 rounded-lg text-sm font-medium mt-1 ${
                           service.status === "Live Product"
-                            ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"
+                            ? "bg-emerald-100 text-emerald-700 border border-emerald-200"
                             : service.status === "Beta Release"
-                            ? "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30"
+                            ? "bg-yellow-100 text-yellow-700 border border-yellow-200"
                             : service.status === "In Development"
-                            ? "bg-blue-500/20 text-blue-400 border border-blue-500/30"
-                            : "bg-slate-500/20 text-slate-400 border border-slate-500/30"
+                            ? "bg-blue-100 text-blue-700 border border-blue-200"
+                            : "bg-gray-100 text-gray-700 border border-gray-200"
                         }`}
                       >
                         {service.status}
@@ -355,13 +356,13 @@ const ServicesTabsComponent = ({
                   </div>
                 </div>
 
-                <p className="text-slate-300 mb-6">{service.description}</p>
+                <p className="text-gray-600 mb-6">{service.description}</p>
 
                 <div className="space-y-3">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
                       <CheckCircle className={`w-5 h-5 ${activeTabData.color}`} />
-                      <span className="text-slate-300">{feature}</span>
+                      <span className="text-gray-700">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -373,8 +374,8 @@ const ServicesTabsComponent = ({
           <div
             className={`${activeTabData.gradientBg} backdrop-blur-sm rounded-[24px] p-8 text-center border ${activeTabData.borderColor} ${activeTabData.shadowColor}`}
           >
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-            <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
+            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               Let's discuss how our{" "}
               {activeTab === "talent"
                 ? "talent solutions"
@@ -386,13 +387,7 @@ const ServicesTabsComponent = ({
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#contact" className="inline-block">
                 <button
-                  className={`group text-poppins rounded-2xl font-bold px-8 py-4 bg-gradient-to-r ${
-                    activeTabData.color === "text-cyan-400"
-                      ? "from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
-                      : activeTabData.color === "text-emerald-400"
-                      ? "from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700"
-                      : "from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700"
-                  } text-white hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 relative overflow-hidden`}
+                  className={`group text-poppins rounded-2xl font-bold px-8 py-4 bg-gradient-to-r ${activeTabData.buttonGradient} text-white hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 relative overflow-hidden`}
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></span>
                   <span className="relative flex items-center gap-2">
@@ -404,23 +399,25 @@ const ServicesTabsComponent = ({
             </div>
           </div>
         </div>
+
         {/* Additional Component Section */}
         {currentContent.additionalComponent && (
           <div className="mt-8 mb-12">
             <div className="transition-all duration-500 ease-in-out">{currentContent.additionalComponent}</div>
           </div>
         )}
-        <div className="flex flex-wrap justify-center items-center gap-8 text-white">
+
+        <div className="flex flex-wrap justify-center items-center gap-8 text-gray-700">
           <div className="flex items-center gap-2">
-            <Shield className="w-5 h-5 text-emerald-500" />
+            <Shield className="w-5 h-5 text-emerald-600" />
             <span>Enterprise Security</span>
           </div>
           <div className="flex items-center gap-2">
-            <Star className="w-5 h-5 text-yellow-400" />
+            <Star className="w-5 h-5 text-yellow-500" />
             <span>24/7 Support</span>
           </div>
           <div className="flex items-center gap-2">
-            <Zap className="w-5 h-5 text-cyan-500" />
+            <Zap className="w-5 h-5 text-cyan-600" />
             <span>Instant Scaling</span>
           </div>
         </div>
