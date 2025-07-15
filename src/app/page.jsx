@@ -16,6 +16,7 @@ import Faq from "@/components/Faq";
 import Pricing from "@/components/Pricing";
 import BusinessOverview from "@/components/BusinessOverview";
 import Comparison from "@/components/Comparison";
+import { developmentTestimonials, talentTestimonials } from "@/constants";
 
 async function AsyncClientProject() {
   // Simulate server-side data fetching
@@ -38,6 +39,7 @@ export default function Home() {
             {/* <BusinessOverview /> */}
             <Comparison />
             <Pricing />
+            <TestimonialList activeTab="talent" testimonials={talentTestimonials} />
             <Faq />
             <ContactForm activeTab="talent" />
           </>
@@ -46,7 +48,7 @@ export default function Home() {
           <>
             <WorkList />
             <Services />
-            <TestimonialList />
+            <TestimonialList activeTab="development" testimonials={developmentTestimonials} />
             <ContactForm activeTab="development" />
           </>
         }
