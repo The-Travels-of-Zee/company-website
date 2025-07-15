@@ -71,10 +71,6 @@ const TestimonialList = ({ activeTab = "talent", testimonials }) => {
             <br />
             <span className="text-gray-800">Success Stories</span>
           </h2>
-
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Hear from our satisfied clients who have transformed their businesses with our AI and ML talent solutions.
-          </p>
         </div>
 
         {/* Swiper wrapper */}
