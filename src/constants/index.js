@@ -197,7 +197,53 @@ export const teamMembers = [
   },
 ];
 
-export const testimonials = [
+export const talentTestimonials = [
+  {
+    name: "Leon Carter",
+    project_name: "Machine Learning Backend",
+    designation: "CTO, FinTech Startup",
+    msg: "We hired 3 senior backend engineers in under 2 weeks, AI-powered screening matched our tech stack precisely.",
+    image: "./static/T-logo.png",
+  },
+
+  {
+    name: "Priya Desai",
+    project_name: "Data Analyst",
+    designation: "HR Head, eCommerce Brand",
+    msg: "Their AI skill tests and portfolio scoring gave us total confidence in the candidates.",
+    image: "./static/T-logo.png",
+  },
+  {
+    name: "Samantha Lee",
+    designation: "CTO, NovaHealth",
+    project_name: "Technical Talent Acquisition",
+    msg: "Thanks to their AI resume scoring and video analysis tools, we accelerated our screening process without sacrificing candidate quality.",
+    image: "./static/T-logo.png",
+  },
+  {
+    name: "Raj Mehta",
+    designation: "Director of Engineering, Quantix",
+    project_name: "Technical Talent Acquisition",
+    msg: "We sourced highly specialized ML engineers and AI developers within days. Their technical talent network is truly next-level.",
+    image: "./static/T-logo.png",
+  },
+  {
+    name: "Carla Nguyen",
+    designation: "Head of Talent, FinEdge",
+    project_name: "Technical Talent Acquisition",
+    msg: "The portfolio-based assessments helped us pinpoint candidates with both the skills and the experience to hit the ground running.",
+    image: "./static/T-logo.png",
+  },
+  {
+    name: "Daniel Romero",
+    designation: "VP of HR, LogiTech Systems",
+    project_name: "Technical Talent Acquisition",
+    msg: "We reduced our time-to-hire significantly. Automated matching and smoother onboarding saved us weeks of manual coordination.",
+    image: "./static/T-logo.png",
+  },
+];
+
+export const developmentTestimonials = [
   {
     id: 1,
     name: "Kathy Ceuvas",
@@ -221,22 +267,6 @@ export const testimonials = [
     designation: "Executive Director at The Natalie Strong Foundation",
     msg: "The Travels of Zee did a fantastic job redesigning the website. They were professional, creative, and incredibly easy to work with and they delivered exactly what we needed.",
     image: "./images/Oscar-A-Rodriguez.avif",
-  },
-  {
-    id: 4,
-    name: "",
-    project_name: "Machine Learning Backend",
-    designation: "CTO, FinTech Startup",
-    msg: "We hired 3 senior backend engineers in under 2 weeks, AI-powered screening matched our tech stack precisely.",
-    image: "./static/T-logo.png",
-  },
-  {
-    id: 5,
-    name: "",
-    project_name: "Data Analyst",
-    designation: "HR Head, eCommerce Brand",
-    msg: "Their AI skill tests and portfolio scoring gave us total confidence in the candidates.",
-    image: "./static/T-logo.png",
   },
 ];
 
