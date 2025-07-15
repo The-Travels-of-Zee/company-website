@@ -72,7 +72,7 @@ const EngagementModels = () => {
         </div>
 
         <Link href={"#contact"} aria-label="Learn More">
-          <button className="group/btn relative min-w-max mx-auto font_avenir text-base font-semibold rounded-xl border-2 border-brandOrange rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-brandOrange hover:to-brandOrange/90 hover:text-white duration-500 px-4 py-3 overflow-hidden">
+          <button className="group/btn relative min-w-max mx-auto font_avenir text-base font-semibold rounded-xl border-2 border-brandOrange bg-gradient-to-r from-transparent to-transparent hover:from-brandOrange hover:to-brandOrange/90 hover:text-white duration-500 px-4 py-3 overflow-hidden">
             {/* Button background effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-brandOrange/0 via-brandOrange/5 to-brandOrange/0 group-hover/btn:from-brandOrange/20 group-hover/btn:via-brandOrange/10 group-hover/btn:to-brandOrange/20 transition-all duration-500" />
 
