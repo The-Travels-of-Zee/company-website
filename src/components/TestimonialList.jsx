@@ -101,36 +101,39 @@ const TestimonialList = ({ activeTab = "talent", testimonials }) => {
             }}
             a11y={{ prevSlideMessage: "Previous testimonial", nextSlideMessage: "Next testimonial" }}
           >
-            {testimonials.map((t, index) => (
-              <SwiperSlide key={index}>
-                <div
-                  className={`testimonial_card my-10 bg-white border ${currentTheme.border} ${currentTheme.hover} transition-all duration-300 px-6 py-12 rounded-2xl flex flex-col items-center group hover:shadow-md`}
-                >
-                  <div className="image_container mb-6">
-                    <img
-                      className={`rounded-2xl w-[100px] h-[100px] object-cover border-2 border-gray-200 group-hover:${currentTheme.border} transition-all duration-300`}
-                      src={t.image}
-                      alt={`Photo of ${t.name}`}
-                    />
-                  </div>
+            {testimonials &&
+              testimonials.map((t, index) => (
+                <SwiperSlide key={index}>
+                  <div
+                    className={`testimonial_card my-10 bg-white border ${currentTheme.border} ${currentTheme.hover} transition-all duration-300 px-6 py-12 rounded-2xl flex flex-col items-center group hover:shadow-md`}
+                  >
+                    <div className="image_container mb-6">
+                      <img
+                        className={`rounded-2xl w-[100px] h-[100px] object-cover border-2 border-gray-200 group-hover:${currentTheme.border} transition-all duration-300`}
+                        src={t.image}
+                        alt={`Photo of ${t.name}`}
+                      />
+                    </div>
 
-                  <div className="flex-1 flex flex-col justify-between text-center">
-                    <p className="font-poppins font-normal text-gray-700 text-center mb-8 leading-relaxed">"{t.msg}"</p>
+                    <div className="flex-1 flex flex-col justify-between text-center">
+                      <p className="font-poppins font-normal text-gray-700 text-center mb-8 leading-relaxed">
+                        "{t.msg}"
+                      </p>
 
-                    <div>
-                      <p
-                        className={`font-poppins font-semibold bg-gradient-to-r ${currentTheme.primary} bg-clip-text text-transparent text-[18px] text-center mb-2`}
-                      >
-                        {t.project_name}
-                      </p>
-                      <p className="font-poppins font-normal text-gray-500 text-center">
-                        {t.name}, {t.designation}
-                      </p>
+                      <div>
+                        <p
+                          className={`font-poppins font-semibold bg-gradient-to-r ${currentTheme.primary} bg-clip-text text-transparent text-[18px] text-center mb-2`}
+                        >
+                          {t.project_name}
+                        </p>
+                        <p className="font-poppins font-normal text-gray-500 text-center">
+                          {t.name}, {t.designation}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
+                </SwiperSlide>
+              ))}
           </Swiper>
 
           {/* Custom Navigation Buttons */}
