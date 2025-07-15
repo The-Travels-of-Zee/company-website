@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import SiteNavbar from "@/components/SiteNavbar";
 import SiteFooter from "@/components/SiteFooter";
+import NewsletterPopup from "@/components/NewsletterPopup";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -64,6 +65,7 @@ export default function RootLayout({ children }) {
         <SiteNavbar />
         {children}
         <SiteFooter />
+        <NewsletterPopup />
       </body>
     </html>
   );
