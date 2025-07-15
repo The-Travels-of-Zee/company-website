@@ -16,7 +16,7 @@ import Faq from "@/components/Faq";
 import Pricing from "@/components/Pricing";
 import BusinessOverview from "@/components/BusinessOverview";
 import Comparison from "@/components/Comparison";
-import { developmentTestimonials, talentTestimonials } from "@/constants";
+import { developmentFaqs, developmentTestimonials, inHouseAppFaqs, talentFaqs, talentTestimonials } from "@/constants";
 
 async function AsyncClientProject() {
   // Simulate server-side data fetching
@@ -40,7 +40,7 @@ export default function Home() {
             <Comparison />
             <Pricing />
             <TestimonialList activeTab="talent" testimonials={talentTestimonials} />
-            <Faq />
+            <Faq activeTab="talent" faqs={talentFaqs} />
             <ContactForm activeTab="talent" />
           </>
         }
@@ -49,6 +49,7 @@ export default function Home() {
             <WorkList />
             <Services />
             <TestimonialList activeTab="development" testimonials={developmentTestimonials} />
+            <Faq activeTab="development" faqs={developmentFaqs} />
             <ContactForm activeTab="development" />
           </>
         }
@@ -57,6 +58,7 @@ export default function Home() {
             <Suspense fallback={<Loading />}>
               <AsyncCompanyProject />
             </Suspense>
+            <Faq activeTab="apps" faqs={inHouseAppFaqs} />
             <ContactForm activeTab="apps" />
           </>
         }

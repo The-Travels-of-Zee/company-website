@@ -184,7 +184,7 @@ const Pricing = () => {
           </div>
 
           <div className="text-center mt-10">
-            <Link href="/pricing">
+            <Link href="/pricing" target="_blank">
               <button className="group inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all shadow-md hover:shadow-cyan-500/30">
                 <DollarSign className="w-5 h-5" />
                 More About Pricings
